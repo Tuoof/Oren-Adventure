@@ -1,2 +1,2 @@
 # WPG-5
- proyek game multiplayer mata kuliah wpg
+ proyek game multiplayer mata kuliah wpg-5
