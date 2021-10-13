@@ -1,7 +1,13 @@
 {
   "dependencies": {
+    "com.hwaet.projectcloner": {
+      "version": "file:C:/Users/andik/Downloads/UnityProjectCloner-master",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {}
+    },
     "com.unity.2d.animation": {
-      "version": "5.0.7",
+      "version": "5.0.8",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -128,7 +134,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.multiplayer.mlapi": {
-      "version": "file:C:/Users/andik/Downloads/com.unity.multiplayer.mlapi-0.1.0.tgz",
+      "version": "file:C:\\Users\\andik\\Downloads\\com.unity.multiplayer.mlapi-0.1.0.tgz",
       "depth": 0,
       "source": "local-tarball",
       "dependencies": {

@@ -5,27 +5,76 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637696834387682894
-    m_Hash: 273074101
+      ticks: 637696874792943550
+    m_Hash: 4059167764
   m_LockFileStatus:
     m_FilePath: C:/GitHub/WPG-5/Oren Adventure/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637696834387739243
-    m_Hash: 3002486679
+      ticks: 637696874793013591
+    m_Hash: 3475114194
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
   m_Packages:
     m_ResolvedPackages:
-    - packageId: com.unity.2d.animation@5.0.7
+    - packageId: com.hwaet.projectcloner@file:C:\Users\andik\Downloads\UnityProjectCloner-master
       testable: 0
       isDirectDependency: 1
-      version: 5.0.7
+      version: 0.0.1
+      source: 4
+      resolvedPath: C:\Users\andik\Downloads\UnityProjectCloner-master
+      assetPath: Packages/com.hwaet.projectcloner
+      name: com.hwaet.projectcloner
+      displayName: Project Cloner
+      author:
+        name: 
+        email: 
+        url: 
+      category: Unity
+      type: 
+      description: A tool to let the user quickly clone their project, for multiplayer
+        testing.
+      status: 4
+      errors: []
+      versions:
+        all: []
+        compatible: []
+        verified: 
+      dependencies: []
+      resolvedDependencies: []
+      keywords:
+      - multiplayer
+      - unity
+      - editor
+      registry:
+        id: 
+        name: 
+        url: 
+        scopes: []
+        isDefault: 0
+        capabilities: 0
+      hasRegistry: 0
+      hideInEditor: 1
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 0
+      documentationUrl: 
+      hasRepository: 0
+      repository:
+        type: 
+        url: 
+        revision: 
+        path: 
+    - packageId: com.unity.2d.animation@5.0.8
+      testable: 0
+      isDirectDependency: 1
+      version: 5.0.8
       source: 1
-      resolvedPath: C:\GitHub\WPG-5\Oren Adventure\Library\PackageCache\com.unity.2d.animation@5.0.7
+      resolvedPath: C:\GitHub\WPG-5\Oren Adventure\Library\PackageCache\com.unity.2d.animation@5.0.8
       assetPath: Packages/com.unity.2d.animation
       name: com.unity.2d.animation
       displayName: 2D Animation
@@ -160,13 +209,13 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 637637510960000000
+      datePublishedTicks: 637684996900000000
       documentationUrl: 
       hasRepository: 1
       repository:
         type: git
         url: https://github.cds.internal.unity3d.com/unity/2d.git
-        revision: 6f9c488e4d487ead34ee4d516f0a2f4a911a8b25
+        revision: f2df77302616ee97ac0bda980859324394e44df3
         path: 
     - packageId: com.unity.2d.pixel-perfect@4.0.1
       testable: 0
@@ -336,7 +385,7 @@ m_PackageAssets:
       - name: com.unity.modules.uielementsnative
         version: 1.0.0
       - name: com.unity.2d.animation
-        version: 5.0.7
+        version: 5.0.8
       - name: com.unity.mathematics
         version: 1.1.0
       - name: com.unity.modules.animation
@@ -1079,8 +1128,10 @@ m_PackageAssets:
       status: 4
       errors: []
       versions:
-        all: []
-        compatible: []
+        all:
+        - 0.1.0
+        compatible:
+        - 0.1.0
         verified: 
       dependencies:
       - name: com.unity.modules.ai
@@ -3806,6 +3857,20 @@ m_PackageAssets:
         path: 
   m_LocalPackages:
     m_LocalFileStatus:
+    - m_FilePath: C:\Users\andik\Downloads\UnityProjectCloner-master/package.json
+      m_PathExists: 1
+      m_ContentTrackingEnabled: 1
+      m_ModificationDate:
+        serializedVersion: 2
+        ticks: 637666292500000000
+      m_Hash: 1845975900
+    - m_FilePath: C:\Users\andik\Downloads\UnityProjectCloner-master
+      m_PathExists: 1
+      m_ContentTrackingEnabled: 1
+      m_ModificationDate:
+        serializedVersion: 2
+        ticks: 0
+      m_Hash: 0
     - m_FilePath: C:\Users\andik\Downloads\com.unity.multiplayer.mlapi-0.1.0.tgz/package.json
       m_PathExists: 0
       m_ContentTrackingEnabled: 1
