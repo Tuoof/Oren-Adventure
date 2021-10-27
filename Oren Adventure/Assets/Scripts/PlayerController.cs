@@ -1,14 +1,16 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+    private PlayerInputAction playerInputAction;
+    private float horizontal;
     public float speed;
     public float jumpForce;
     private float highJump;
     private float ultraJump;
-    private float moveInput;
 
     private Rigidbody2D rb;
 
@@ -17,50 +19,66 @@ public class PlayerController : MonoBehaviour
     private bool isGrounded;
     public Transform groundCheck;
     public float checkRadius;
-    public LayerMask whatIsGrounded;
+    public LayerMask groundLayer;
 
     private int extraJump;
     public int extraJumpValue;
+
+    private void Awake()
+    {
+        playerInputAction = new PlayerInputAction();
+    }
+    private void OnEnable()
+    {
+        playerInputAction.Enable();
+    }
+    private void OnDisable()
+    {
+        playerInputAction.Disable();
+    }
 
     private void Start()
     {
         extraJump = extraJumpValue;
         rb = GetComponent<Rigidbody2D>();        
     }
-
-    private void FixedUpdate()
+    private void Update()
     {
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGrounded);
+        rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
 
-        moveInput = SimpleInput.GetAxisRaw("Horizontal");
-        rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
-
-        if (facingRight == false && moveInput > 0)
+        if (facingRight == false && horizontal > 0)
         {
             Flip();
         }
-        else if (facingRight == true && moveInput < 0)
+        else if (facingRight == true && horizontal < 0)
         {
             Flip();
         }
     }
-
-    private void Update()
+    public void Move(InputAction.CallbackContext context)
     {
-        if (isGrounded == true)
+        horizontal = context.ReadValue<Vector2>().x;
+    }
+    private bool IsGrounded()
+    {
+        extraJump = extraJumpValue;
+        return Physics2D.OverlapCircle(groundCheck.position, checkRadius, groundLayer);
+    }
+
+    public void Jump(InputAction.CallbackContext context)
+    {
+        if (context.performed && extraJump == 0 && IsGrounded())
         {
-            extraJump = extraJumpValue;
+            rb.velocity = Vector2.up * jumpForce;
         }
-
-
-        if (Input.GetButtonDown("Jump") && extraJump > 0)
+        if (context.performed && extraJump > 0)
         {
             rb.velocity = Vector2.up * jumpForce;
             extraJump--;
         }
-        else if (Input.GetButtonDown("Jump") && extraJump == 0 && isGrounded == true)
+        else if(context.canceled && rb.velocity.y > 0f)
         {
-            rb.velocity = Vector2.up * jumpForce;
+            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
         }
     }
 
@@ -70,18 +88,5 @@ public class PlayerController : MonoBehaviour
         Vector3 Scaler = transform.localScale;
         Scaler.x *= -1;
         transform.localScale = Scaler;
-    }
-
-    public void Jump()
-    {
-        if (extraJump > 0)
-        {
-            rb.velocity = Vector2.up * jumpForce;
-            extraJump--;
-        }
-        else if (extraJump == 0 && isGrounded == true)
-        {
-            rb.velocity = Vector2.up * jumpForce;
-        }
     }
 }
