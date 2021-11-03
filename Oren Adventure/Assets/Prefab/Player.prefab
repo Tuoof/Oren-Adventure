@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1817768598451111320}
   - component: {fileID: 1817768598451111013}
-  - component: {fileID: 1817768598451111012}
+  - component: {fileID: 7815341244022597716}
   - component: {fileID: 4443511981809817095}
   - component: {fileID: 3331667373156923876}
   - component: {fileID: 8405487509300753296}
@@ -63,8 +63,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!70 &1817768598451111012
-CapsuleCollider2D:
+--- !u!61 &7815341244022597716
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -76,9 +76,19 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.15, y: 0.23}
-  m_Size: {x: 1.55, y: 1.79}
-  m_Direction: 0
+  m_Offset: {x: -0.15, y: 0.14}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.55, y: 1.62}
+  m_EdgeRadius: 0
 --- !u!114 &4443511981809817095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -184,7 +194,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
     m_ActionId: c92a552c-da1d-4e16-9181-d75b9e52a3f1
-    m_ActionName: Player/Movement[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d,/XInputControllerWindows/dpad/up,/XInputControllerWindows/dpad/down,/XInputControllerWindows/dpad/left,/XInputControllerWindows/dpad/right,/XInputControllerWindows/leftStick]
+    m_ActionName: Player/Movement[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow,/XInputControllerWindows/leftStick,/XInputControllerWindows/dpad]
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1817768598451111322}

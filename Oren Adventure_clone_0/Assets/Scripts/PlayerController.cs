@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using MLAPI;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : NetworkBehaviour
 {
     private PlayerInputAction playerInputAction;
     private float horizontal;
@@ -40,7 +41,7 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         extraJump = extraJumpValue;
-        rb = GetComponent<Rigidbody2D>();        
+        rb = GetComponent<Rigidbody2D>();
     }
     private void Update()
     {
@@ -76,7 +77,7 @@ public class PlayerController : MonoBehaviour
             rb.velocity = Vector2.up * jumpForce;
             extraJump--;
         }
-        else if(context.canceled && rb.velocity.y > 0f)
+        else if (context.canceled && rb.velocity.y > 0f)
         {
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
         }
