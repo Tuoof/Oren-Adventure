@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637714999439486820
-    m_Hash: 1099164081
+      ticks: 637715189742532547
+    m_Hash: 2499229926
   m_LockFileStatus:
     m_FilePath: C:/GitHub/WPG-5/Oren Adventure/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637714999440808927
-    m_Hash: 3355375533
+      ticks: 637715189742602507
+    m_Hash: 659442121
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
@@ -146,7 +146,7 @@ m_PackageAssets:
       - name: com.unity.modules.uielementsnative
         version: 1.0.0
       - name: com.unity.mathematics
-        version: 1.1.0
+        version: 1.2.1
       - name: com.unity.modules.animation
         version: 1.0.0
       keywords:
@@ -346,7 +346,7 @@ m_PackageAssets:
       - name: com.unity.2d.animation
         version: 5.0.8
       - name: com.unity.mathematics
-        version: 1.1.0
+        version: 1.2.1
       - name: com.unity.modules.animation
         version: 1.0.0
       keywords:
@@ -522,7 +522,7 @@ m_PackageAssets:
         version: 1.0.0
       resolvedDependencies:
       - name: com.unity.mathematics
-        version: 1.1.0
+        version: 1.2.1
       - name: com.unity.2d.common
         version: 4.0.3
       - name: com.unity.2d.sprite
@@ -1499,47 +1499,36 @@ m_PackageAssets:
         url: https://github.cds.internal.unity3d.com/unity/com.unity.multiplayer-hlapi.git
         revision: bab548572ce9bd49e42fa76ed4edd1972be375c9
         path: 
-    - packageId: com.unity.multiplayer.mlapi@file:C:\Users\andik\Downloads\com.unity.multiplayer.mlapi-0.1.0.tgz
+    - packageId: com.unity.multiplayer.mlapi-patcher@https://github.com/Unity-Technologies/mlapi-community-contributions.git?path=/com.unity.multiplayer.mlapi-patcher#release-0.1.0
       testable: 0
       isDirectDependency: 1
       version: 0.1.0
-      source: 6
-      resolvedPath: C:\GitHub\WPG-5\Oren Adventure\Library\PackageCache\com.unity.multiplayer.mlapi@854937f93cd7-1634086580145
-      assetPath: Packages/com.unity.multiplayer.mlapi
-      name: com.unity.multiplayer.mlapi
-      displayName: MLAPI Networking Library
+      source: 5
+      resolvedPath: C:\GitHub\WPG-5\Oren Adventure\Library\PackageCache\com.unity.multiplayer.mlapi-patcher@2583c66903
+      assetPath: Packages/com.unity.multiplayer.mlapi-patcher
+      name: com.unity.multiplayer.mlapi-patcher
+      displayName: MLAPI Patcher Package
       author:
         name: 
         email: 
         url: 
       category: 
-      type: library
-      description: This the Core Unity Mid-level API that provides core SDK for multiplayer
-        games within unity
+      type: 
+      description: Package provides utility for upgrading MLAPI to the Unity Package
+        Manager version.
       status: 4
       errors: []
       versions:
-        all:
-        - 0.1.0
-        compatible:
-        - 0.1.0
+        all: []
+        compatible: []
         verified: 
       dependencies:
-      - name: com.unity.modules.ai
-        version: 1.0.0
-      - name: com.unity.modules.animation
-        version: 1.0.0
-      - name: com.unity.nuget.mono-cecil
-        version: 1.10.1-preview.1
+      - name: com.unity.scriptablebuildpipeline
+        version: 1.14.1
       resolvedDependencies:
-      - name: com.unity.modules.ai
-        version: 1.0.0
-      - name: com.unity.modules.animation
-        version: 1.0.0
-      - name: com.unity.nuget.mono-cecil
-        version: 1.10.1
-      keywords:
-      - unity
+      - name: com.unity.scriptablebuildpipeline
+        version: 1.14.1
+      keywords: []
       registry:
         id: 
         name: 
@@ -1548,17 +1537,96 @@ m_PackageAssets:
         isDefault: 0
         capabilities: 0
       hasRegistry: 0
-      hideInEditor: 0
+      hideInEditor: 1
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
       datePublishedTicks: 0
       documentationUrl: 
+      hasRepository: 0
+      repository:
+        type: 
+        url: 
+        revision: 
+        path: 
+    - packageId: com.unity.netcode.gameobjects@1.0.0-pre.3
+      testable: 0
+      isDirectDependency: 1
+      version: 1.0.0-pre.3
+      source: 1
+      resolvedPath: C:\GitHub\WPG-5\Oren Adventure\Library\PackageCache\com.unity.netcode.gameobjects@1.0.0-pre.3
+      assetPath: Packages/com.unity.netcode.gameobjects
+      name: com.unity.netcode.gameobjects
+      displayName: Netcode for GameObjects
+      author:
+        name: 
+        email: 
+        url: 
+      category: 
+      type: 
+      description: Netcode for GameObjects is a high-level netcode SDK that provides
+        networking capabilities to GameObject/MonoBehaviour workflows within Unity
+        and sits on top of underlying transport layer.
+      status: 4
+      errors: []
+      versions:
+        all:
+        - 1.0.0-pre.2
+        - 1.0.0-pre.3
+        compatible:
+        - 1.0.0-pre.2
+        - 1.0.0-pre.3
+        verified: 
+      dependencies:
+      - name: com.unity.modules.ai
+        version: 1.0.0
+      - name: com.unity.modules.animation
+        version: 1.0.0
+      - name: com.unity.nuget.mono-cecil
+        version: 1.10.1
+      - name: com.unity.collections
+        version: 1.0.0-pre.5
+      resolvedDependencies:
+      - name: com.unity.modules.ai
+        version: 1.0.0
+      - name: com.unity.modules.animation
+        version: 1.0.0
+      - name: com.unity.nuget.mono-cecil
+        version: 1.10.1
+      - name: com.unity.collections
+        version: 1.0.0-pre.5
+      - name: com.unity.burst
+        version: 1.5.4
+      - name: com.unity.mathematics
+        version: 1.2.1
+      - name: com.unity.test-framework
+        version: 1.1.29
+      - name: com.unity.ext.nunit
+        version: 1.0.6
+      - name: com.unity.modules.imgui
+        version: 1.0.0
+      - name: com.unity.modules.jsonserialize
+        version: 1.0.0
+      keywords: []
+      registry:
+        id: main
+        name: 
+        url: https://packages.unity.com
+        scopes: []
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
+      hideInEditor: 1
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 637714818860000000
+      documentationUrl: 
       hasRepository: 1
       repository:
         type: git
-        url: https://github.com/Unity-Technologies/com.unity.multiplayer.mlapi.git
-        revision: 3e3aef6aa02c2a25359898319e5bd49d3518b57b
+        url: https://github.com/Unity-Technologies/com.unity.netcode.gameobjects.git
+        revision: 3e4df72dadeea8bd622da2824e30541910c79d3d
         path: 
     - packageId: com.unity.purchasing.udp@2.0.0
       testable: 0
@@ -4073,6 +4141,301 @@ m_PackageAssets:
         url: https://github.cds.internal.unity3d.com/unity/com.unity.nuget.mono-cecil.git
         revision: c1b254abc76d079830441168142797a454b48735
         path: 
+    - packageId: com.unity.collections@1.0.0-pre.5
+      testable: 0
+      isDirectDependency: 0
+      version: 1.0.0-pre.5
+      source: 1
+      resolvedPath: C:\GitHub\WPG-5\Oren Adventure\Library\PackageCache\com.unity.collections@1.0.0-pre.5
+      assetPath: Packages/com.unity.collections
+      name: com.unity.collections
+      displayName: Collections
+      author:
+        name: 
+        email: 
+        url: 
+      category: 
+      type: 
+      description: A C# collections library providing data structures that can be
+        used in jobs, and optimized by Burst compiler.
+      status: 4
+      errors: []
+      versions:
+        all:
+        - 0.0.9-preview.1
+        - 0.0.9-preview.2
+        - 0.0.9-preview.3
+        - 0.0.9-preview.4
+        - 0.0.9-preview.5
+        - 0.0.9-preview.6
+        - 0.0.9-preview.7
+        - 0.0.9-preview.8
+        - 0.0.9-preview.9
+        - 0.0.9-preview.10
+        - 0.0.9-preview.11
+        - 0.0.9-preview.12
+        - 0.0.9-preview.13
+        - 0.0.9-preview.14
+        - 0.0.9-preview.15
+        - 0.0.9-preview.16
+        - 0.0.9-preview.17
+        - 0.0.9-preview.18
+        - 0.0.9-preview.19
+        - 0.0.9-preview.20
+        - 0.1.0-preview
+        - 0.1.1-preview
+        - 0.2.0-preview.13
+        - 0.3.0-preview.0
+        - 0.4.0-preview.6
+        - 0.5.0-preview.9
+        - 0.5.1-preview.11
+        - 0.5.2-preview.8
+        - 0.6.0-preview.9
+        - 0.7.0-preview.2
+        - 0.7.1-preview.3
+        - 0.8.0-preview.5
+        - 0.9.0-preview.5
+        - 0.9.0-preview.6
+        - 0.11.0-preview.17
+        - 0.12.0-preview.13
+        - 0.14.0-preview.16
+        - 0.15.0-preview.21
+        - 0.17.0-preview.18
+        - 1.0.0-pre.3
+        - 1.0.0-pre.5
+        - 1.0.0-pre.6
+        compatible:
+        - 0.0.9-preview.1
+        - 0.0.9-preview.2
+        - 0.0.9-preview.3
+        - 0.0.9-preview.4
+        - 0.0.9-preview.5
+        - 0.0.9-preview.6
+        - 0.0.9-preview.7
+        - 0.0.9-preview.8
+        - 0.0.9-preview.9
+        - 0.0.9-preview.10
+        - 0.0.9-preview.11
+        - 0.0.9-preview.12
+        - 0.0.9-preview.13
+        - 0.0.9-preview.14
+        - 0.0.9-preview.15
+        - 0.0.9-preview.16
+        - 0.0.9-preview.17
+        - 0.0.9-preview.18
+        - 0.0.9-preview.19
+        - 0.0.9-preview.20
+        - 0.1.0-preview
+        - 0.1.1-preview
+        - 0.2.0-preview.13
+        - 0.3.0-preview.0
+        - 0.4.0-preview.6
+        - 0.5.0-preview.9
+        - 0.5.1-preview.11
+        - 0.5.2-preview.8
+        - 0.6.0-preview.9
+        - 0.7.0-preview.2
+        - 0.7.1-preview.3
+        - 0.8.0-preview.5
+        - 0.9.0-preview.5
+        - 0.9.0-preview.6
+        - 0.11.0-preview.17
+        - 0.12.0-preview.13
+        - 0.14.0-preview.16
+        - 0.15.0-preview.21
+        - 0.17.0-preview.18
+        - 1.0.0-pre.3
+        - 1.0.0-pre.5
+        - 1.0.0-pre.6
+        verified: 
+      dependencies:
+      - name: com.unity.burst
+        version: 1.5.4
+      - name: com.unity.test-framework
+        version: 1.1.22
+      resolvedDependencies:
+      - name: com.unity.burst
+        version: 1.5.4
+      - name: com.unity.mathematics
+        version: 1.2.1
+      - name: com.unity.test-framework
+        version: 1.1.29
+      - name: com.unity.ext.nunit
+        version: 1.0.6
+      - name: com.unity.modules.imgui
+        version: 1.0.0
+      - name: com.unity.modules.jsonserialize
+        version: 1.0.0
+      keywords:
+      - dots
+      - collections
+      - unity
+      registry:
+        id: main
+        name: 
+        url: https://packages.unity.com
+        scopes: []
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
+      hideInEditor: 1
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 637653241630000000
+      documentationUrl: 
+      hasRepository: 1
+      repository:
+        type: git
+        url: https://github.cds.internal.unity3d.com/unity/dots.git
+        revision: 7ccff6592fefb3ff74fc8d4dc12e727b7f7e6152
+        path: 
+    - packageId: com.unity.scriptablebuildpipeline@1.14.1
+      testable: 0
+      isDirectDependency: 0
+      version: 1.14.1
+      source: 1
+      resolvedPath: C:\GitHub\WPG-5\Oren Adventure\Library\PackageCache\com.unity.scriptablebuildpipeline@1.14.1
+      assetPath: Packages/com.unity.scriptablebuildpipeline
+      name: com.unity.scriptablebuildpipeline
+      displayName: Scriptable Build Pipeline
+      author:
+        name: 
+        email: 
+        url: 
+      category: 
+      type: 
+      description: The Scriptable Build Pipeline moves the asset bundle build pipeline
+        to C#.  Use the pre-defined build flows, or create your own using the divided
+        up APIs.  This system improves build time, fixes incremental build, and provides
+        greater flexibility.
+      status: 4
+      errors: []
+      versions:
+        all:
+        - 0.0.5-preview
+        - 0.0.6-preview
+        - 0.0.8-preview
+        - 0.0.9-preview
+        - 0.0.10-preview
+        - 0.0.14-preview
+        - 0.0.15-preview
+        - 0.1.0-preview
+        - 0.2.0-preview
+        - 1.0.1-preview
+        - 1.1.0-preview
+        - 1.1.1-preview
+        - 1.2.1-preview
+        - 1.3.5-preview
+        - 1.4.1-preview
+        - 1.5.0-preview
+        - 1.5.1
+        - 1.5.2
+        - 1.5.4
+        - 1.5.6
+        - 1.5.10
+        - 1.6.3-preview
+        - 1.6.4-preview
+        - 1.6.5-preview
+        - 1.7.2
+        - 1.7.3
+        - 1.8.2
+        - 1.8.4
+        - 1.8.6
+        - 1.9.0
+        - 1.10.0
+        - 1.11.1
+        - 1.11.2
+        - 1.12.0
+        - 1.13.1
+        - 1.14.0
+        - 1.14.1
+        - 1.15.1
+        - 1.15.2
+        - 1.16.1
+        - 1.17.0
+        - 1.18.0
+        - 1.19.0
+        - 1.19.1
+        - 1.19.2
+        - 1.19.3
+        compatible:
+        - 0.0.5-preview
+        - 0.0.6-preview
+        - 0.0.8-preview
+        - 0.0.9-preview
+        - 0.0.10-preview
+        - 0.0.14-preview
+        - 0.0.15-preview
+        - 0.1.0-preview
+        - 0.2.0-preview
+        - 1.0.1-preview
+        - 1.1.0-preview
+        - 1.1.1-preview
+        - 1.2.1-preview
+        - 1.3.5-preview
+        - 1.4.1-preview
+        - 1.5.0-preview
+        - 1.5.1
+        - 1.5.2
+        - 1.5.4
+        - 1.5.6
+        - 1.5.10
+        - 1.6.3-preview
+        - 1.6.4-preview
+        - 1.6.5-preview
+        - 1.7.2
+        - 1.7.3
+        - 1.8.2
+        - 1.8.4
+        - 1.8.6
+        - 1.9.0
+        - 1.10.0
+        - 1.11.1
+        - 1.11.2
+        - 1.12.0
+        - 1.13.1
+        - 1.14.0
+        - 1.14.1
+        - 1.15.1
+        - 1.15.2
+        - 1.16.1
+        - 1.17.0
+        - 1.18.0
+        - 1.19.0
+        - 1.19.1
+        - 1.19.2
+        - 1.19.3
+        verified: 1.19.3
+      dependencies: []
+      resolvedDependencies: []
+      keywords:
+      - build
+      - bundle
+      - bundles
+      - assetbundles
+      - cache
+      - server
+      registry:
+        id: main
+        name: 
+        url: https://packages.unity.com
+        scopes: []
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
+      hideInEditor: 1
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 637408030860000000
+      documentationUrl: 
+      hasRepository: 1
+      repository:
+        type: git
+        url: https://github.cds.internal.unity3d.com/unity/Addressables.git
+        revision: 77a8e2e3bc47fd22d4f773d5b949d92bffda3036
+        path: 
     - packageId: com.unity.subsystemregistration@1.1.0
       testable: 0
       isDirectDependency: 0
@@ -4099,10 +4462,12 @@ m_PackageAssets:
         - 1.0.5
         - 1.0.6
         - 1.1.0
+        - 1.1.1
         compatible:
         - 1.0.6
         - 1.1.0
-        verified: 1.1.0
+        - 1.1.1
+        verified: 1.1.1
       dependencies:
       - name: com.unity.modules.subsystems
         version: 1.0.0
@@ -4134,83 +4499,6 @@ m_PackageAssets:
         type: git
         url: https://github.cds.internal.unity3d.com/unity/com.unity.subsystemregistration.git
         revision: 72584ba5248fbe79e560e795ad819f876954fceb
-        path: 
-    - packageId: com.unity.mathematics@1.1.0
-      testable: 0
-      isDirectDependency: 0
-      version: 1.1.0
-      source: 1
-      resolvedPath: C:\GitHub\WPG-5\Oren Adventure\Library\PackageCache\com.unity.mathematics@1.1.0
-      assetPath: Packages/com.unity.mathematics
-      name: com.unity.mathematics
-      displayName: Mathematics
-      author:
-        name: 
-        email: 
-        url: 
-      category: 
-      type: 
-      description: Unity's C# SIMD math library providing vector types and math functions
-        with a shader like syntax.
-      status: 4
-      errors: []
-      versions:
-        all:
-        - 0.0.12-preview.2
-        - 0.0.12-preview.5
-        - 0.0.12-preview.8
-        - 0.0.12-preview.10
-        - 0.0.12-preview.11
-        - 0.0.12-preview.13
-        - 0.0.12-preview.17
-        - 0.0.12-preview.19
-        - 0.0.12-preview.20
-        - 1.0.0-preview.1
-        - 1.0.1
-        - 1.1.0-preview.1
-        - 1.1.0
-        - 1.2.1
-        - 1.2.4
-        compatible:
-        - 0.0.12-preview.2
-        - 0.0.12-preview.5
-        - 0.0.12-preview.8
-        - 0.0.12-preview.10
-        - 0.0.12-preview.11
-        - 0.0.12-preview.13
-        - 0.0.12-preview.17
-        - 0.0.12-preview.19
-        - 0.0.12-preview.20
-        - 1.0.0-preview.1
-        - 1.0.1
-        - 1.1.0-preview.1
-        - 1.1.0
-        - 1.2.1
-        - 1.2.4
-        verified: 1.2.4
-      dependencies: []
-      resolvedDependencies: []
-      keywords:
-      - unity
-      registry:
-        id: main
-        name: 
-        url: https://packages.unity.com
-        scopes: []
-        isDefault: 1
-        capabilities: 7
-      hasRegistry: 1
-      hideInEditor: 1
-      entitlements:
-        isAllowed: 1
-      isAssetStorePackage: 0
-      datePublishedTicks: 636984649280000000
-      documentationUrl: 
-      hasRepository: 1
-      repository:
-        type: git
-        url: git@github.com:Unity-Technologies/Unity.Mathematics.git
-        revision: 0a3dfafaf606098ea681de4c4be60f3aac63b773
         path: 
     - packageId: com.unity.2d.common@4.0.3
       testable: 0
@@ -4369,22 +4657,314 @@ m_PackageAssets:
         url: https://github.cds.internal.unity3d.com/unity/2d.git
         revision: 6f9c488e4d487ead34ee4d516f0a2f4a911a8b25
         path: 
+    - packageId: com.unity.burst@1.5.4
+      testable: 0
+      isDirectDependency: 0
+      version: 1.5.4
+      source: 1
+      resolvedPath: C:\GitHub\WPG-5\Oren Adventure\Library\PackageCache\com.unity.burst@1.5.4
+      assetPath: Packages/com.unity.burst
+      name: com.unity.burst
+      displayName: Burst
+      author:
+        name: 
+        email: 
+        url: 
+      category: 
+      type: 
+      description: Burst is a compiler that translates from IL/.NET bytecode to highly
+        optimized native code using LLVM.
+      status: 4
+      errors: []
+      versions:
+        all:
+        - 0.2.4-preview.5
+        - 0.2.4-preview.7
+        - 0.2.4-preview.11
+        - 0.2.4-preview.12
+        - 0.2.4-preview.13
+        - 0.2.4-preview.14
+        - 0.2.4-preview.15
+        - 0.2.4-preview.16
+        - 0.2.4-preview.17
+        - 0.2.4-preview.18
+        - 0.2.4-preview.19
+        - 0.2.4-preview.20
+        - 0.2.4-preview.21
+        - 0.2.4-preview.22
+        - 0.2.4-preview.23
+        - 0.2.4-preview.24
+        - 0.2.4-preview.25
+        - 0.2.4-preview.30
+        - 0.2.4-preview.31
+        - 0.2.4-preview.33
+        - 0.2.4-preview.34
+        - 0.2.4-preview.37
+        - 0.2.4-preview.41
+        - 0.2.4-preview.45
+        - 0.2.4-preview.48
+        - 0.2.4-preview.50
+        - 1.1.0-preview.2
+        - 1.1.0-preview.3
+        - 1.1.0-preview.4
+        - 1.1.1
+        - 1.1.2
+        - 1.1.3-preview.3
+        - 1.2.0-preview.1
+        - 1.2.0-preview.5
+        - 1.2.0-preview.6
+        - 1.2.0-preview.8
+        - 1.2.0-preview.9
+        - 1.2.0-preview.10
+        - 1.2.0-preview.11
+        - 1.2.0-preview.12
+        - 1.2.0
+        - 1.2.1
+        - 1.2.2
+        - 1.2.3
+        - 1.3.0-preview.1
+        - 1.3.0-preview.2
+        - 1.3.0-preview.3
+        - 1.3.0-preview.4
+        - 1.3.0-preview.5
+        - 1.3.0-preview.6
+        - 1.3.0-preview.7
+        - 1.3.0-preview.8
+        - 1.3.0-preview.9
+        - 1.3.0-preview.10
+        - 1.3.0-preview.11
+        - 1.3.0-preview.12
+        - 1.3.0-preview.13
+        - 1.3.0
+        - 1.3.1
+        - 1.3.2
+        - 1.3.3
+        - 1.3.4
+        - 1.3.5
+        - 1.3.6
+        - 1.3.7
+        - 1.3.8
+        - 1.3.9
+        - 1.4.0-pre.1
+        - 1.4.0-preview.1
+        - 1.4.0-preview.2
+        - 1.4.0-preview.3
+        - 1.4.0-preview.4
+        - 1.4.0-preview.5
+        - 1.4.1-pre.1
+        - 1.4.1-pre.2
+        - 1.4.1
+        - 1.4.2
+        - 1.4.3
+        - 1.4.4-preview.1
+        - 1.4.4-preview.2
+        - 1.4.4
+        - 1.4.5
+        - 1.4.6
+        - 1.4.7
+        - 1.4.8
+        - 1.4.9
+        - 1.4.11
+        - 1.5.0-pre.3
+        - 1.5.0-pre.4
+        - 1.5.0-pre.5
+        - 1.5.0
+        - 1.5.1
+        - 1.5.2
+        - 1.5.3
+        - 1.5.4
+        - 1.5.5
+        - 1.5.6-preview.1
+        - 1.5.6
+        - 1.6.0-pre.2
+        - 1.6.0-pre.3
+        - 1.6.0-pre.4
+        - 1.6.0
+        - 1.6.1
+        - 1.7.0-pre.1
+        compatible:
+        - 1.1.1
+        - 1.1.2
+        - 1.1.3-preview.3
+        - 1.2.0-preview.1
+        - 1.2.0-preview.5
+        - 1.2.0-preview.6
+        - 1.2.0-preview.8
+        - 1.2.0-preview.9
+        - 1.2.0-preview.10
+        - 1.2.0-preview.11
+        - 1.2.0-preview.12
+        - 1.2.0
+        - 1.2.1
+        - 1.2.2
+        - 1.2.3
+        - 1.3.0-preview.1
+        - 1.3.0-preview.2
+        - 1.3.0-preview.3
+        - 1.3.0-preview.4
+        - 1.3.0-preview.5
+        - 1.3.0-preview.6
+        - 1.3.0-preview.7
+        - 1.3.0-preview.8
+        - 1.3.0-preview.9
+        - 1.3.0-preview.10
+        - 1.3.0-preview.11
+        - 1.3.0-preview.12
+        - 1.3.0-preview.13
+        - 1.3.0
+        - 1.3.1
+        - 1.3.2
+        - 1.3.3
+        - 1.3.4
+        - 1.3.5
+        - 1.3.6
+        - 1.3.7
+        - 1.3.8
+        - 1.3.9
+        - 1.4.0-pre.1
+        - 1.4.0-preview.1
+        - 1.4.0-preview.2
+        - 1.4.0-preview.3
+        - 1.4.0-preview.4
+        - 1.4.0-preview.5
+        - 1.4.1-pre.1
+        - 1.4.1-pre.2
+        - 1.4.1
+        - 1.4.2
+        - 1.4.3
+        - 1.4.4-preview.1
+        - 1.4.4-preview.2
+        - 1.4.4
+        - 1.4.5
+        - 1.4.6
+        - 1.4.7
+        - 1.4.8
+        - 1.4.9
+        - 1.4.11
+        - 1.5.0-pre.3
+        - 1.5.0-pre.4
+        - 1.5.0-pre.5
+        - 1.5.0
+        - 1.5.1
+        - 1.5.2
+        - 1.5.3
+        - 1.5.4
+        - 1.5.5
+        - 1.5.6-preview.1
+        - 1.5.6
+        - 1.6.0-pre.2
+        - 1.6.0-pre.3
+        - 1.6.0-pre.4
+        - 1.6.0
+        - 1.6.1
+        - 1.7.0-pre.1
+        verified: 1.4.11
+      dependencies:
+      - name: com.unity.mathematics
+        version: 1.2.1
+      resolvedDependencies:
+      - name: com.unity.mathematics
+        version: 1.2.1
+      keywords: []
+      registry:
+        id: main
+        name: 
+        url: https://packages.unity.com
+        scopes: []
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
+      hideInEditor: 1
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 637568919480000000
+      documentationUrl: 
+      hasRepository: 1
+      repository:
+        type: git
+        url: https://github.cds.internal.unity3d.com/unity/burst.git
+        revision: 1253fdbbb9980df52e2be5de1e0c0ffe54a1dcbf
+        path: 
+    - packageId: com.unity.mathematics@1.2.1
+      testable: 0
+      isDirectDependency: 0
+      version: 1.2.1
+      source: 1
+      resolvedPath: C:\GitHub\WPG-5\Oren Adventure\Library\PackageCache\com.unity.mathematics@1.2.1
+      assetPath: Packages/com.unity.mathematics
+      name: com.unity.mathematics
+      displayName: Mathematics
+      author:
+        name: 
+        email: 
+        url: 
+      category: 
+      type: 
+      description: Unity's C# SIMD math library providing vector types and math functions
+        with a shader like syntax.
+      status: 4
+      errors: []
+      versions:
+        all:
+        - 0.0.12-preview.2
+        - 0.0.12-preview.5
+        - 0.0.12-preview.8
+        - 0.0.12-preview.10
+        - 0.0.12-preview.11
+        - 0.0.12-preview.13
+        - 0.0.12-preview.17
+        - 0.0.12-preview.19
+        - 0.0.12-preview.20
+        - 1.0.0-preview.1
+        - 1.0.1
+        - 1.1.0-preview.1
+        - 1.1.0
+        - 1.2.1
+        - 1.2.4
+        compatible:
+        - 0.0.12-preview.2
+        - 0.0.12-preview.5
+        - 0.0.12-preview.8
+        - 0.0.12-preview.10
+        - 0.0.12-preview.11
+        - 0.0.12-preview.13
+        - 0.0.12-preview.17
+        - 0.0.12-preview.19
+        - 0.0.12-preview.20
+        - 1.0.0-preview.1
+        - 1.0.1
+        - 1.1.0-preview.1
+        - 1.1.0
+        - 1.2.1
+        - 1.2.4
+        verified: 1.2.4
+      dependencies: []
+      resolvedDependencies: []
+      keywords:
+      - unity
+      registry:
+        id: main
+        name: 
+        url: https://packages.unity.com
+        scopes: []
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
+      hideInEditor: 1
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 637324062630000000
+      documentationUrl: 
+      hasRepository: 1
+      repository:
+        type: git
+        url: git+https://github.com/Unity-Technologies/Unity.Mathematics.git
+        revision: 71412d94b7a0b0fdbb3195a5e6559bf6a761e91a
+        path: 
   m_LocalPackages:
     m_LocalFileStatus:
-    - m_FilePath: C:\Users\andik\Downloads\com.unity.multiplayer.mlapi-0.1.0.tgz/package.json
-      m_PathExists: 0
-      m_ContentTrackingEnabled: 1
-      m_ModificationDate:
-        serializedVersion: 2
-        ticks: 0
-      m_Hash: 0
-    - m_FilePath: C:\Users\andik\Downloads\com.unity.multiplayer.mlapi-0.1.0.tgz
-      m_PathExists: 1
-      m_ContentTrackingEnabled: 1
-      m_ModificationDate:
-        serializedVersion: 2
-        ticks: 637696833801445727
-      m_Hash: 57045384
     - m_FilePath: C:\Users\andik\Downloads\ParrelSync-master\ParrelSync/package.json
       m_PathExists: 1
       m_ContentTrackingEnabled: 1
