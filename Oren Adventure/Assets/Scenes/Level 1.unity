@@ -764,7 +764,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 1920, y: 1080}
+  m_ReferenceResolution: {x: 1280, y: 720}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -869,7 +869,7 @@ MonoBehaviour:
   NetworkConfig:
     ProtocolVersion: 0
     NetworkTransport: {fileID: 1359358134}
-    PlayerPrefab: {fileID: 0}
+    PlayerPrefab: {fileID: 1817768598451111015, guid: cc31e1ed4adcba540bfff786b351f64a, type: 3}
     NetworkPrefabs:
     - Override: 0
       Prefab: {fileID: 1817768598451111015, guid: cc31e1ed4adcba540bfff786b351f64a, type: 3}

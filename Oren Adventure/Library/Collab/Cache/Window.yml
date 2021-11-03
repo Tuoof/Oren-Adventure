@@ -14,10 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SimpleSelectedItems:
     m_Keys:
-    - Packages/manifest.json
-    - Packages/packages-lock.json
+    - Assets/Prefab/Player(Clone).prefab
+    - Assets/Prefab/Player(Clone).prefab.meta
+    - Assets/Prefab/Player.prefab
+    - Assets/Scenes/Level 1.unity
     - 
-    m_Values: 000000
+    m_Values: 0101010101
   RevisionSummary: 
   ChangesSearchValue: 
   SelectedHistoryRevision: 
