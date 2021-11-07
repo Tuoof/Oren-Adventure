@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.Networking;
+using Unity.Netcode;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : NetworkBehaviour
 {
     private PlayerInputAction playerInputAction;
     private float horizontal;
@@ -25,9 +25,15 @@ public class PlayerController : MonoBehaviour
     private int extraJump;
     public int extraJumpValue;
 
+    private Camera _camera;
+    private float lastXPost;
+    public GameObject farBackground;
+
     private void Awake()
     {
         playerInputAction = new PlayerInputAction();
+        _camera = Camera.main;
+        farBackground = GameObject.FindGameObjectWithTag("FarBackground");
     }
     private void OnEnable()
     {
@@ -42,6 +48,7 @@ public class PlayerController : MonoBehaviour
     {
         extraJump = extraJumpValue;
         rb = GetComponent<Rigidbody2D>();
+        lastXPost = _camera.transform.position.x;
     }
     private void Update()
     {
@@ -55,6 +62,7 @@ public class PlayerController : MonoBehaviour
         {
             Flip();
         }
+        FollowTarget();
     }
     public void Move(InputAction.CallbackContext context)
     {
@@ -89,5 +97,16 @@ public class PlayerController : MonoBehaviour
         Vector3 Scaler = transform.localScale;
         Scaler.x *= -1;
         transform.localScale = Scaler;
+    }
+
+    public void FollowTarget()
+    {
+        _camera.transform.position = new Vector3(rb.position.x, rb.position.y, _camera.transform.position.z);
+
+        
+        float amountToMoveX = _camera.transform.position.x - lastXPost;
+        farBackground.transform.position = farBackground.transform.position + new Vector3(amountToMoveX, 0f, 0f);
+
+        lastXPost = transform.position.x;
     }
 }

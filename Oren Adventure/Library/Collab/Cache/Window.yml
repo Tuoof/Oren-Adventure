@@ -14,12 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SimpleSelectedItems:
     m_Keys:
-    - Assets/Prefab/Player(Clone).prefab
-    - Assets/Prefab/Player(Clone).prefab.meta
-    - Assets/Prefab/Player.prefab
-    - Assets/Scenes/Level 1.unity
+    - Assets/Scenes/StartMenu.unity
     - 
-    m_Values: 0101010101
+    m_Values: 0101
   RevisionSummary: 
   ChangesSearchValue: 
   SelectedHistoryRevision: 

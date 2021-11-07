@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637715205223377676
-    m_Hash: 3180875152
+      ticks: 637719010397089245
+    m_Hash: 2507359499
   m_LockFileStatus:
     m_FilePath: C:/GitHub/WPG-5/Oren Adventure/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637715205223477687
-    m_Hash: 2251974072
+      ticks: 637719010397239289
+    m_Hash: 324066426
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
@@ -731,12 +731,12 @@ m_PackageAssets:
         url: https://github.cds.internal.unity3d.com/unity/com.unity.adaptiveperformance.git
         revision: 55e99eb87dccfc8271118fb74aaa9f7eafb316b9
         path: 
-    - packageId: com.unity.collab-proxy@1.9.0
+    - packageId: com.unity.collab-proxy@1.15.1
       testable: 0
       isDirectDependency: 1
-      version: 1.9.0
+      version: 1.15.1
       source: 1
-      resolvedPath: C:\GitHub\WPG-5\Oren Adventure\Library\PackageCache\com.unity.collab-proxy@1.9.0
+      resolvedPath: C:\GitHub\WPG-5\Oren Adventure\Library\PackageCache\com.unity.collab-proxy@1.15.1
       assetPath: Packages/com.unity.collab-proxy
       name: com.unity.collab-proxy
       displayName: Version Control
@@ -812,8 +812,18 @@ m_PackageAssets:
         - 2.1.0-preview.5
         - 2.1.0-preview.6
         verified: 1.9.0
-      dependencies: []
-      resolvedDependencies: []
+      dependencies:
+      - name: com.unity.nuget.newtonsoft-json
+        version: 2.0.0
+      - name: com.unity.services.core
+        version: 1.0.1
+      resolvedDependencies:
+      - name: com.unity.nuget.newtonsoft-json
+        version: 2.0.0
+      - name: com.unity.services.core
+        version: 1.1.0-pre.10
+      - name: com.unity.modules.unitywebrequest
+        version: 1.0.0
       keywords:
       - backup
       - cloud
@@ -840,13 +850,13 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 637637594290000000
+      datePublishedTicks: 637705007780000000
       documentationUrl: 
       hasRepository: 1
       repository:
         type: git
         url: https://github.cds.internal.unity3d.com/unity/com.unity.cloud.collaborate.git
-        revision: 51447944a1e7d94937e6b7f9e887d58f5097ed13
+        revision: 44478cbd3117b13beac17ff868e64d0aed5c4071
         path: 
     - packageId: com.unity.ide.rider@2.0.7
       testable: 0
@@ -1546,7 +1556,7 @@ m_PackageAssets:
       - name: com.unity.collections
         version: 1.0.0-pre.5
       - name: com.unity.burst
-        version: 1.5.4
+        version: 1.5.5
       - name: com.unity.mathematics
         version: 1.2.1
       - name: com.unity.test-framework
@@ -1699,6 +1709,123 @@ m_PackageAssets:
         type: git
         url: https://github.cds.internal.unity3d.com/unity/com.unity.purchasing.udp.git
         revision: 798aa412c850c5cee9fe518d6e36e97e1ed6611d
+        path: 
+    - packageId: com.unity.services.relay@1.0.1-pre.3
+      testable: 0
+      isDirectDependency: 1
+      version: 1.0.1-pre.3
+      source: 1
+      resolvedPath: C:\GitHub\WPG-5\Oren Adventure\Library\PackageCache\com.unity.services.relay@1.0.1-pre.3
+      assetPath: Packages/com.unity.services.relay
+      name: com.unity.services.relay
+      displayName: Relay
+      author:
+        name: 
+        email: 
+        url: 
+      category: 
+      type: 
+      description: 'Connect the players of your peer-hosted games with Relay. Your
+        games will also benefit from improved reliability, privacy and the ability
+        to communicate across platforms. To get started, enable listen-server UDP
+        networking for your project on the Unity Dashboard.
+
+
+        Features include
+        an allocation service to join game hosts via code, multi-region support,
+        and more.'
+      status: 4
+      errors: []
+      versions:
+        all:
+        - 1.0.0-pre.4
+        - 1.0.1-pre.1
+        - 1.0.1-pre.2
+        - 1.0.1-pre.3
+        compatible:
+        - 1.0.0-pre.4
+        - 1.0.1-pre.1
+        - 1.0.1-pre.2
+        - 1.0.1-pre.3
+        verified: 
+      dependencies:
+      - name: com.unity.services.core
+        version: 1.1.0-pre.10
+      - name: com.unity.modules.unitywebrequest
+        version: 1.0.0
+      - name: com.unity.modules.unitywebrequestassetbundle
+        version: 1.0.0
+      - name: com.unity.modules.unitywebrequestaudio
+        version: 1.0.0
+      - name: com.unity.modules.unitywebrequesttexture
+        version: 1.0.0
+      - name: com.unity.modules.unitywebrequestwww
+        version: 1.0.0
+      - name: com.unity.nuget.newtonsoft-json
+        version: 2.0.0
+      - name: com.unity.services.authentication
+        version: 1.0.0-pre.6
+      - name: com.unity.transport
+        version: 1.0.0-pre.6
+      resolvedDependencies:
+      - name: com.unity.services.core
+        version: 1.1.0-pre.10
+      - name: com.unity.modules.unitywebrequest
+        version: 1.0.0
+      - name: com.unity.nuget.newtonsoft-json
+        version: 2.0.0
+      - name: com.unity.modules.unitywebrequestassetbundle
+        version: 1.0.0
+      - name: com.unity.modules.assetbundle
+        version: 1.0.0
+      - name: com.unity.modules.unitywebrequestaudio
+        version: 1.0.0
+      - name: com.unity.modules.audio
+        version: 1.0.0
+      - name: com.unity.modules.unitywebrequesttexture
+        version: 1.0.0
+      - name: com.unity.modules.imageconversion
+        version: 1.0.0
+      - name: com.unity.modules.unitywebrequestwww
+        version: 1.0.0
+      - name: com.unity.services.authentication
+        version: 1.0.0-pre.6
+      - name: com.unity.transport
+        version: 1.0.0-pre.7
+      - name: com.unity.collections
+        version: 1.0.0-pre.5
+      - name: com.unity.burst
+        version: 1.5.5
+      - name: com.unity.mathematics
+        version: 1.2.1
+      - name: com.unity.test-framework
+        version: 1.1.29
+      - name: com.unity.ext.nunit
+        version: 1.0.6
+      - name: com.unity.modules.imgui
+        version: 1.0.0
+      - name: com.unity.modules.jsonserialize
+        version: 1.0.0
+      keywords: []
+      registry:
+        id: main
+        name: 
+        url: https://packages.unity.com
+        scopes: []
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
+      hideInEditor: 1
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 637707816260000000
+      documentationUrl: 
+      hasRepository: 1
+      repository:
+        type: git
+        url: https://github.cds.internal.unity3d.com/unity/com.unity.services.relay.git
+        revision: 1592f435e478ba4d80f187927f2456fc30ee3a0c
         path: 
     - packageId: com.unity.test-framework@1.1.29
       testable: 0
@@ -1912,10 +2039,12 @@ m_PackageAssets:
         - 3.0.5
         - 3.0.6
         - 3.2.0-pre.1
+        - 3.2.0-pre.2
         - 4.0.0-pre.1
         compatible:
         - 3.0.6
         - 3.2.0-pre.1
+        - 3.2.0-pre.2
         verified: 3.0.6
       dependencies:
       - name: com.unity.ugui
@@ -2041,6 +2170,7 @@ m_PackageAssets:
         - 1.6.1
         - 1.6.2
         - 1.6.3
+        - 1.7.0-pre.1
         compatible:
         - 1.4.8
         - 1.5.0-pre.2
@@ -2064,6 +2194,7 @@ m_PackageAssets:
         - 1.6.1
         - 1.6.2
         - 1.6.3
+        - 1.7.0-pre.1
         verified: 1.4.8
       dependencies:
       - name: com.unity.modules.director
@@ -2108,6 +2239,108 @@ m_PackageAssets:
         type: git
         url: https://github.cds.internal.unity3d.com/unity/com.unity.timeline.git
         revision: 527e4364e28028f20f04fc51db671eb4bb910a26
+        path: 
+    - packageId: com.unity.transport@1.0.0-pre.7
+      testable: 0
+      isDirectDependency: 1
+      version: 1.0.0-pre.7
+      source: 1
+      resolvedPath: C:\GitHub\WPG-5\Oren Adventure\Library\PackageCache\com.unity.transport@1.0.0-pre.7
+      assetPath: Packages/com.unity.transport
+      name: com.unity.transport
+      displayName: Unity Transport
+      author:
+        name: 
+        email: 
+        url: 
+      category: 
+      type: 
+      description: Unity network transport layer - the low-level interface for sending
+        UDP data
+      status: 4
+      errors: []
+      versions:
+        all:
+        - 0.2.0-preview.4
+        - 0.2.1-preview.1
+        - 0.2.2-preview.2
+        - 0.2.3-preview.0
+        - 0.2.4-preview.0
+        - 0.3.0-preview.6
+        - 0.3.1-preview.4
+        - 0.4.0-preview.3
+        - 0.4.1-preview.1
+        - 0.5.0-preview.5
+        - 0.6.0-preview.7
+        - 0.8.0-preview.8
+        - 1.0.0-pre.2
+        - 1.0.0-pre.3
+        - 1.0.0-pre.4
+        - 1.0.0-pre.5
+        - 1.0.0-pre.6
+        - 1.0.0-pre.7
+        compatible:
+        - 0.2.0-preview.4
+        - 0.2.1-preview.1
+        - 0.2.2-preview.2
+        - 0.2.3-preview.0
+        - 0.2.4-preview.0
+        - 0.3.0-preview.6
+        - 0.3.1-preview.4
+        - 0.4.0-preview.3
+        - 0.4.1-preview.1
+        - 0.5.0-preview.5
+        - 0.6.0-preview.7
+        - 0.8.0-preview.8
+        - 1.0.0-pre.2
+        - 1.0.0-pre.3
+        - 1.0.0-pre.4
+        - 1.0.0-pre.5
+        - 1.0.0-pre.6
+        - 1.0.0-pre.7
+        verified: 
+      dependencies:
+      - name: com.unity.collections
+        version: 1.0.0-pre.5
+      - name: com.unity.burst
+        version: 1.5.5
+      - name: com.unity.mathematics
+        version: 1.2.1
+      resolvedDependencies:
+      - name: com.unity.collections
+        version: 1.0.0-pre.5
+      - name: com.unity.burst
+        version: 1.5.5
+      - name: com.unity.mathematics
+        version: 1.2.1
+      - name: com.unity.test-framework
+        version: 1.1.29
+      - name: com.unity.ext.nunit
+        version: 1.0.6
+      - name: com.unity.modules.imgui
+        version: 1.0.0
+      - name: com.unity.modules.jsonserialize
+        version: 1.0.0
+      keywords: []
+      registry:
+        id: main
+        name: 
+        url: https://packages.unity.com
+        scopes: []
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
+      hideInEditor: 1
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 637704455330000000
+      documentationUrl: 
+      hasRepository: 1
+      repository:
+        type: git
+        url: https://github.cds.internal.unity3d.com/unity/com.unity.transport.git
+        revision: 5048cef3563a02e4d6d81d147a15bc9125026326
         path: 
     - packageId: com.unity.ugui@1.0.0
       testable: 0
@@ -3965,132 +4198,6 @@ m_PackageAssets:
         url: 
         revision: 
         path: 
-    - packageId: com.unity.ext.nunit@1.0.6
-      testable: 0
-      isDirectDependency: 0
-      version: 1.0.6
-      source: 1
-      resolvedPath: C:\GitHub\WPG-5\Oren Adventure\Library\PackageCache\com.unity.ext.nunit@1.0.6
-      assetPath: Packages/com.unity.ext.nunit
-      name: com.unity.ext.nunit
-      displayName: Custom NUnit
-      author:
-        name: 
-        email: 
-        url: 
-      category: Libraries
-      type: 
-      description: Custom version of the nunit package build to work with Unity.
-        Used by the Unity Test Framework.
-      status: 4
-      errors: []
-      versions:
-        all:
-        - 0.1.5-preview
-        - 0.1.6-preview
-        - 0.1.9-preview
-        - 1.0.0
-        - 1.0.5
-        - 1.0.6
-        compatible:
-        - 0.1.5-preview
-        - 0.1.6-preview
-        - 0.1.9-preview
-        - 1.0.0
-        - 1.0.5
-        - 1.0.6
-        verified: 1.0.6
-      dependencies: []
-      resolvedDependencies: []
-      keywords:
-      - nunit
-      - unittest
-      - test
-      registry:
-        id: main
-        name: 
-        url: https://packages.unity.com
-        scopes: []
-        isDefault: 1
-        capabilities: 7
-      hasRegistry: 1
-      hideInEditor: 1
-      entitlements:
-        isAllowed: 1
-      isAssetStorePackage: 0
-      datePublishedTicks: 637429759280000000
-      documentationUrl: 
-      hasRepository: 1
-      repository:
-        type: git
-        url: https://github.cds.internal.unity3d.com/unity/com.unity.ext.nunit.git
-        revision: 29ea4d6504a5f58fb3a6934db839aa80ae6d9d88
-        path: 
-    - packageId: com.unity.nuget.mono-cecil@1.10.1
-      testable: 0
-      isDirectDependency: 0
-      version: 1.10.1
-      source: 1
-      resolvedPath: C:\GitHub\WPG-5\Oren Adventure\Library\PackageCache\com.unity.nuget.mono-cecil@1.10.1
-      assetPath: Packages/com.unity.nuget.mono-cecil
-      name: com.unity.nuget.mono-cecil
-      displayName: Mono Cecil
-      author:
-        name: 
-        email: 
-        url: 
-      category: 
-      type: 
-      description: 'The mono cecil library from https://www.nuget.org/packages/Mono.Cecil/
-
-
-        This
-        package is intended for internal Unity use only. Most Unity users will be
-        better suite using the existing community tooling.
-
-        To avoid assembly
-        clashes, please use this package if you intend to use Mono.Cecil.'
-      status: 4
-      errors: []
-      versions:
-        all:
-        - 0.1.6-preview.2
-        - 1.0.0-preview.1
-        - 1.10.0-preview.1
-        - 1.10.1-preview.1
-        - 1.10.1
-        - 1.10.2
-        compatible:
-        - 0.1.6-preview.2
-        - 1.0.0-preview.1
-        - 1.10.0-preview.1
-        - 1.10.1-preview.1
-        - 1.10.1
-        - 1.10.2
-        verified: 
-      dependencies: []
-      resolvedDependencies: []
-      keywords: []
-      registry:
-        id: main
-        name: 
-        url: https://packages.unity.com
-        scopes: []
-        isDefault: 1
-        capabilities: 7
-      hasRegistry: 1
-      hideInEditor: 1
-      entitlements:
-        isAllowed: 1
-      isAssetStorePackage: 0
-      datePublishedTicks: 637437477070000000
-      documentationUrl: 
-      hasRepository: 1
-      repository:
-        type: git
-        url: https://github.cds.internal.unity3d.com/unity/com.unity.nuget.mono-cecil.git
-        revision: c1b254abc76d079830441168142797a454b48735
-        path: 
     - packageId: com.unity.collections@1.0.0-pre.5
       testable: 0
       isDirectDependency: 0
@@ -4205,7 +4312,7 @@ m_PackageAssets:
         version: 1.1.22
       resolvedDependencies:
       - name: com.unity.burst
-        version: 1.5.4
+        version: 1.5.5
       - name: com.unity.mathematics
         version: 1.2.1
       - name: com.unity.test-framework
@@ -4239,6 +4346,648 @@ m_PackageAssets:
         type: git
         url: https://github.cds.internal.unity3d.com/unity/dots.git
         revision: 7ccff6592fefb3ff74fc8d4dc12e727b7f7e6152
+        path: 
+    - packageId: com.unity.burst@1.5.5
+      testable: 0
+      isDirectDependency: 0
+      version: 1.5.5
+      source: 1
+      resolvedPath: C:\GitHub\WPG-5\Oren Adventure\Library\PackageCache\com.unity.burst@1.5.5
+      assetPath: Packages/com.unity.burst
+      name: com.unity.burst
+      displayName: Burst
+      author:
+        name: 
+        email: 
+        url: 
+      category: 
+      type: 
+      description: Burst is a compiler that translates from IL/.NET bytecode to highly
+        optimized native code using LLVM.
+      status: 4
+      errors: []
+      versions:
+        all:
+        - 0.2.4-preview.5
+        - 0.2.4-preview.7
+        - 0.2.4-preview.11
+        - 0.2.4-preview.12
+        - 0.2.4-preview.13
+        - 0.2.4-preview.14
+        - 0.2.4-preview.15
+        - 0.2.4-preview.16
+        - 0.2.4-preview.17
+        - 0.2.4-preview.18
+        - 0.2.4-preview.19
+        - 0.2.4-preview.20
+        - 0.2.4-preview.21
+        - 0.2.4-preview.22
+        - 0.2.4-preview.23
+        - 0.2.4-preview.24
+        - 0.2.4-preview.25
+        - 0.2.4-preview.30
+        - 0.2.4-preview.31
+        - 0.2.4-preview.33
+        - 0.2.4-preview.34
+        - 0.2.4-preview.37
+        - 0.2.4-preview.41
+        - 0.2.4-preview.45
+        - 0.2.4-preview.48
+        - 0.2.4-preview.50
+        - 1.1.0-preview.2
+        - 1.1.0-preview.3
+        - 1.1.0-preview.4
+        - 1.1.1
+        - 1.1.2
+        - 1.1.3-preview.3
+        - 1.2.0-preview.1
+        - 1.2.0-preview.5
+        - 1.2.0-preview.6
+        - 1.2.0-preview.8
+        - 1.2.0-preview.9
+        - 1.2.0-preview.10
+        - 1.2.0-preview.11
+        - 1.2.0-preview.12
+        - 1.2.0
+        - 1.2.1
+        - 1.2.2
+        - 1.2.3
+        - 1.3.0-preview.1
+        - 1.3.0-preview.2
+        - 1.3.0-preview.3
+        - 1.3.0-preview.4
+        - 1.3.0-preview.5
+        - 1.3.0-preview.6
+        - 1.3.0-preview.7
+        - 1.3.0-preview.8
+        - 1.3.0-preview.9
+        - 1.3.0-preview.10
+        - 1.3.0-preview.11
+        - 1.3.0-preview.12
+        - 1.3.0-preview.13
+        - 1.3.0
+        - 1.3.1
+        - 1.3.2
+        - 1.3.3
+        - 1.3.4
+        - 1.3.5
+        - 1.3.6
+        - 1.3.7
+        - 1.3.8
+        - 1.3.9
+        - 1.4.0-pre.1
+        - 1.4.0-preview.1
+        - 1.4.0-preview.2
+        - 1.4.0-preview.3
+        - 1.4.0-preview.4
+        - 1.4.0-preview.5
+        - 1.4.1-pre.1
+        - 1.4.1-pre.2
+        - 1.4.1
+        - 1.4.2
+        - 1.4.3
+        - 1.4.4-preview.1
+        - 1.4.4-preview.2
+        - 1.4.4
+        - 1.4.5
+        - 1.4.6
+        - 1.4.7
+        - 1.4.8
+        - 1.4.9
+        - 1.4.11
+        - 1.5.0-pre.3
+        - 1.5.0-pre.4
+        - 1.5.0-pre.5
+        - 1.5.0
+        - 1.5.1
+        - 1.5.2
+        - 1.5.3
+        - 1.5.4
+        - 1.5.5
+        - 1.5.6-preview.1
+        - 1.5.6
+        - 1.6.0-pre.2
+        - 1.6.0-pre.3
+        - 1.6.0-pre.4
+        - 1.6.0
+        - 1.6.1
+        - 1.7.0-pre.1
+        compatible:
+        - 1.1.1
+        - 1.1.2
+        - 1.1.3-preview.3
+        - 1.2.0-preview.1
+        - 1.2.0-preview.5
+        - 1.2.0-preview.6
+        - 1.2.0-preview.8
+        - 1.2.0-preview.9
+        - 1.2.0-preview.10
+        - 1.2.0-preview.11
+        - 1.2.0-preview.12
+        - 1.2.0
+        - 1.2.1
+        - 1.2.2
+        - 1.2.3
+        - 1.3.0-preview.1
+        - 1.3.0-preview.2
+        - 1.3.0-preview.3
+        - 1.3.0-preview.4
+        - 1.3.0-preview.5
+        - 1.3.0-preview.6
+        - 1.3.0-preview.7
+        - 1.3.0-preview.8
+        - 1.3.0-preview.9
+        - 1.3.0-preview.10
+        - 1.3.0-preview.11
+        - 1.3.0-preview.12
+        - 1.3.0-preview.13
+        - 1.3.0
+        - 1.3.1
+        - 1.3.2
+        - 1.3.3
+        - 1.3.4
+        - 1.3.5
+        - 1.3.6
+        - 1.3.7
+        - 1.3.8
+        - 1.3.9
+        - 1.4.0-pre.1
+        - 1.4.0-preview.1
+        - 1.4.0-preview.2
+        - 1.4.0-preview.3
+        - 1.4.0-preview.4
+        - 1.4.0-preview.5
+        - 1.4.1-pre.1
+        - 1.4.1-pre.2
+        - 1.4.1
+        - 1.4.2
+        - 1.4.3
+        - 1.4.4-preview.1
+        - 1.4.4-preview.2
+        - 1.4.4
+        - 1.4.5
+        - 1.4.6
+        - 1.4.7
+        - 1.4.8
+        - 1.4.9
+        - 1.4.11
+        - 1.5.0-pre.3
+        - 1.5.0-pre.4
+        - 1.5.0-pre.5
+        - 1.5.0
+        - 1.5.1
+        - 1.5.2
+        - 1.5.3
+        - 1.5.4
+        - 1.5.5
+        - 1.5.6-preview.1
+        - 1.5.6
+        - 1.6.0-pre.2
+        - 1.6.0-pre.3
+        - 1.6.0-pre.4
+        - 1.6.0
+        - 1.6.1
+        - 1.7.0-pre.1
+        verified: 1.4.11
+      dependencies:
+      - name: com.unity.mathematics
+        version: 1.2.1
+      resolvedDependencies:
+      - name: com.unity.mathematics
+        version: 1.2.1
+      keywords: []
+      registry:
+        id: main
+        name: 
+        url: https://packages.unity.com
+        scopes: []
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
+      hideInEditor: 1
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 637632656480000000
+      documentationUrl: 
+      hasRepository: 1
+      repository:
+        type: git
+        url: https://github.cds.internal.unity3d.com/unity/burst.git
+        revision: 82ea9a89ab88f08d6485a9836e75b689ca7301f3
+        path: 
+    - packageId: com.unity.mathematics@1.2.1
+      testable: 0
+      isDirectDependency: 0
+      version: 1.2.1
+      source: 1
+      resolvedPath: C:\GitHub\WPG-5\Oren Adventure\Library\PackageCache\com.unity.mathematics@1.2.1
+      assetPath: Packages/com.unity.mathematics
+      name: com.unity.mathematics
+      displayName: Mathematics
+      author:
+        name: 
+        email: 
+        url: 
+      category: 
+      type: 
+      description: Unity's C# SIMD math library providing vector types and math functions
+        with a shader like syntax.
+      status: 4
+      errors: []
+      versions:
+        all:
+        - 0.0.12-preview.2
+        - 0.0.12-preview.5
+        - 0.0.12-preview.8
+        - 0.0.12-preview.10
+        - 0.0.12-preview.11
+        - 0.0.12-preview.13
+        - 0.0.12-preview.17
+        - 0.0.12-preview.19
+        - 0.0.12-preview.20
+        - 1.0.0-preview.1
+        - 1.0.1
+        - 1.1.0-preview.1
+        - 1.1.0
+        - 1.2.1
+        - 1.2.4
+        compatible:
+        - 0.0.12-preview.2
+        - 0.0.12-preview.5
+        - 0.0.12-preview.8
+        - 0.0.12-preview.10
+        - 0.0.12-preview.11
+        - 0.0.12-preview.13
+        - 0.0.12-preview.17
+        - 0.0.12-preview.19
+        - 0.0.12-preview.20
+        - 1.0.0-preview.1
+        - 1.0.1
+        - 1.1.0-preview.1
+        - 1.1.0
+        - 1.2.1
+        - 1.2.4
+        verified: 1.2.4
+      dependencies: []
+      resolvedDependencies: []
+      keywords:
+      - unity
+      registry:
+        id: main
+        name: 
+        url: https://packages.unity.com
+        scopes: []
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
+      hideInEditor: 1
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 637324062630000000
+      documentationUrl: 
+      hasRepository: 1
+      repository:
+        type: git
+        url: git+https://github.com/Unity-Technologies/Unity.Mathematics.git
+        revision: 71412d94b7a0b0fdbb3195a5e6559bf6a761e91a
+        path: 
+    - packageId: com.unity.ext.nunit@1.0.6
+      testable: 0
+      isDirectDependency: 0
+      version: 1.0.6
+      source: 1
+      resolvedPath: C:\GitHub\WPG-5\Oren Adventure\Library\PackageCache\com.unity.ext.nunit@1.0.6
+      assetPath: Packages/com.unity.ext.nunit
+      name: com.unity.ext.nunit
+      displayName: Custom NUnit
+      author:
+        name: 
+        email: 
+        url: 
+      category: Libraries
+      type: 
+      description: Custom version of the nunit package build to work with Unity.
+        Used by the Unity Test Framework.
+      status: 4
+      errors: []
+      versions:
+        all:
+        - 0.1.5-preview
+        - 0.1.6-preview
+        - 0.1.9-preview
+        - 1.0.0
+        - 1.0.5
+        - 1.0.6
+        compatible:
+        - 0.1.5-preview
+        - 0.1.6-preview
+        - 0.1.9-preview
+        - 1.0.0
+        - 1.0.5
+        - 1.0.6
+        verified: 1.0.6
+      dependencies: []
+      resolvedDependencies: []
+      keywords:
+      - nunit
+      - unittest
+      - test
+      registry:
+        id: main
+        name: 
+        url: https://packages.unity.com
+        scopes: []
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
+      hideInEditor: 1
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 637429759280000000
+      documentationUrl: 
+      hasRepository: 1
+      repository:
+        type: git
+        url: https://github.cds.internal.unity3d.com/unity/com.unity.ext.nunit.git
+        revision: 29ea4d6504a5f58fb3a6934db839aa80ae6d9d88
+        path: 
+    - packageId: com.unity.services.core@1.1.0-pre.10
+      testable: 0
+      isDirectDependency: 0
+      version: 1.1.0-pre.10
+      source: 1
+      resolvedPath: C:\GitHub\WPG-5\Oren Adventure\Library\PackageCache\com.unity.services.core@1.1.0-pre.10
+      assetPath: Packages/com.unity.services.core
+      name: com.unity.services.core
+      displayName: Services Core
+      author:
+        name: 
+        email: 
+        url: 
+      category: 
+      type: 
+      description: 'This package defines common components used by multiple Game
+        Service packages.
+
+        These are standardized and aim to unify the overall
+        experience of working with Game Services SDK.'
+      status: 4
+      errors: []
+      versions:
+        all:
+        - 1.0.1
+        - 1.1.0-pre.7
+        - 1.1.0-pre.8
+        - 1.1.0-pre.9
+        - 1.1.0-pre.10
+        - 1.1.0-pre.11
+        compatible:
+        - 1.0.1
+        - 1.1.0-pre.7
+        - 1.1.0-pre.8
+        - 1.1.0-pre.9
+        - 1.1.0-pre.10
+        - 1.1.0-pre.11
+        verified: 1.0.1
+      dependencies:
+      - name: com.unity.modules.unitywebrequest
+        version: 1.0.0
+      - name: com.unity.nuget.newtonsoft-json
+        version: 2.0.0
+      resolvedDependencies:
+      - name: com.unity.modules.unitywebrequest
+        version: 1.0.0
+      - name: com.unity.nuget.newtonsoft-json
+        version: 2.0.0
+      keywords: []
+      registry:
+        id: main
+        name: 
+        url: https://packages.unity.com
+        scopes: []
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
+      hideInEditor: 1
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 637693259660000000
+      documentationUrl: 
+      hasRepository: 1
+      repository:
+        type: git
+        url: https://github.cds.internal.unity3d.com/unity/operate-services-sdk.git
+        revision: e67c1e2e12bcf1a896fbde6bbc12bdab9e82db83
+        path: 
+    - packageId: com.unity.nuget.newtonsoft-json@2.0.0
+      testable: 0
+      isDirectDependency: 0
+      version: 2.0.0
+      source: 1
+      resolvedPath: C:\GitHub\WPG-5\Oren Adventure\Library\PackageCache\com.unity.nuget.newtonsoft-json@2.0.0
+      assetPath: Packages/com.unity.nuget.newtonsoft-json
+      name: com.unity.nuget.newtonsoft-json
+      displayName: Newtonsoft Json
+      author:
+        name: 
+        email: 
+        url: 
+      category: 
+      type: 
+      description: 'Newtonsoft Json for use in Unity projects and Unity packages.
+        Currently synced to version 12.0.2.
+
+
+        This package is used for advanced
+        json serialization and deserialization. Most Unity users will be better suited
+        using the existing json tools built into Unity.
+
+        To avoid assembly
+        clashes, please use this package if you intend to use Newtonsoft Json.'
+      status: 4
+      errors: []
+      versions:
+        all:
+        - 1.0.0-preview.2
+        - 1.0.0-preview.3
+        - 1.0.0-preview.4
+        - 1.0.1-preview.1
+        - 1.1.2
+        - 2.0.0-preview
+        - 2.0.0-preview.1
+        - 2.0.0-preview.2
+        - 2.0.0
+        - 2.0.1-preview.1
+        - 2.0.2
+        compatible:
+        - 1.0.0-preview.2
+        - 1.0.0-preview.3
+        - 1.0.0-preview.4
+        - 1.0.1-preview.1
+        - 1.1.2
+        - 2.0.0-preview
+        - 2.0.0-preview.1
+        - 2.0.0-preview.2
+        - 2.0.0
+        - 2.0.1-preview.1
+        - 2.0.2
+        verified: 2.0.2
+      dependencies: []
+      resolvedDependencies: []
+      keywords: []
+      registry:
+        id: main
+        name: 
+        url: https://packages.unity.com
+        scopes: []
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
+      hideInEditor: 1
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 637237898320000000
+      documentationUrl: 
+      hasRepository: 1
+      repository:
+        type: git
+        url: https://github.cds.internal.unity3d.com/unity/com.unity.nuget.newtonsoft-json.git
+        revision: d2fd6ed876261bbd82f59199ad711e7667bf633a
+        path: 
+    - packageId: com.unity.services.authentication@1.0.0-pre.6
+      testable: 0
+      isDirectDependency: 0
+      version: 1.0.0-pre.6
+      source: 1
+      resolvedPath: C:\GitHub\WPG-5\Oren Adventure\Library\PackageCache\com.unity.services.authentication@1.0.0-pre.6
+      assetPath: Packages/com.unity.services.authentication
+      name: com.unity.services.authentication
+      displayName: Authentication
+      author:
+        name: 
+        email: 
+        url: 
+      category: 
+      type: 
+      description: "A client-side SDK for managing the signing-in of a player to
+        the Unity User Authentication Service (UAS) and the provision of associated
+        identifiers and tokens for use by other packages and services. \n\nInitial
+        features include: \n\u25AA Anonymous login \n\u25AA Automatic access token
+        refresh during session \n\nNote: this is still in development."
+      status: 4
+      errors: []
+      versions:
+        all:
+        - 1.0.0-pre.4
+        - 1.0.0-pre.6
+        compatible:
+        - 1.0.0-pre.4
+        - 1.0.0-pre.6
+        verified: 
+      dependencies:
+      - name: com.unity.nuget.newtonsoft-json
+        version: 2.0.0
+      - name: com.unity.services.core
+        version: 1.1.0-pre.9
+      - name: com.unity.modules.unitywebrequest
+        version: 1.0.0
+      resolvedDependencies:
+      - name: com.unity.nuget.newtonsoft-json
+        version: 2.0.0
+      - name: com.unity.services.core
+        version: 1.1.0-pre.10
+      - name: com.unity.modules.unitywebrequest
+        version: 1.0.0
+      keywords: []
+      registry:
+        id: main
+        name: 
+        url: https://packages.unity.com
+        scopes: []
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
+      hideInEditor: 1
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 637691480060000000
+      documentationUrl: 
+      hasRepository: 1
+      repository:
+        type: git
+        url: https://github.cds.internal.unity3d.com/unity/operate-services-sdk.git
+        revision: ec86ebdb63416f941b0b55ed6bcd374ae54e4507
+        path: 
+    - packageId: com.unity.nuget.mono-cecil@1.10.1
+      testable: 0
+      isDirectDependency: 0
+      version: 1.10.1
+      source: 1
+      resolvedPath: C:\GitHub\WPG-5\Oren Adventure\Library\PackageCache\com.unity.nuget.mono-cecil@1.10.1
+      assetPath: Packages/com.unity.nuget.mono-cecil
+      name: com.unity.nuget.mono-cecil
+      displayName: Mono Cecil
+      author:
+        name: 
+        email: 
+        url: 
+      category: 
+      type: 
+      description: 'The mono cecil library from https://www.nuget.org/packages/Mono.Cecil/
+
+
+        This
+        package is intended for internal Unity use only. Most Unity users will be
+        better suite using the existing community tooling.
+
+        To avoid assembly
+        clashes, please use this package if you intend to use Mono.Cecil.'
+      status: 4
+      errors: []
+      versions:
+        all:
+        - 0.1.6-preview.2
+        - 1.0.0-preview.1
+        - 1.10.0-preview.1
+        - 1.10.1-preview.1
+        - 1.10.1
+        - 1.10.2
+        compatible:
+        - 0.1.6-preview.2
+        - 1.0.0-preview.1
+        - 1.10.0-preview.1
+        - 1.10.1-preview.1
+        - 1.10.1
+        - 1.10.2
+        verified: 
+      dependencies: []
+      resolvedDependencies: []
+      keywords: []
+      registry:
+        id: main
+        name: 
+        url: https://packages.unity.com
+        scopes: []
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
+      hideInEditor: 1
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 637437477070000000
+      documentationUrl: 
+      hasRepository: 1
+      repository:
+        type: git
+        url: https://github.cds.internal.unity3d.com/unity/com.unity.nuget.mono-cecil.git
+        revision: c1b254abc76d079830441168142797a454b48735
         path: 
     - packageId: com.unity.subsystemregistration@1.1.0
       testable: 0
@@ -4460,312 +5209,6 @@ m_PackageAssets:
         type: git
         url: https://github.cds.internal.unity3d.com/unity/2d.git
         revision: 6f9c488e4d487ead34ee4d516f0a2f4a911a8b25
-        path: 
-    - packageId: com.unity.burst@1.5.4
-      testable: 0
-      isDirectDependency: 0
-      version: 1.5.4
-      source: 1
-      resolvedPath: C:\GitHub\WPG-5\Oren Adventure\Library\PackageCache\com.unity.burst@1.5.4
-      assetPath: Packages/com.unity.burst
-      name: com.unity.burst
-      displayName: Burst
-      author:
-        name: 
-        email: 
-        url: 
-      category: 
-      type: 
-      description: Burst is a compiler that translates from IL/.NET bytecode to highly
-        optimized native code using LLVM.
-      status: 4
-      errors: []
-      versions:
-        all:
-        - 0.2.4-preview.5
-        - 0.2.4-preview.7
-        - 0.2.4-preview.11
-        - 0.2.4-preview.12
-        - 0.2.4-preview.13
-        - 0.2.4-preview.14
-        - 0.2.4-preview.15
-        - 0.2.4-preview.16
-        - 0.2.4-preview.17
-        - 0.2.4-preview.18
-        - 0.2.4-preview.19
-        - 0.2.4-preview.20
-        - 0.2.4-preview.21
-        - 0.2.4-preview.22
-        - 0.2.4-preview.23
-        - 0.2.4-preview.24
-        - 0.2.4-preview.25
-        - 0.2.4-preview.30
-        - 0.2.4-preview.31
-        - 0.2.4-preview.33
-        - 0.2.4-preview.34
-        - 0.2.4-preview.37
-        - 0.2.4-preview.41
-        - 0.2.4-preview.45
-        - 0.2.4-preview.48
-        - 0.2.4-preview.50
-        - 1.1.0-preview.2
-        - 1.1.0-preview.3
-        - 1.1.0-preview.4
-        - 1.1.1
-        - 1.1.2
-        - 1.1.3-preview.3
-        - 1.2.0-preview.1
-        - 1.2.0-preview.5
-        - 1.2.0-preview.6
-        - 1.2.0-preview.8
-        - 1.2.0-preview.9
-        - 1.2.0-preview.10
-        - 1.2.0-preview.11
-        - 1.2.0-preview.12
-        - 1.2.0
-        - 1.2.1
-        - 1.2.2
-        - 1.2.3
-        - 1.3.0-preview.1
-        - 1.3.0-preview.2
-        - 1.3.0-preview.3
-        - 1.3.0-preview.4
-        - 1.3.0-preview.5
-        - 1.3.0-preview.6
-        - 1.3.0-preview.7
-        - 1.3.0-preview.8
-        - 1.3.0-preview.9
-        - 1.3.0-preview.10
-        - 1.3.0-preview.11
-        - 1.3.0-preview.12
-        - 1.3.0-preview.13
-        - 1.3.0
-        - 1.3.1
-        - 1.3.2
-        - 1.3.3
-        - 1.3.4
-        - 1.3.5
-        - 1.3.6
-        - 1.3.7
-        - 1.3.8
-        - 1.3.9
-        - 1.4.0-pre.1
-        - 1.4.0-preview.1
-        - 1.4.0-preview.2
-        - 1.4.0-preview.3
-        - 1.4.0-preview.4
-        - 1.4.0-preview.5
-        - 1.4.1-pre.1
-        - 1.4.1-pre.2
-        - 1.4.1
-        - 1.4.2
-        - 1.4.3
-        - 1.4.4-preview.1
-        - 1.4.4-preview.2
-        - 1.4.4
-        - 1.4.5
-        - 1.4.6
-        - 1.4.7
-        - 1.4.8
-        - 1.4.9
-        - 1.4.11
-        - 1.5.0-pre.3
-        - 1.5.0-pre.4
-        - 1.5.0-pre.5
-        - 1.5.0
-        - 1.5.1
-        - 1.5.2
-        - 1.5.3
-        - 1.5.4
-        - 1.5.5
-        - 1.5.6-preview.1
-        - 1.5.6
-        - 1.6.0-pre.2
-        - 1.6.0-pre.3
-        - 1.6.0-pre.4
-        - 1.6.0
-        - 1.6.1
-        - 1.7.0-pre.1
-        compatible:
-        - 1.1.1
-        - 1.1.2
-        - 1.1.3-preview.3
-        - 1.2.0-preview.1
-        - 1.2.0-preview.5
-        - 1.2.0-preview.6
-        - 1.2.0-preview.8
-        - 1.2.0-preview.9
-        - 1.2.0-preview.10
-        - 1.2.0-preview.11
-        - 1.2.0-preview.12
-        - 1.2.0
-        - 1.2.1
-        - 1.2.2
-        - 1.2.3
-        - 1.3.0-preview.1
-        - 1.3.0-preview.2
-        - 1.3.0-preview.3
-        - 1.3.0-preview.4
-        - 1.3.0-preview.5
-        - 1.3.0-preview.6
-        - 1.3.0-preview.7
-        - 1.3.0-preview.8
-        - 1.3.0-preview.9
-        - 1.3.0-preview.10
-        - 1.3.0-preview.11
-        - 1.3.0-preview.12
-        - 1.3.0-preview.13
-        - 1.3.0
-        - 1.3.1
-        - 1.3.2
-        - 1.3.3
-        - 1.3.4
-        - 1.3.5
-        - 1.3.6
-        - 1.3.7
-        - 1.3.8
-        - 1.3.9
-        - 1.4.0-pre.1
-        - 1.4.0-preview.1
-        - 1.4.0-preview.2
-        - 1.4.0-preview.3
-        - 1.4.0-preview.4
-        - 1.4.0-preview.5
-        - 1.4.1-pre.1
-        - 1.4.1-pre.2
-        - 1.4.1
-        - 1.4.2
-        - 1.4.3
-        - 1.4.4-preview.1
-        - 1.4.4-preview.2
-        - 1.4.4
-        - 1.4.5
-        - 1.4.6
-        - 1.4.7
-        - 1.4.8
-        - 1.4.9
-        - 1.4.11
-        - 1.5.0-pre.3
-        - 1.5.0-pre.4
-        - 1.5.0-pre.5
-        - 1.5.0
-        - 1.5.1
-        - 1.5.2
-        - 1.5.3
-        - 1.5.4
-        - 1.5.5
-        - 1.5.6-preview.1
-        - 1.5.6
-        - 1.6.0-pre.2
-        - 1.6.0-pre.3
-        - 1.6.0-pre.4
-        - 1.6.0
-        - 1.6.1
-        - 1.7.0-pre.1
-        verified: 1.4.11
-      dependencies:
-      - name: com.unity.mathematics
-        version: 1.2.1
-      resolvedDependencies:
-      - name: com.unity.mathematics
-        version: 1.2.1
-      keywords: []
-      registry:
-        id: main
-        name: 
-        url: https://packages.unity.com
-        scopes: []
-        isDefault: 1
-        capabilities: 7
-      hasRegistry: 1
-      hideInEditor: 1
-      entitlements:
-        isAllowed: 1
-      isAssetStorePackage: 0
-      datePublishedTicks: 637568919480000000
-      documentationUrl: 
-      hasRepository: 1
-      repository:
-        type: git
-        url: https://github.cds.internal.unity3d.com/unity/burst.git
-        revision: 1253fdbbb9980df52e2be5de1e0c0ffe54a1dcbf
-        path: 
-    - packageId: com.unity.mathematics@1.2.1
-      testable: 0
-      isDirectDependency: 0
-      version: 1.2.1
-      source: 1
-      resolvedPath: C:\GitHub\WPG-5\Oren Adventure\Library\PackageCache\com.unity.mathematics@1.2.1
-      assetPath: Packages/com.unity.mathematics
-      name: com.unity.mathematics
-      displayName: Mathematics
-      author:
-        name: 
-        email: 
-        url: 
-      category: 
-      type: 
-      description: Unity's C# SIMD math library providing vector types and math functions
-        with a shader like syntax.
-      status: 4
-      errors: []
-      versions:
-        all:
-        - 0.0.12-preview.2
-        - 0.0.12-preview.5
-        - 0.0.12-preview.8
-        - 0.0.12-preview.10
-        - 0.0.12-preview.11
-        - 0.0.12-preview.13
-        - 0.0.12-preview.17
-        - 0.0.12-preview.19
-        - 0.0.12-preview.20
-        - 1.0.0-preview.1
-        - 1.0.1
-        - 1.1.0-preview.1
-        - 1.1.0
-        - 1.2.1
-        - 1.2.4
-        compatible:
-        - 0.0.12-preview.2
-        - 0.0.12-preview.5
-        - 0.0.12-preview.8
-        - 0.0.12-preview.10
-        - 0.0.12-preview.11
-        - 0.0.12-preview.13
-        - 0.0.12-preview.17
-        - 0.0.12-preview.19
-        - 0.0.12-preview.20
-        - 1.0.0-preview.1
-        - 1.0.1
-        - 1.1.0-preview.1
-        - 1.1.0
-        - 1.2.1
-        - 1.2.4
-        verified: 1.2.4
-      dependencies: []
-      resolvedDependencies: []
-      keywords:
-      - unity
-      registry:
-        id: main
-        name: 
-        url: https://packages.unity.com
-        scopes: []
-        isDefault: 1
-        capabilities: 7
-      hasRegistry: 1
-      hideInEditor: 1
-      entitlements:
-        isAllowed: 1
-      isAssetStorePackage: 0
-      datePublishedTicks: 637324062630000000
-      documentationUrl: 
-      hasRepository: 1
-      repository:
-        type: git
-        url: git+https://github.com/Unity-Technologies/Unity.Mathematics.git
-        revision: 71412d94b7a0b0fdbb3195a5e6559bf6a761e91a
         path: 
   m_LocalPackages:
     m_LocalFileStatus: []
