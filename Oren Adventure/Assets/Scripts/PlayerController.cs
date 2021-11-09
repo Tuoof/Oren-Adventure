@@ -6,13 +6,16 @@ using Unity.Netcode;
 
 public class PlayerController : NetworkBehaviour
 {
+    public NetworkVariable<Vector2> Position = new NetworkVariable<Vector2>();
+    [SerializeField] private PlayerInput playerInput;
+    [SerializeField] private float horizontal;
     private PlayerInputAction playerInputAction;
-    private float horizontal;
     public float speed;
     public float jumpForce;
     private float highJump;
     private float ultraJump;
 
+    public Animator animator;
     private Rigidbody2D rb;
 
     private bool facingRight = true;
@@ -32,41 +35,67 @@ public class PlayerController : NetworkBehaviour
     private void Awake()
     {
         playerInputAction = new PlayerInputAction();
-        _camera = Camera.main;
-        farBackground = GameObject.FindGameObjectWithTag("FarBackground");
+        playerInput = GetComponent<PlayerInput>();
+
+        //playerInputAction.Player.Enable();
+        // playerInputAction.Player.Jump.performed += Jump;
+        // playerInputAction.Player.Movement.performed += Move;
     }
+
     private void OnEnable()
     {
         playerInputAction.Enable();
+        playerInputAction.Player.Jump.performed += Jump;
+        // playerInputAction.Player.Movement. += Move;
     }
     private void OnDisable()
     {
         playerInputAction.Disable();
+        playerInputAction.Player.Jump.performed -= Jump;
+        // playerInputAction.Player.Movement.performed -= Move;
+    }
+    public override void OnNetworkSpawn()
+    {
+        if (IsLocalPlayer)
+        {
+            Move();            
+        }
     }
 
-    private void Start()
+    public void Start()
     {
-        extraJump = extraJumpValue;
-        rb = GetComponent<Rigidbody2D>();
-        lastXPost = _camera.transform.position.x;
+        if (IsLocalPlayer)
+        {
+            extraJump = extraJumpValue;
+            rb = GetComponent<Rigidbody2D>();
+            lastXPost = _camera.transform.position.x;
+        }
     }
     private void Update()
     {
+        if (IsLocalPlayer)
+        {
+            animator.SetFloat("Speed", Mathf.Abs(horizontal * speed));
+            Move();
+
+            if (facingRight == false && horizontal > 0)
+            {
+                Flip();
+            }
+            else if (facingRight == true && horizontal < 0)
+            {
+                Flip();
+            }
+
+            FollowTarget();
+        }
+    }
+
+    public void Move()
+    {
+        horizontal = playerInputAction.Player.Movement.ReadValue<Vector2>().x;
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
 
-        if (facingRight == false && horizontal > 0)
-        {
-            Flip();
-        }
-        else if (facingRight == true && horizontal < 0)
-        {
-            Flip();
-        }
-        FollowTarget();
-    }
-    public void Move(InputAction.CallbackContext context)
-    {
-        horizontal = context.ReadValue<Vector2>().x;
     }
     private bool IsGrounded()
     {
@@ -101,12 +130,14 @@ public class PlayerController : NetworkBehaviour
 
     public void FollowTarget()
     {
-        _camera.transform.position = new Vector3(rb.position.x, rb.position.y, _camera.transform.position.z);
+        if (IsOwner)
+        {
+            _camera.transform.position = new Vector3(rb.position.x, rb.position.y, _camera.transform.position.z);
 
-        
-        float amountToMoveX = _camera.transform.position.x - lastXPost;
-        farBackground.transform.position = farBackground.transform.position + new Vector3(amountToMoveX, 0f, 0f);
+            float amountToMoveX = _camera.transform.position.x - lastXPost;
+            farBackground.transform.position = farBackground.transform.position + new Vector3(amountToMoveX, 0f, 0f);
 
-        lastXPost = transform.position.x;
+            lastXPost = transform.position.x;
+        }
     }
 }

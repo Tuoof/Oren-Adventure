@@ -14,9 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SimpleSelectedItems:
     m_Keys:
-    - Assets/Scenes/StartMenu.unity
+    - Assets/Scripts/CameraMovement.cs
+    - ProjectSettings/ProjectVersion.txt
     - 
-    m_Values: 0101
+    m_Values: 000000
   RevisionSummary: 
   ChangesSearchValue: 
   SelectedHistoryRevision: 
