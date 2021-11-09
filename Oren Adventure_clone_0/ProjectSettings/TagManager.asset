@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: [FarBackground]
+  tags:
+  - FarBackground
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -43,4 +45,19 @@ TagManager:
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Enemy
+    uniqueID: 1917494387
+    locked: 0
+  - name: Player
+    uniqueID: 3832961805
+    locked: 0
+  - name: Objects3
+    uniqueID: 2153220143
+    locked: 0
+  - name: Objects2
+    uniqueID: 1323527477
+    locked: 0
+  - name: Objects1
+    uniqueID: 559123791
     locked: 0

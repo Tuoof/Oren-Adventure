@@ -221,7 +221,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stiffness: 7
   farBackground: {fileID: 1599577656}
-  Player: {fileID: 1817768598451111015, guid: cc31e1ed4adcba540bfff786b351f64a, type: 3}
   minHeight: 0
   maxHeight: 0
 --- !u!1 &164078690
@@ -757,10 +756,10 @@ MonoBehaviour:
   NetworkConfig:
     ProtocolVersion: 0
     NetworkTransport: {fileID: 1359358134}
-    PlayerPrefab: {fileID: 1817768598451111015, guid: cc31e1ed4adcba540bfff786b351f64a, type: 3}
+    PlayerPrefab: {fileID: 1817768598451111015, guid: d20a3f9627741d141b8d352183586a27, type: 3}
     NetworkPrefabs:
     - Override: 0
-      Prefab: {fileID: 1817768598451111015, guid: cc31e1ed4adcba540bfff786b351f64a, type: 3}
+      Prefab: {fileID: 1817768598451111015, guid: d20a3f9627741d141b8d352183586a27, type: 3}
       SourcePrefabToOverride: {fileID: 1817768598451111015, guid: cc31e1ed4adcba540bfff786b351f64a, type: 3}
       SourceHashToOverride: 0
       OverridingTargetPrefab: {fileID: 0}
@@ -772,7 +771,7 @@ MonoBehaviour:
     TimeResyncInterval: 30
     EnsureNetworkVariableLengthSafety: 0
     EnableSceneManagement: 1
-    ForceSamePrefabs: 1
+    ForceSamePrefabs: 0
     RecycleNetworkIds: 1
     NetworkIdRecycleDelay: 120
     RpcHashSize: 0

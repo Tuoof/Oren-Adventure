@@ -36,12 +36,20 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Checkpoint.cs" />
+     <Compile Include="Assets\Scripts\Level1Puzzle.cs" />
+     <Compile Include="Assets\Script Network\CameraMovement.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Input System\PlayerInputAction.cs" />
      <Compile Include="Assets\Scripts\MenuControl.cs" />
-     <Compile Include="Assets\Scripts\PlayerControllerSInglePlayer.cs" />
-     <Compile Include="Assets\Scripts\PlayerController.cs" />
-     <Compile Include="Assets\Scripts\CameraMovement.cs" />
+     <Compile Include="Assets\Scripts\PlayerControllerSP.cs" />
+     <Compile Include="Assets\Scripts\StageManager.cs" />
+     <Compile Include="Assets\Script Network\PlayerController.cs" />
+     <Compile Include="Assets\Scripts\ParallaxBG.cs" />
+     <Compile Include="Assets\Scripts\KillPlayer.cs" />
+     <Compile Include="Assets\Scripts\CameraMovementSP.cs" />
+     <Compile Include="Assets\Scripts\Weapon.cs" />
+     <Compile Include="Assets\Scripts\PuzzleButton.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.19f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>

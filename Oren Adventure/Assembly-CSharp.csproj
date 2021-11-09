@@ -36,12 +36,20 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Checkpoint.cs" />
+     <Compile Include="Assets\Scripts\Level1Puzzle.cs" />
+     <Compile Include="Assets\Script Network\CameraMovement.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Input System\PlayerInputAction.cs" />
      <Compile Include="Assets\Scripts\MenuControl.cs" />
-     <Compile Include="Assets\Scripts\PlayerController.cs" />
-     <Compile Include="Assets\Scripts\CameraMovement.cs" />
-     <Compile Include="Assets\Scripts\PlayerControllerSInglePlayer.cs" />
+     <Compile Include="Assets\Scripts\PlayerControllerSP.cs" />
+     <Compile Include="Assets\Scripts\StageManager.cs" />
+     <Compile Include="Assets\Script Network\PlayerController.cs" />
+     <Compile Include="Assets\Scripts\ParallaxBG.cs" />
+     <Compile Include="Assets\Scripts\KillPlayer.cs" />
+     <Compile Include="Assets\Scripts\CameraMovementSP.cs" />
+     <Compile Include="Assets\Scripts\PuzzleButton.cs" />
+     <Compile Include="Assets\Scripts\Bullet.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.19f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
@@ -648,6 +656,9 @@
     <Reference Include="Unity.Notifications">
         <HintPath>C:\GitHub\WPG-5\Oren Adventure\Library\ScriptAssemblies\Unity.Notifications.dll</HintPath>
     </Reference>
+    <Reference Include="PsdPlugin">
+        <HintPath>C:\GitHub\WPG-5\Oren Adventure\Library\ScriptAssemblies\PsdPlugin.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
         <HintPath>C:\GitHub\WPG-5\Oren Adventure\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
@@ -741,6 +752,9 @@
     <Reference Include="Unity.2D.Sprite.Editor">
         <HintPath>C:\GitHub\WPG-5\Oren Adventure\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.2D.Psdimporter.Editor">
+        <HintPath>C:\GitHub\WPG-5\Oren Adventure\Library\ScriptAssemblies\Unity.2D.Psdimporter.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.InternalAPIEditorBridge.001">
         <HintPath>C:\GitHub\WPG-5\Oren Adventure\Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll</HintPath>
     </Reference>
@@ -791,6 +805,12 @@
     </Reference>
     <Reference Include="Unity.2D.Common.Runtime">
         <HintPath>C:\GitHub\WPG-5\Oren Adventure\Library\ScriptAssemblies\Unity.2D.Common.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.SpriteShape.Editor">
+        <HintPath>C:\GitHub\WPG-5\Oren Adventure\Library\ScriptAssemblies\Unity.2D.SpriteShape.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.SpriteShape.Runtime">
+        <HintPath>C:\GitHub\WPG-5\Oren Adventure\Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
