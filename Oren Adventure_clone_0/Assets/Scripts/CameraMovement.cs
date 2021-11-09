@@ -7,7 +7,7 @@ public class CameraMovement : MonoBehaviour
     private Rigidbody2D rb;
     public GameObject Player;
     private float lastXPost;
-    private float minHeight, maxHeight;
+    [SerializeField] private float minHeight, maxHeight;
     private Camera _camera;
 
     // Start is called before the first frame update
@@ -34,8 +34,11 @@ public class CameraMovement : MonoBehaviour
 
     public void FollowTarget()
     {
-        _camera.transform.position = new Vector3(rb.position.x, rb.position.y, _camera.transform.position.z);
+        /*_camera.transform.position = new Vector3(rb.position.x, rb.position.y, _camera.transform.position.z);
         float clampedY = Mathf.Clamp(transform.position.y, minHeight, maxHeight);
+        _camera.transform.position = new Vector3( _camera.transform.position.x, clampedY, _camera.transform.position.z); */
+
+        _camera.transform.position = new Vector3( rb.position.x, Mathf.Clamp(rb.position.y, minHeight, maxHeight), _camera.transform.position.z);
         
         float amountToMoveX = _camera.transform.position.x - lastXPost;
         farBackground.transform.position = farBackground.transform.position + new Vector3(amountToMoveX, 0f, 0f);

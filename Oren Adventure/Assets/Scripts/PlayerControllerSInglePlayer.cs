@@ -4,8 +4,10 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using Unity.Netcode;
 
-public class PlayerControllerSinglePlayer : NetworkBehaviour
+public class PlayerControllerSInglePlayer : MonoBehaviour
 {
+    [SerializeField] private PlayerInput playerInput;
+
     public Animator animator;
     private PlayerInputAction playerInputAction;
     private float horizontal;
@@ -32,6 +34,7 @@ public class PlayerControllerSinglePlayer : NetworkBehaviour
 
     private void Awake()
     {
+        playerInput = GetComponent<PlayerInput>();
         playerInputAction = new PlayerInputAction();
         _camera = Camera.main;
         farBackground = GameObject.FindGameObjectWithTag("FarBackground");
@@ -63,7 +66,6 @@ public class PlayerControllerSinglePlayer : NetworkBehaviour
         {
             Flip();
         }
-        FollowTarget();
     }
     public void Move(InputAction.CallbackContext context)
     {
@@ -98,17 +100,6 @@ public class PlayerControllerSinglePlayer : NetworkBehaviour
         Vector3 Scaler = transform.localScale;
         Scaler.x *= -1;
         transform.localScale = Scaler;
-    }
-
-    public void FollowTarget()
-    {
-        _camera.transform.position = new Vector3(rb.position.x, rb.position.y, _camera.transform.position.z);
-
-
-        float amountToMoveX = _camera.transform.position.x - lastXPost;
-        farBackground.transform.position = farBackground.transform.position + new Vector3(amountToMoveX, 0f, 0f);
-
-        lastXPost = transform.position.x;
     }
 }
 

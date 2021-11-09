@@ -14,8 +14,10 @@ GameObject:
   - component: {fileID: 4443511981809817095}
   - component: {fileID: 8405487509300753296}
   - component: {fileID: 1817768598451111322}
+  - component: {fileID: 2457507436180757672}
   - component: {fileID: 1496104353269772543}
   - component: {fileID: 3749624546761054572}
+  - component: {fileID: 2027839184920711740}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -62,7 +64,7 @@ Rigidbody2D:
   m_Material: {fileID: 6200000, guid: 3c3dc1121ea704f4cae7a253d7b2970c, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!61 &7815341244022597716
 BoxCollider2D:
@@ -118,8 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 0296673dea589ec48b53925c33cae362,
-    type: 3}
+  m_Actions: {fileID: -944628639613478452, guid: 0296673dea589ec48b53925c33cae362, type: 3}
   m_NotificationBehavior: 2
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
@@ -133,7 +134,19 @@ MonoBehaviour:
       m_Calls: []
   m_ActionEvents:
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11500000, guid: 868125b5f8636c34c83109c585332bc3, type: 3}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: c92a552c-da1d-4e16-9181-d75b9e52a3f1
     m_ActionName: Player/Movement[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow,/XInputControllerWindows/leftStick,/XInputControllerWindows/dpad]
   - m_PersistentCalls:
@@ -157,6 +170,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71281333a5cd1ae46a5869601dc93f81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Position:
+    m_InternalValue: {x: 0, y: 0}
   speed: 20
   jumpForce: 40
   groundCheck: {fileID: 1817768598504298341}
@@ -165,7 +180,23 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   extraJumpValue: 0
+--- !u!114 &2457507436180757672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1817768598451111015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c771b719fa3594489b59e4a65568e6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stiffness: 0
   farBackground: {fileID: 0}
+  Player: {fileID: 0}
+  minHeight: -3
+  maxHeight: 1.5
 --- !u!114 &1496104353269772543
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -205,6 +236,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80d7c879794dfda4687da0e400131852, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &2027839184920711740
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1817768598451111015}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 581a32112b18d7649a65677c8aa517f2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1817768598504298340
 GameObject:
   m_ObjectHideFlags: 0
