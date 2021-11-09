@@ -6,7 +6,8 @@ using Unity.Netcode;
 
 public class PlayerController : NetworkBehaviour
 {
-    public NetworkVariable<Vector2> Position = new NetworkVariable<Vector2>();
+    // public NetworkVariable<Vector2> Position = new NetworkVariable<Vector2>();
+    [SerializeField] private Animator animator;
     private PlayerInput playerInput;
     private float horizontal;
     private PlayerInputAction playerInputAction;
@@ -61,6 +62,7 @@ public class PlayerController : NetworkBehaviour
     {
         if (IsLocalPlayer)
         {
+            animator.SetFloat("Speed", Mathf.Abs(horizontal * speed));
             horizontal = playerInputAction.Player.Movement.ReadValue<Vector2>().x;
             Move();
 
