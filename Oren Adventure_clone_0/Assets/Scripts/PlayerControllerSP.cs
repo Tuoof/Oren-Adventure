@@ -22,6 +22,7 @@ public class PlayerControllerSP : MonoBehaviour
     // Shooting Variable
     public GameObject Bullet;
     public Transform firePoint;
+    public int Damage = 10;
 
     // Check if player in the ground variable
     private bool isGrounded;
@@ -94,15 +95,20 @@ public class PlayerControllerSP : MonoBehaviour
         if (context.started)
         {
             Instantiate(Bullet, firePoint.position, firePoint.rotation);
+            RaycastHit2D hitInfo = Physics2D.Raycast(firePoint.position, firePoint.right);
+            SpiderEnemy spiderEnemy = hitInfo.transform.GetComponent<SpiderEnemy>();
+            if (spiderEnemy !=null)
+            {
+                spiderEnemy.TakeDamage(Damage);
+            }
         }
     }
 
     void Flip()
     {
         facingRight = !facingRight;
-        Vector3 Scaler = transform.localScale;
-        Scaler.x *= -1;
-        transform.localScale = Scaler;
+
+        transform.Rotate(0f, 180f, 0f);
     }
 }
 

@@ -5,6 +5,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     [SerializeField] float speed;
+    public int Damage = 10;
     private Rigidbody2D rb;
     // Start is called before the first frame update
     void Start()
@@ -23,6 +24,11 @@ public class Bullet : MonoBehaviour
     void OnTriggerEnter2D (Collider2D hitInfo)
     {
         Debug.Log(hitInfo.name);
+        SpiderEnemy spiderEnemy = hitInfo.GetComponent<SpiderEnemy>();
+        if(spiderEnemy != null)
+        {
+            spiderEnemy.TakeDamage(Damage);
+        }
         Destroy(gameObject);
     }
 }

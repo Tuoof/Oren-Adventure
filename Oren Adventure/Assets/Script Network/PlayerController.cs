@@ -1,108 +1,126 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Unity.Netcode;
 
+[RequireComponent(typeof(Rigidbody2D))]
+
 public class PlayerController : NetworkBehaviour
 {
-    // public NetworkVariable<Vector2> Position = new NetworkVariable<Vector2>();
-    [SerializeField] private Animator animator;
+    // public NetworkVariable<float> horizontal = new NetworkVariable<float>();
     private PlayerInput playerInput;
-    private float horizontal;
+    public Animator animator;
     private PlayerInputAction playerInputAction;
-    public float speed;
-    public float jumpForce;
-    private float highJump, ultraJump;
-
     private Rigidbody2D rb;
 
+    // Movement and Jump variable
+    private float horizontal;
+    public float speed, jumpForce;
+    private float highJump, ultraJump;
+    private int extraJump;
+    public int extraJumpValue;
     private bool facingRight = true;
 
+    // Shooting Variable
+    public GameObject Bullet;
+    public Transform firePoint;
+    public int Damage = 10;
+
+    // Check if player in the ground variable
     private bool isGrounded;
     public Transform groundCheck;
     public float checkRadius;
     public LayerMask groundLayer;
 
-    private int extraJump;
-    public int extraJumpValue;
-
     private void Awake()
     {
         playerInputAction = new PlayerInputAction();
         playerInput = GetComponent<PlayerInput>();
-
-        //playerInputAction.Player.Enable();
-        // playerInputAction.Player.Jump.performed += Jump;
-        // playerInputAction.Player.Movement.performed += Move;
     }
 
     private void OnEnable()
     {
         playerInputAction.Enable();
-        // playerInputAction.Player.Jump.performed += Jump;
     }
     private void OnDisable()
     {
         playerInputAction.Disable();
-        // playerInputAction.Player.Jump.performed -= Jump;
     }
     public override void OnNetworkSpawn()
     {
-        if (IsLocalPlayer)
-        {
-            extraJump = extraJumpValue;
-            rb = GetComponent<Rigidbody2D>();
-            playerInputAction.Player.Movement.performed += ctx => setMovement(ctx.ReadValue<Vector2>().x);
-            playerInputAction.Player.Movement.canceled += ctx => ResetMovement();
-            playerInputAction.Player.Jump.performed += ctx => Jump();
-        }
+        extraJump = extraJumpValue;
+        rb = GetComponent<Rigidbody2D>();
+        playerInputAction.Player.Movement.performed += ctx => setMovementServerRpc(ctx.ReadValue<Vector2>().x);
+        playerInputAction.Player.Movement.canceled += ctx => ResetMovementServerRpc();
+        playerInputAction.Player.Jump.started += ctx => JumpServerRpc();
+        playerInputAction.Player.Shoot.started += ctx => Shoot();
     }
     private void Update()
     {
-        if (IsLocalPlayer)
-        {
-            animator.SetFloat("Speed", Mathf.Abs(horizontal * speed));
-            Move();
+        // if (!IsOwner) { return; }
 
-            if (facingRight == false && horizontal > 0)
-            {
-                Flip();
-            }
-            else if (facingRight == true && horizontal < 0)
-            {
-                Flip();
-            }
+        animator.SetFloat("Speed", Mathf.Abs(horizontal * speed));
+        MoveServerRpc();
+
+        if (facingRight == false && horizontal > 0)
+        {
+            Flip();
+        }
+        else if (facingRight == true && horizontal < 0)
+        {
+            Flip();
         }
     }
 
-    private void setMovement(float movement)
+    [ServerRpc]
+    private void setMovementServerRpc(float movement)
     {
+        // if (!IsOwner) { return; }
         horizontal = movement;
     }
-    private void ResetMovement()
+    [ServerRpc]
+    private void ResetMovementServerRpc()
     {
+        // if (!IsOwner) { return; }
         horizontal = Vector2.zero.x;
     }
-    public void Move()
+    [ServerRpc]
+    public void MoveServerRpc()
     {
+        if (!IsServer) { return; }
+
         // horizontal = playerInputAction.Player.Movement.ReadValue<Vector2>().x;
+        // rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+
+        MoveClientRpc();
+    }
+
+    [ClientRpc]
+    public void MoveClientRpc(ServerRpcParams rpcParams = default)
+    {
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
     }
+
     private bool IsGrounded()
     {
         extraJump = extraJumpValue;
         return Physics2D.OverlapCircle(groundCheck.position, checkRadius, groundLayer);
     }
-
-    public void Jump()
+    [ServerRpc]
+    public void JumpServerRpc()
     {
-        // InputAction.CallbackContext context
+        if (!IsServer) { return; }
+
+        JumpClientRpc();
+    }
+
+    [ClientRpc]
+    public void JumpClientRpc(ServerRpcParams rpcParams = default)
+    {
         if (extraJump == 0 && IsGrounded())
         {
             rb.velocity = Vector2.up * jumpForce;
         }
-        if (extraJump > 0)
+        else if (extraJump > 0)
         {
             rb.velocity = Vector2.up * jumpForce;
             extraJump--;
@@ -116,8 +134,18 @@ public class PlayerController : NetworkBehaviour
     void Flip()
     {
         facingRight = !facingRight;
-        Vector3 Scaler = transform.localScale;
-        Scaler.x *= -1;
-        transform.localScale = Scaler;
+
+        transform.Rotate(0f, 180f, 0f);
+    }
+
+    public void Shoot()
+    {
+        Instantiate(Bullet, firePoint.position, firePoint.rotation);
+        RaycastHit2D hitInfo = Physics2D.Raycast(firePoint.position, firePoint.right);
+        SpiderEnemy spiderEnemy = hitInfo.transform.GetComponent<SpiderEnemy>();
+        if (spiderEnemy != null)
+        {
+            spiderEnemy.TakeDamage(Damage);
+        }
     }
 }

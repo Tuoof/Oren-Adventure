@@ -27,26 +27,21 @@ public class CameraMovement : NetworkBehaviour
         FollowTarget();
     }
 
-    private void FollowPlayer()
-    {
-        float t = Time.deltaTime * stiffness;
-        transform.position = new Vector3(Mathf.Lerp(transform.position.x, _camera.transform.position.x, t), Mathf.Lerp(transform.position.y, _camera.transform.position.y, t), transform.position.z);
-    }
+    // private void FollowPlayer()
+    // {
+    //     float t = Time.deltaTime * stiffness;
+    //     transform.position = new Vector3(Mathf.Lerp(transform.position.x, _camera.transform.position.x, t), Mathf.Lerp(transform.position.y, _camera.transform.position.y, t), transform.position.z);
+    // }
 
     public void FollowTarget()
     {
-        if (IsOwner)
-        {
-            /*_camera.transform.position = new Vector3(rb.position.x, rb.position.y, _camera.transform.position.z);
-        float clampedY = Mathf.Clamp(transform.position.y, minHeight, maxHeight);
-        _camera.transform.position = new Vector3( _camera.transform.position.x, clampedY, _camera.transform.position.z); */
+        if (!IsOwner) { return; }
 
-        _camera.transform.position = new Vector3( rb.position.x, Mathf.Clamp(rb.position.y, minHeight, maxHeight), _camera.transform.position.z);
-        
+        _camera.transform.position = new Vector3(rb.position.x, Mathf.Clamp(rb.position.y, minHeight, maxHeight), _camera.transform.position.z);
+
         float amountToMoveX = _camera.transform.position.x - lastXPost;
         farBackground.transform.position = farBackground.transform.position + new Vector3(amountToMoveX, 0f, 0f);
 
         lastXPost = transform.position.x;
-        }
     }
 }
