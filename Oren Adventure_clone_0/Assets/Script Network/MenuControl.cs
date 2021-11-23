@@ -9,15 +9,15 @@ public class MenuControl : NetworkBehaviour
     private Text m_HostIpInput;
 
     [SerializeField]
-    private string m_LobbySceneName = "Lobby";
+    private string m_SceneName = "Lobby";
 
-    public void StartLocalGame()
+    public void StartHostGame()
     {
         // Update the current HostNameInput with whatever we have set in the NetworkConfig as default
         var unetTransport = (UNetTransport)NetworkManager.Singleton.NetworkConfig.NetworkTransport;
         if (unetTransport) m_HostIpInput.text = "127.0.0.1";
         LobbyControl.isHosting = true; //This is a work around to handle proper instantiation of a scene for the first time.(See LobbyControl.cs)
-        SceneTransitionHandler.sceneTransitionHandler.SwitchScene(m_LobbySceneName);
+        SceneTransitionHandler.sceneTransitionHandler.SwitchScene(m_SceneName);
     }
 
     public void JoinLocalGame()
@@ -32,7 +32,13 @@ public class MenuControl : NetworkBehaviour
                 utpTransport.ConnectPort = 7777;
             }
             LobbyControl.isHosting = false; //This is a work around to handle proper instantiation of a scene for the first time.  (See LobbyControl.cs)
-            SceneTransitionHandler.sceneTransitionHandler.SwitchScene(m_LobbySceneName);
+            SceneTransitionHandler.sceneTransitionHandler.SwitchScene(m_SceneName);
         }
+    }
+
+    public void StartLocalGame()
+    {
+        m_SceneName = "LevelTutorial";
+        SceneTransitionHandler.sceneTransitionHandler.SwitchScene(m_SceneName);
     }
 }

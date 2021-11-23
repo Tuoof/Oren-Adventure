@@ -130,7 +130,7 @@ public class OldPlayerController : NetworkBehaviour
 
     public void Jump()
     {
-        if (/*NetworkManager.Singleton.IsClient*/ IsHost)
+        if (IsLocalPlayer)
         {
             if (extraJump == 0 && IsGrounded())
             {

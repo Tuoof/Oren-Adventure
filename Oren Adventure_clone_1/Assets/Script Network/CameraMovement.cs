@@ -5,19 +5,20 @@ public class CameraMovement : NetworkBehaviour
 {
     [SerializeField] private float stiffness;
     public GameObject farBackground;
-    private Rigidbody2D rb;
+    // private Rigidbody2D rb;
     public GameObject Player;
     private float lastXPost;
     [SerializeField] private float minHeight, maxHeight;
-    private Camera _camera;
+    [SerializeField ]private Camera _camera;
 
     // Start is called before the first frame update
     public override void OnNetworkSpawn()
     {
         lastXPost = transform.position.x;
         _camera = Camera.main;
-        rb = GetComponent<Rigidbody2D>();
+        // rb = GetComponent<Rigidbody2D>();
         farBackground = GameObject.FindGameObjectWithTag("FarBackground");
+        Player = GameObject.FindGameObjectWithTag("Player");
         //cameraTarget = Player.transform;
     }
 
@@ -37,7 +38,7 @@ public class CameraMovement : NetworkBehaviour
     {
         if (!IsOwner) { return; }
 
-        _camera.transform.position = new Vector3(rb.position.x, Mathf.Clamp(rb.position.y, minHeight, maxHeight), _camera.transform.position.z);
+        _camera.transform.position = new Vector3(Player.transform.position.x, Mathf.Clamp(Player.transform.position.y, minHeight, maxHeight), _camera.transform.position.z);
 
         float amountToMoveX = _camera.transform.position.x - lastXPost;
         farBackground.transform.position = farBackground.transform.position + new Vector3(amountToMoveX, 0f, 0f);

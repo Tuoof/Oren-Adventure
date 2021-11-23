@@ -18,9 +18,11 @@ public class KillPlayer : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.name=="Player")
+        if(collision.tag =="Player")
         {
             stageManager.RespawnPlayer();
+            // FindObjectOfType<PlayerHealth>().DealDamage();
+            PlayerHealth.instance.DealDamage();
         }
     }
 }

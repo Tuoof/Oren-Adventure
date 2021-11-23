@@ -10,7 +10,7 @@ public class LobbyControl : NetworkBehaviour
     public static bool isHosting;
 
     [SerializeField]
-    private string m_InGameSceneName = "InGame";
+    private string m_SceneName = "Level1";
     
     // Minimum player count required to transition to next level
     [SerializeField]
@@ -183,7 +183,7 @@ public class LobbyControl : NetworkBehaviour
                 SceneTransitionHandler.sceneTransitionHandler.OnClientLoadedScene -= ClientLoadedScene;
 
                 //Transition to the ingame scene
-                SceneTransitionHandler.sceneTransitionHandler.SwitchScene(m_InGameSceneName);
+                SceneTransitionHandler.sceneTransitionHandler.SwitchScene(m_SceneName);
             }
         }
     }

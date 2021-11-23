@@ -5,6 +5,7 @@ public class CameraMovementSP : NetworkBehaviour
 {
     [SerializeField] private float stiffness;
     public GameObject farBackground;
+    // public GameObject Player;
     private Rigidbody2D rb;
     private float lastXPost;
     [SerializeField] private float minHeight, maxHeight;
@@ -15,6 +16,7 @@ public class CameraMovementSP : NetworkBehaviour
     {
         lastXPost = transform.position.x;
         _camera = Camera.main;
+        // Player = GameObject.FindGameObjectWithTag("Player");
         rb = GetComponent<Rigidbody2D>();
     }
 
