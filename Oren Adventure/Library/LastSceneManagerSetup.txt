@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/InitBootStrap.unity
+- path: Assets/Scenes/InitTestScene637739485619520171.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

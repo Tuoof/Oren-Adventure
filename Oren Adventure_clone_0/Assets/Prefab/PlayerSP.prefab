@@ -114,9 +114,10 @@ GameObject:
   - component: {fileID: 985761258532968334}
   - component: {fileID: 8710394030654487487}
   - component: {fileID: 6931717227043381371}
-  - component: {fileID: 985761258532968333}
-  - component: {fileID: 985761258532968330}
-  - component: {fileID: 985761258532968331}
+  - component: {fileID: 7858301266192808306}
+  - component: {fileID: 5701308021956927096}
+  - component: {fileID: -621496772245967403}
+  - component: {fileID: -1326729177883558160}
   m_Layer: 9
   m_Name: PlayerSP
   m_TagString: Player
@@ -220,7 +221,7 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 985761258532968333}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayerControllerSInglePlayer, Assembly-CSharp
         m_MethodName: Move
         m_Mode: 0
@@ -236,7 +237,7 @@ MonoBehaviour:
     m_ActionName: Player/Movement[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow,/XInputControllerWindows/leftStick,/XInputControllerWindows/dpad]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 985761258532968333}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayerControllerSInglePlayer, Assembly-CSharp
         m_MethodName: Jump
         m_Mode: 0
@@ -252,7 +253,7 @@ MonoBehaviour:
     m_ActionName: Player/Jump[/Keyboard/space,/XInputControllerWindows/buttonSouth]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 985761258532968333}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayerControllerSP, Assembly-CSharp
         m_MethodName: Shoot
         m_Mode: 0
@@ -271,7 +272,7 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &985761258532968333
+--- !u!114 &7858301266192808306
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -283,12 +284,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 868125b5f8636c34c83109c585332bc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerInput: {fileID: 0}
+  playerInput: {fileID: 6931717227043381371}
   animator: {fileID: 985761258525692224}
-  speed: 15
-  jumpForce: 50
-  extraJumpValue: 1
-  Bullet: {fileID: 3263582606053999581, guid: 42944af0e19b89040b704bc38b7c8587, type: 3}
+  speed: 30
+  jumpForce: 40
+  extraJumpValue: 0
+  Bullet: {fileID: 0}
   firePoint: {fileID: 1482847890383245317}
   Damage: 10
   groundCheck: {fileID: 985761258648077454}
@@ -296,7 +297,37 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 256
---- !u!114 &985761258532968330
+--- !u!114 &5701308021956927096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 985761258532968332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c771b719fa3594489b59e4a65568e6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stiffness: 0
+  farBackground: {fileID: 0}
+  minHeight: 0
+  maxHeight: 0
+--- !u!114 &-621496772245967403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 985761258532968332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73efdf6e82ad39d4283598449eca8afa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealth: 0
+  maxHealth: 5
+--- !u!114 &-1326729177883558160
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -312,20 +343,6 @@ MonoBehaviour:
   farBackground: {fileID: 0}
   minHeight: -3
   maxHeight: 1.5
---- !u!114 &985761258532968331
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 985761258532968332}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73efdf6e82ad39d4283598449eca8afa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentHealth: 0
-  maxHealth: 5
 --- !u!1 &985761258648077455
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,7 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerHealth : MonoBehaviour
+namespace oren_Advent
+{
+    public class PlayerHealth : MonoBehaviour
 {
     public static PlayerHealth instance;
     public int currentHealth, maxHealth;
@@ -31,4 +33,5 @@ public class PlayerHealth : MonoBehaviour
             gameObject.SetActive(false);
         }
     }
+}
 }

@@ -2,27 +2,31 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class KillPlayer : MonoBehaviour
+namespace oren_Advent
 {
-    public StageManager stageManager;
-    // Start is called before the first frame update
-    void Start()
+    public class KillPlayer : MonoBehaviour
     {
-        stageManager = FindObjectOfType<StageManager>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.tag =="Player")
+        public StageManager stageManager;
+        // Start is called before the first frame update
+        void Start()
         {
-            stageManager.RespawnPlayer();
-            // FindObjectOfType<PlayerHealth>().DealDamage();
-            PlayerHealth.instance.DealDamage();
+            stageManager = FindObjectOfType<StageManager>();
+        }
+
+        // Update is called once per frame
+        void Update()
+        {
+
+        }
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            if (collision.tag == "Player")
+            {
+                stageManager.RespawnPlayer();
+                // FindObjectOfType<PlayerHealth>().DealDamage();
+                PlayerHealth.instance.DealDamage();
+            }
         }
     }
 }
+

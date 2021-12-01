@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
-using Unity.Netcode;
 
-public class CameraMovementSP : NetworkBehaviour
+public class CameraMovementSP : MonoBehaviour
 {
     [SerializeField] private float stiffness;
     public GameObject farBackground;

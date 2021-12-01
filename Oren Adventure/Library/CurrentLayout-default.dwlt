@@ -19,9 +19,9 @@ MonoBehaviour:
     width: 1536
     height: 790.4
   m_ShowMode: 4
-  m_Title: Collaborate
+  m_Title: Project
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 875, y: 542}
+  m_MinSize: {x: 875, y: 742}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &2
@@ -46,7 +46,7 @@ MonoBehaviour:
     y: 0
     width: 1536
     height: 790
-  m_MinSize: {x: 875, y: 542}
+  m_MinSize: {x: 875, y: 742}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
   m_TopViewHeight: 30
@@ -74,8 +74,8 @@ MonoBehaviour:
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
   m_LoadedToolbars:
-  - {fileID: 23}
-  m_MainToolbar: {fileID: 23}
+  - {fileID: 26}
+  m_MainToolbar: {fileID: 26}
   m_LastLoadedLayoutName: 
 --- !u!114 &4
 MonoBehaviour:
@@ -112,17 +112,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Children:
   - {fileID: 6}
-  - {fileID: 11}
+  - {fileID: 13}
   m_Position:
     serializedVersion: 2
     x: 0
     y: 30
     width: 1536
     height: 740
-  m_MinSize: {x: 660, y: 492}
-  m_MaxSize: {x: 14002, y: 14042}
+  m_MinSize: {x: 678, y: 692}
+  m_MaxSize: {x: 14001, y: 18042}
   vertical: 0
-  controlID: 560
+  controlID: 5316
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -137,17 +137,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Children:
   - {fileID: 7}
-  - {fileID: 10}
+  - {fileID: 12}
   m_Position:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1055.2
+    width: 981.6
     height: 740
-  m_MinSize: {x: 403, y: 492}
-  m_MaxSize: {x: 10001, y: 14042}
+  m_MinSize: {x: 403, y: 692}
+  m_MaxSize: {x: 10001, y: 18042}
   vertical: 1
-  controlID: 513
+  controlID: 5317
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -167,12 +167,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1055.2
+    width: 981.6
     height: 448.8
-  m_MinSize: {x: 403, y: 221}
-  m_MaxSize: {x: 8003, y: 4021}
+  m_MinSize: {x: 403, y: 421}
+  m_MaxSize: {x: 8003, y: 8021}
   vertical: 0
-  controlID: 514
+  controlID: 5318
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -183,23 +183,76 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
+  m_Name: SceneHierarchyWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 355.2
+    width: 434.4
     height: 448.8
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 13}
+  m_ActualView: {fileID: 15}
   m_Panes:
-  - {fileID: 13}
+  - {fileID: 15}
+  - {fileID: 16}
+  m_Selected: 0
+  m_LastSelected: 1
+--- !u!114 &9
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 10}
+  - {fileID: 11}
+  m_Position:
+    serializedVersion: 2
+    x: 434.4
+    y: 0
+    width: 547.19995
+    height: 448.8
+  m_MinSize: {x: 202, y: 421}
+  m_MaxSize: {x: 4002, y: 8021}
+  vertical: 1
+  controlID: 5319
+--- !u!114 &10
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: GameView
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 547.19995
+    height: 228
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 14}
+  m_Panes:
+  - {fileID: 14}
+  - {fileID: 17}
   m_Selected: 0
   m_LastSelected: 0
---- !u!114 &9
+--- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -214,20 +267,18 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 355.2
-    y: 0
-    width: 699.99994
-    height: 448.8
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 15}
+    x: 0
+    y: 228
+    width: 547.19995
+    height: 220.79999
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 18}
   m_Panes:
-  - {fileID: 12}
-  - {fileID: 14}
-  - {fileID: 15}
-  m_Selected: 2
+  - {fileID: 18}
+  m_Selected: 0
   m_LastSelected: 0
---- !u!114 &10
+--- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -244,17 +295,17 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 448.8
-    width: 1055.2
+    width: 981.6
     height: 291.2
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
-  m_ActualView: {fileID: 16}
+  m_ActualView: {fileID: 19}
   m_Panes:
-  - {fileID: 16}
-  - {fileID: 17}
+  - {fileID: 19}
+  - {fileID: 20}
   m_Selected: 0
   m_LastSelected: 1
---- !u!114 &11
+--- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -264,27 +315,27 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: CollaborateWindow
+  m_Name: InspectorWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1055.2
+    x: 981.6
     y: 0
-    width: 480.80005
+    width: 554.4
     height: 740
-  m_MinSize: {x: 257, y: 421}
-  m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 22}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 21}
   m_Panes:
-  - {fileID: 18}
-  - {fileID: 19}
-  - {fileID: 20}
   - {fileID: 21}
   - {fileID: 22}
-  m_Selected: 4
-  m_LastSelected: 0
---- !u!114 &12
+  - {fileID: 23}
+  - {fileID: 24}
+  - {fileID: 25}
+  m_Selected: 0
+  m_LastSelected: 4
+--- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -304,10 +355,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 356.2
-    y: 19
-    width: 697.99994
-    height: 427.8
+    x: 434.4
+    y: 73.6
+    width: 545.19995
+    height: 207
   m_ViewDataDictionary: {fileID: 0}
   m_SerializedViewNames: []
   m_SerializedViewValues: []
@@ -319,7 +370,7 @@ MonoBehaviour:
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
-  m_MaximizeOnPlay: 1
+  m_MaximizeOnPlay: 0
   m_UseMipMap: 0
   m_VSyncEnabled: 0
   m_Gizmos: 0
@@ -342,7 +393,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
+    m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -351,29 +402,29 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 1536
-      height: 700
-    m_Scale: {x: 0.8101852, y: 0.8101852}
-    m_Translation: {x: 768, y: 350}
+      width: 545.19995
+      height: 186
+    m_Scale: {x: 0.21527778, y: 0.21527778}
+    m_Translation: {x: 272.59998, y: 93}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -947.9314
+      x: -1266.2709
       y: -432
-      width: 1895.8628
+      width: 2532.5417
       height: 864
     m_MinimalGUI: 1
-  m_defaultScale: 0.8101852
-  m_LastWindowPixelSize: {x: 1920, y: 901.25}
+  m_defaultScale: 0.21527778
+  m_LastWindowPixelSize: {x: 681.49994, y: 258.75}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
   m_XRRenderMode: 0
   m_RenderTexture: {fileID: 0}
---- !u!114 &13
+--- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -395,26 +446,26 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 73.6
-    width: 354.2
+    width: 433.4
     height: 427.8
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 4a510000
+      m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: d6f6ffffaef8ffff2efaffff54faffff92faffff44fbffff08520000846c0000ca6c0000
+      m_ExpandedIDs: 4c6fffffac70ffffdc71ffffd67bfffff27bffffd27cffffd27dffffee7dffffd67effff7c80ffff9880ffffcc80ffff7281ffff8e81ffffc281ffff2c82ffff4882ffff8882fffffc82ffff1483ffff3683ffffdc83ffff7284ffffac9affff369cffff249dffff169effffe69effffb4a2ffffe4a2ffff0ea3ffff38a3fffff2a3ffff4aa5ffff10a6ffffd8a6ffff68a7ffff16a8ffff32a8ffff0ea9ffffa0acffffbcacffff72adffff24b1ffff04b2ffff74b3ffff90b3ffff6eb4ffffceb4ffff60b9ffff08beffff9cbeffff6ec4ffff7cc6ffff6eccffff66cdffff5aceffff7eceffff78cfffffa0d0ffffd4d1ffff24d3ffff5cd4fffffed4ffff00d7ffff00ebffff40faffff9eae00004eaf000056af000082af0000beca0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: PlayersInLobby
-        m_OriginalName: PlayersInLobby
+        m_Name: BGGua3
+        m_OriginalName: BGGua3
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 27814
+        m_UserData: 44886
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
         m_OriginalEventType: 0
@@ -427,7 +478,488 @@ MonoBehaviour:
       m_IsLocked: 0
     m_CurrentSortingName: TransformSorting
   m_WindowGUID: 4c969a2b90040154d917609493e03593
---- !u!114 &14
+--- !u!114 &16
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 13401, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Test Runner
+    m_Image: {fileID: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 0
+    y: 73.6
+    width: 433.4
+    height: 427.8
+  m_ViewDataDictionary: {fileID: 0}
+  m_Spl:
+    ID: 8865
+    splitterInitialOffset: 0
+    currentActiveSplitter: -1
+    realSizes:
+    - 268
+    - 89.600006
+    relativeSizes:
+    - 0.75
+    - 0.25
+    minSizes:
+    - 32
+    - 32
+    maxSizes:
+    - 0
+    - 0
+    lastTotalSize: 357.6
+    splitSize: 6
+    xOffset: 0
+    m_Version: 1
+    oldRealSizes: 
+    oldMinSizes: 
+    oldMaxSizes: 
+    oldSplitSize: 0
+  m_TestTypeToolbarIndex: 1
+  m_PlayModeTestListGUI:
+    m_Window: {fileID: 16}
+    m_NewResultList:
+    - id: 1005
+      uniqueId: '[Oren Adventure][suite]'
+      name: Oren Adventure
+      fullName: Oren Adventure
+      resultStatus: 2
+      duration: 0.2085295
+      messages: One or more child tests had errors
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 
+      parentUniqueId: 
+    - id: 1049
+      uniqueId: '[PlayTest][C:/GitHub/WPG-5/Oren Adventure/Library/ScriptAssemblies/PlayTest.dll][suite]'
+      name: PlayTest.dll
+      fullName: C:/GitHub/WPG-5/Oren Adventure/Library/ScriptAssemblies/PlayTest.dll
+      resultStatus: 2
+      duration: 0.1487917
+      messages: One or more child tests had errors
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1045
+      parentUniqueId: '[Oren Adventure][suite]'
+    - id: 1046
+      uniqueId: PlayTest.dll/[PlayTest][campaignTest][suite]
+      name: campaignTest
+      fullName: campaignTest
+      resultStatus: 2
+      duration: 0.1379564
+      messages: One or more child tests had errors
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1049
+      parentUniqueId: '[PlayTest][C:/GitHub/WPG-5/Oren Adventure/Library/ScriptAssemblies/PlayTest.dll][suite]'
+    - id: 1047
+      uniqueId: PlayTest.dll/campaignTest/[PlayTest][campaignTest.campaignTestSimplePasses]
+      name: campaignTestSimplePasses
+      fullName: campaignTest.campaignTestSimplePasses
+      resultStatus: 1
+      duration: 0.0250153
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1046
+      parentUniqueId: PlayTest.dll/[PlayTest][campaignTest][suite]
+    - id: 1048
+      uniqueId: PlayTest.dll/campaignTest/[PlayTest][campaignTest.campaignTestWithEnumeratorPasses]
+      name: campaignTestWithEnumeratorPasses
+      fullName: campaignTest.campaignTestWithEnumeratorPasses
+      resultStatus: 2
+      duration: 0.0929597
+      messages: 'System.NullReferenceException : Object reference not set to an instance
+        of an object'
+      output: 
+      stacktrace: "  at oren_Advent.PlayerControllerSP.Jump () [0x00043] in C:\\GitHub\\WPG-5\\Oren
+        Adventure\\Assets\\Scripts\\PlayerControllerSP.cs:105 \r\n  at campaignTest+<campaignTestWithEnumeratorPasses>d__2.MoveNext
+        () [0x0003c] in C:\\GitHub\\WPG-5\\Oren Adventure\\Assets\\PlayTest\\campaignTest.cs:29
+        \r\n  at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a]
+        in C:\\GitHub\\WPG-5\\Oren Adventure\\Library\\PackageCache\\com.unity.test-framework@1.1.29\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:46 "
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1046
+      parentUniqueId: PlayTest.dll/[PlayTest][campaignTest][suite]
+    m_ResultText: "campaignTestWithEnumeratorPasses (0.093s)\n---\nSystem.NullReferenceException
+      : Object reference not set to an instance of an object\n---\nat oren_Advent.PlayerControllerSP.Jump
+      () [0x00043] in C:\\GitHub\\WPG-5\\Oren Adventure\\Assets\\Scripts\\PlayerControllerSP.cs:105
+      \r\n  at campaignTest+<campaignTestWithEnumeratorPasses>d__2.MoveNext () [0x0003c]
+      in C:\\GitHub\\WPG-5\\Oren Adventure\\Assets\\PlayTest\\campaignTest.cs:29
+      \r\n  at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a]
+      in C:\\GitHub\\WPG-5\\Oren Adventure\\Library\\PackageCache\\com.unity.test-framework@1.1.29\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:46"
+    m_ResultStacktrace: "  at oren_Advent.PlayerControllerSP.Jump () [0x00043] in
+      C:\\GitHub\\WPG-5\\Oren Adventure\\Assets\\Scripts\\PlayerControllerSP.cs:105
+      \r\n  at campaignTest+<campaignTestWithEnumeratorPasses>d__2.MoveNext () [0x0003c]
+      in C:\\GitHub\\WPG-5\\Oren Adventure\\Assets\\PlayTest\\campaignTest.cs:29
+      \r\n  at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a]
+      in C:\\GitHub\\WPG-5\\Oren Adventure\\Library\\PackageCache\\com.unity.test-framework@1.1.29\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:46 "
+    m_TestListState:
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: d54f07ac
+      m_LastClickedID: -1408806955
+      m_ExpandedIDs: 3e076afcf05baa05d92bc5299ed728568a66335fffffff7f
+      m_RenameOverlay:
+        m_UserAcceptedRename: 0
+        m_Name: 
+        m_OriginalName: 
+        m_EditFieldRect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        m_UserData: 0
+        m_IsWaitingForDelay: 0
+        m_IsRenaming: 0
+        m_OriginalEventType: 11
+        m_IsRenamingFilename: 0
+        m_ClientGUIView: {fileID: 0}
+      m_SearchString: 
+    m_TestRunnerUIFilter:
+      PassedHidden: 0
+      FailedHidden: 0
+      NotRunHidden: 0
+      m_SearchString: 
+      selectedCategoryMask: 0
+      availableCategories:
+      - Uncategorized
+    m_SelectedOption: 0
+  m_EditModeTestListGUI:
+    m_Window: {fileID: 16}
+    m_NewResultList:
+    - id: 1000
+      uniqueId: '[Oren Adventure][suite]'
+      name: Oren Adventure
+      fullName: Oren Adventure
+      resultStatus: 2
+      duration: 0.2509531
+      messages: One or more child tests had errors
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 
+      parentUniqueId: 
+    - id: 1018
+      uniqueId: '[Tests.dll][suite]'
+      name: Tests.dll
+      fullName: C:/GitHub/WPG-5/Oren Adventure/Library/ScriptAssemblies/Tests.dll
+      resultStatus: 2
+      duration: 0.2056575
+      messages: One or more child tests had errors
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1006
+      parentUniqueId: '[Oren Adventure][suite]'
+    - id: 1006
+      uniqueId: Tests.dll/[Tests][suite]
+      name: Tests
+      fullName: Tests
+      resultStatus: 2
+      duration: 0.2044639
+      messages: One or more child tests had errors
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1005
+      parentUniqueId: '[Tests.dll][suite]'
+    - id: 1001
+      uniqueId: Tests.dll/Tests/[Tests][Tests.bulletTest][suite]
+      name: bulletTest
+      fullName: Tests.bulletTest
+      resultStatus: 1
+      duration: 0.119539
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1010
+      parentUniqueId: Tests.dll/[Tests][suite]
+    - id: 1005
+      uniqueId: Tests.dll/Tests/bulletTest/[Tests][Tests.bulletTest.bulletCollisionTest]
+      name: bulletCollisionTest
+      fullName: Tests.bulletTest.bulletCollisionTest
+      resultStatus: 1
+      duration: 0.0266199
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1004
+      parentUniqueId: Tests.dll/Tests/[Tests][Tests.bulletTest][suite]
+    - id: 1016
+      uniqueId: Tests.dll/Tests/bulletTest/[Tests][Tests.bulletTest.bulletMoveDistanceTest]
+      name: bulletMoveDistanceTest
+      fullName: Tests.bulletTest.bulletMoveDistanceTest
+      resultStatus: 1
+      duration: 0.0526458
+      messages: 
+      output: 'bullet passed max distance
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1014
+      parentUniqueId: Tests.dll/Tests/[Tests][Tests.bulletTest][suite]
+    - id: 1001
+      uniqueId: Tests.dll/Tests/[Tests][Tests.healthTest][suite]
+      name: healthTest
+      fullName: Tests.healthTest
+      resultStatus: 1
+      duration: 0.0468243
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1006
+      parentUniqueId: Tests.dll/[Tests][suite]
+    - id: 1002
+      uniqueId: Tests.dll/Tests/healthTest/[Tests][Tests.healthTest.currentHealthTest]
+      name: currentHealthTest
+      fullName: Tests.healthTest.currentHealthTest
+      resultStatus: 1
+      duration: 0.0208866
+      messages: 
+      output: 'Value are equal
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: Tests.dll/Tests/[Tests][Tests.healthTest][suite]
+    - id: 1003
+      uniqueId: Tests.dll/Tests/healthTest/[Tests][Tests.healthTest.healthMinusTest]
+      name: healthMinusTest
+      fullName: Tests.healthTest.healthMinusTest
+      resultStatus: 1
+      duration: 0.0032784
+      messages: 
+      output: 'Gameobject destroyed
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: Tests.dll/Tests/[Tests][Tests.healthTest][suite]
+    - id: 1004
+      uniqueId: Tests.dll/Tests/healthTest/[Tests][Tests.healthTest.healthTestWithEnumeratorPasses]
+      name: healthTestWithEnumeratorPasses
+      fullName: Tests.healthTest.healthTestWithEnumeratorPasses
+      resultStatus: 1
+      duration: 0.01698
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: Tests.dll/Tests/[Tests][Tests.healthTest][suite]
+    - id: 1004
+      uniqueId: Tests.dll/Tests/healthTest/[Tests][Tests.healthTest.MaxHealthTest]
+      name: MaxHealthTest
+      fullName: Tests.healthTest.MaxHealthTest
+      resultStatus: 1
+      duration: 0.001775
+      messages: 
+      output: 'Value are equal
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: Tests.dll/Tests/[Tests][Tests.healthTest][suite]
+    - id: 1015
+      uniqueId: Tests.dll/Tests/[Tests][Tests.playerTest][suite]
+      name: playerTest
+      fullName: Tests.playerTest
+      resultStatus: 2
+      duration: 0.0352383
+      messages: One or more child tests had errors
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1019
+      parentUniqueId: Tests.dll/[Tests][suite]
+    - id: 1016
+      uniqueId: Tests.dll/Tests/playerTest/[Tests][Tests.playerTest.playerJumpTest]
+      name: playerJumpTest
+      fullName: Tests.playerTest.playerJumpTest
+      resultStatus: 2
+      duration: 0.0099434
+      messages: 'System.NullReferenceException : Object reference not set to an instance
+        of an object'
+      output: 
+      stacktrace: "  at oren_Advent.PlayerControllerSP.Jump () [0x00043] in C:\\GitHub\\WPG-5\\Oren
+        Adventure\\Assets\\Scripts\\PlayerControllerSP.cs:100 \r\n  at Tests.playerTest.playerJumpTest
+        () [0x0001e] in C:\\GitHub\\WPG-5\\Oren Adventure\\Assets\\Tests\\playerTest.cs:22
+        \r\n  at (wrapper managed-to-native) System.Reflection.MonoMethod.InternalInvoke(System.Reflection.MonoMethod,object,object[],System.Exception&)\r\n 
+        at System.Reflection.MonoMethod.Invoke (System.Object obj, System.Reflection.BindingFlags
+        invokeAttr, System.Reflection.Binder binder, System.Object[] parameters,
+        System.Globalization.CultureInfo culture) [0x00032] in <695d1cc93cca45069c528c15c9fdd749>:0 "
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1015
+      parentUniqueId: Tests.dll/Tests/[Tests][Tests.playerTest][suite]
+    - id: 1017
+      uniqueId: Tests.dll/Tests/playerTest/[Tests][Tests.playerTest.playerTestWithEnumeratorPasses]
+      name: playerTestWithEnumeratorPasses
+      fullName: Tests.playerTest.playerTestWithEnumeratorPasses
+      resultStatus: 1
+      duration: 0.0151676
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1015
+      parentUniqueId: Tests.dll/Tests/[Tests][Tests.playerTest][suite]
+    m_ResultText: "playerJumpTest (0.010s)\n---\nSystem.NullReferenceException :
+      Object reference not set to an instance of an object\n---\nat oren_Advent.PlayerControllerSP.Jump
+      () [0x00043] in C:\\GitHub\\WPG-5\\Oren Adventure\\Assets\\Scripts\\PlayerControllerSP.cs:100
+      \r\n  at Tests.playerTest.playerJumpTest () [0x0001e] in C:\\GitHub\\WPG-5\\Oren
+      Adventure\\Assets\\Tests\\playerTest.cs:22 \r\n  at (wrapper managed-to-native)
+      System.Reflection.MonoMethod.InternalInvoke(System.Reflection.MonoMethod,object,object[],System.Exception&)\r\n 
+      at System.Reflection.MonoMethod.Invoke (System.Object obj, System.Reflection.BindingFlags
+      invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo
+      culture) [0x00032] in <695d1cc93cca45069c528c15c9fdd749>:0"
+    m_ResultStacktrace: "  at oren_Advent.PlayerControllerSP.Jump () [0x00043] in
+      C:\\GitHub\\WPG-5\\Oren Adventure\\Assets\\Scripts\\PlayerControllerSP.cs:100
+      \r\n  at Tests.playerTest.playerJumpTest () [0x0001e] in C:\\GitHub\\WPG-5\\Oren
+      Adventure\\Assets\\Tests\\playerTest.cs:22 \r\n  at (wrapper managed-to-native)
+      System.Reflection.MonoMethod.InternalInvoke(System.Reflection.MonoMethod,object,object[],System.Exception&)\r\n 
+      at System.Reflection.MonoMethod.Invoke (System.Object obj, System.Reflection.BindingFlags
+      invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo
+      culture) [0x00032] in <695d1cc93cca45069c528c15c9fdd749>:0 "
+    m_TestListState:
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 0ad42529
+      m_LastClickedID: 690344970
+      m_ExpandedIDs: cccc7ef1e557abf73e076afc1ba0fd3b8359db416205597f9d3a5f7fffffff7f
+      m_RenameOverlay:
+        m_UserAcceptedRename: 0
+        m_Name: 
+        m_OriginalName: 
+        m_EditFieldRect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        m_UserData: 0
+        m_IsWaitingForDelay: 0
+        m_IsRenaming: 0
+        m_OriginalEventType: 11
+        m_IsRenamingFilename: 0
+        m_ClientGUIView: {fileID: 0}
+      m_SearchString: 
+    m_TestRunnerUIFilter:
+      PassedHidden: 0
+      FailedHidden: 0
+      NotRunHidden: 0
+      m_SearchString: 
+      selectedCategoryMask: 0
+      availableCategories:
+      - Uncategorized
+--- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -505,7 +1037,7 @@ MonoBehaviour:
   m_CurrentEditor: 1
   m_LayerEditor:
     m_SelectedLayerIndex: 0
---- !u!114 &15
+--- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -525,10 +1057,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 355.2
-    y: 73.6
-    width: 697.99994
-    height: 427.8
+    x: 434.4
+    y: 301.6
+    width: 545.19995
+    height: 199.79999
   m_ViewDataDictionary: {fileID: 0}
   m_ShowContextualTools: 0
   m_WindowGUID: cc27987af1a868c49b0894db9c0f5429
@@ -541,9 +1073,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 4.233903, y: -4.270994, z: 90}
+    m_Target: {x: 28.50494, y: -12.9031925, z: -2.3579721}
     speed: 2
-    m_Value: {x: 4.233823, y: -4.2710066, z: 89.99999}
+    m_Value: {x: 28.50494, y: -12.9031925, z: -2.3579721}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -594,9 +1126,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 23.907305
+    m_Target: 19.612284
     speed: 2
-    m_Value: 23.907541
+    m_Value: 19.612284
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -621,7 +1153,7 @@ MonoBehaviour:
   m_SceneVisActive: 1
   m_LastLockedObject: {fileID: 0}
   m_ViewIsLockedToObject: 0
---- !u!114 &16
+--- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -643,7 +1175,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 522.4
-    width: 1054.2
+    width: 980.6
     height: 270.2
   m_ViewDataDictionary: {fileID: 0}
   m_SearchFilter:
@@ -659,22 +1191,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Tests
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Tests
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\GitHub\WPG-5\Oren Adventure
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 150}
-    m_SelectedIDs: ea500000
-    m_LastClickedID: 20714
-    m_ExpandedIDs: 000000008450000086500000885000008a5000008c5000008e50000090500000925000009450000096500000985000009a5000009c5000009e500000a0500000a2500000a4500000a6500000a8500000aa500000ac500000ae500000b0500000b2500000b4500000b6500000b8500000ba500000bc500000be500000c0500000c2500000d250000000ca9a3b
+    scrollPos: {x: 0, y: 405.8}
+    m_SelectedIDs: 28510000
+    m_LastClickedID: 20776
+    m_ExpandedIDs: 000000009450000096500000985000009a5000009c5000009e500000a0500000a2500000a4500000a6500000a8500000aa500000ac500000ae500000b0500000b2500000b4500000b6500000b8500000ba500000bc500000be500000c0500000c2500000c4500000c6500000c8500000ca500000cc500000ce500000d0500000d2500000f0500000f452000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -702,7 +1234,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000008450000086500000885000008a5000008c5000008e50000090500000925000009450000096500000985000009a5000009c5000009e500000a0500000a2500000a4500000a6500000a8500000aa500000ac500000ae500000b0500000b2500000b4500000b6500000b8500000ba500000bc500000be500000c0500000c250000000ca9a3b
+    m_ExpandedIDs: 000000009450000096500000985000009a5000009c5000009e500000a0500000a2500000a4500000a6500000a8500000aa500000ac500000ae500000b0500000b2500000b4500000b6500000b8500000ba500000bc500000be500000c0500000c2500000c4500000c6500000c8500000ca500000cc500000ce500000d0500000d2500000f452000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -730,7 +1262,7 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c623000036540000067100000a4800007e4700004a510000745000002850000038510000265000003a5100002a510000fe4e0000d24f0000de59000000000000
+    m_ExpandedInstanceIDs: c623000036540000067100000a4800007e4700004a510000745000002850000038510000265000003a5100002a510000fe4e0000d24f0000de590000000000005a520000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -746,7 +1278,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 10}
+      m_ClientGUIView: {fileID: 8}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -758,7 +1290,7 @@ MonoBehaviour:
     m_GridSize: 64
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 207
---- !u!114 &17
+--- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -780,10 +1312,10 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 522.4
-    width: 1054.2
+    width: 980.6
     height: 270.2
   m_ViewDataDictionary: {fileID: 0}
---- !u!114 &18
+--- !u!114 &21
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -803,9 +1335,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1055.2001
+    x: 981.60004
     y: 73.6
-    width: 479.80005
+    width: 553.4
     height: 719
   m_ViewDataDictionary: {fileID: 0}
   m_ObjectsLockedBeforeSerialization: []
@@ -820,7 +1352,7 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_PreviewWindow: {fileID: 0}
---- !u!114 &19
+--- !u!114 &22
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -851,7 +1383,7 @@ MonoBehaviour:
     m_PrefName: Preview_TilemapBrushInspector
   m_Palette: {fileID: 406017993683894127, guid: 65b25ede721eb1b4f873cf7e24a6f6f3, type: 3}
   m_DrawGizmos: 0
---- !u!114 &20
+--- !u!114 &23
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -880,10 +1412,10 @@ MonoBehaviour:
   m_MipLevel: 0
   m_Zoom: 1.9748572
   m_ScrollPosition: {x: 0, y: 0}
-  m_SelectedObject: {fileID: 102900000, guid: 2d87826d7a13bd445be62ea4c13659d5, type: 3}
+  m_SelectedObject: {fileID: 0}
   m_SelectedSpriteRectGUID: 00000000000000000000000000000000
   m_LastUsedModuleTypeName: 
---- !u!114 &21
+--- !u!114 &24
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -908,7 +1440,7 @@ MonoBehaviour:
     width: 477
     height: 719
   m_ViewDataDictionary: {fileID: 0}
---- !u!114 &22
+--- !u!114 &25
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -933,7 +1465,7 @@ MonoBehaviour:
     width: 479.80005
     height: 719
   m_ViewDataDictionary: {fileID: 0}
---- !u!114 &23
+--- !u!114 &26
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -14,8 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SimpleSelectedItems:
     m_Keys:
+    - Assets/Scripts Network/SpiderEnemy.cs
+    - Assets/Scripts/Bullet.cs
+    - Assets/Scripts/Bullet.cs.meta
+    - Assets/Scripts/BulletSP.cs
+    - Assets/Scripts/BulletSP.cs.meta
+    - Assets/Scripts/PlayerControllerSP.cs
+    - Assets/Scripts/SpiderEnemySP.cs
+    - Assets/Tests/healthTest.cs
     - 
-    m_Values: 01
+    m_Values: 000000000000000000
   RevisionSummary: 
   ChangesSearchValue: 
   SelectedHistoryRevision: 

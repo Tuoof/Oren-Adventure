@@ -1,0 +1,19 @@
+{
+    "name": "oren_Networking",
+    "rootNamespace": "",
+    "references": [
+        "GUID:3b8ed52f1b5c64994af4c4e0aa4b6c4b",
+        "GUID:1491147abca9d7d4bb7105af628b223e",
+        "GUID:75469ad4d38634e559750d17036d5f7c",
+        "GUID:208a9037d93166f4d9e9ec641729693c"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

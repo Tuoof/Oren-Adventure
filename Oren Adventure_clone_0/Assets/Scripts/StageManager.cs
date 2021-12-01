@@ -2,7 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StageManager : MonoBehaviour
+namespace oren_Advent
+{
+    public class StageManager : MonoBehaviour
 {
     public GameObject currentCheckpoint;
     private PlayerControllerSP player;
@@ -22,4 +24,5 @@ public class StageManager : MonoBehaviour
         Debug.Log("player respawn");
         player.transform.position = currentCheckpoint.transform.position;
     }
+}
 }
