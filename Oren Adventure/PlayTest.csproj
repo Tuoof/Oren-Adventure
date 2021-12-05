@@ -36,8 +36,8 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\PlayTest\campaignTest.cs" />
-     <None Include="Assets\PlayTest\PlayTest.asmdef" />
+     <Compile Include="Assets\Test Play\campaignTest.cs" />
+     <None Include="Assets\Test Play\PlayTest.asmdef" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.19f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
@@ -613,6 +613,12 @@
     </Reference>
     <Reference Include="UnityEditor.TestRunner">
         <HintPath>C:\GitHub\WPG-5\Oren Adventure\Library\ScriptAssemblies\UnityEditor.TestRunner.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Netcode.Runtime">
+        <HintPath>C:\GitHub\WPG-5\Oren Adventure\Library\ScriptAssemblies\Unity.Netcode.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Services.Core.Networking">
+        <HintPath>C:\GitHub\WPG-5\Oren Adventure\Library\ScriptAssemblies\Unity.Services.Core.Networking.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
         <HintPath>C:\GitHub\WPG-5\Oren Adventure\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>

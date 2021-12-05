@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 713}
   m_MaxSize: {x: 14002, y: 18063}
   vertical: 0
-  controlID: 4895
+  controlID: 4874
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -45,10 +45,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 465.6
+    x: 355.2
     y: 73.6
-    width: 587.6
-    height: 207
+    width: 697.2
+    height: 227
   m_ViewDataDictionary: {fileID: 0}
   m_SerializedViewNames: []
   m_SerializedViewValues: []
@@ -92,23 +92,23 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 587.6
-      height: 186
-    m_Scale: {x: 0.21527779, y: 0.21527778}
-    m_Translation: {x: 293.8, y: 93}
+      width: 697.2
+      height: 206
+    m_Scale: {x: 0.23842593, y: 0.23842593}
+    m_Translation: {x: 348.6, y: 103}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -1364.7483
+      x: -1462.0894
       y: -432
-      width: 2729.4966
+      width: 2924.1787
       height: 864
     m_MinimalGUI: 1
-  m_defaultScale: 0.21527778
-  m_LastWindowPixelSize: {x: 734.5, y: 258.75}
+  m_defaultScale: 0.23842593
+  m_LastWindowPixelSize: {x: 871.5, y: 283.75}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -133,12 +133,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1055.2
+    width: 1054.4
     height: 740
   m_MinSize: {x: 403, y: 713}
   m_MaxSize: {x: 10001, y: 18063}
   vertical: 1
-  controlID: 4896
+  controlID: 4875
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -158,12 +158,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1055.2
-    height: 448.8
+    width: 1054.4
+    height: 468.8
   m_MinSize: {x: 403, y: 442}
   m_MaxSize: {x: 8003, y: 8042}
   vertical: 0
-  controlID: 4897
+  controlID: 4876
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -181,8 +181,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 465.6
-    height: 448.8
+    width: 355.2
+    height: 468.8
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 6}
@@ -213,15 +213,15 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 73.6
-    width: 464.6
-    height: 427.8
+    width: 354.2
+    height: 447.8
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 00ebffff40faffff
+      m_ExpandedIDs: 3efbffff584f0000604f00007a4f0000824f0000a64f0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -267,11 +267,11 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 73.6
-    width: 465
+    width: 433
     height: 428
   m_ViewDataDictionary: {fileID: 0}
   m_Spl:
-    ID: 147
+    ID: 2661
     splitterInitialOffset: 0
     currentActiveSplitter: -1
     realSizes:
@@ -294,7 +294,7 @@ MonoBehaviour:
     oldMinSizes: 
     oldMaxSizes: 
     oldSplitSize: 0
-  m_TestTypeToolbarIndex: 1
+  m_TestTypeToolbarIndex: 0
   m_PlayModeTestListGUI:
     m_Window: {fileID: 7}
     m_NewResultList:
@@ -302,9 +302,9 @@ MonoBehaviour:
       uniqueId: '[Oren Adventure][suite]'
       name: Oren Adventure
       fullName: Oren Adventure
-      resultStatus: 0
-      duration: 0
-      messages: 
+      resultStatus: 2
+      duration: 0.2121625
+      messages: One or more child tests had errors
       output: 
       stacktrace: 
       notRunnable: 0
@@ -314,13 +314,96 @@ MonoBehaviour:
       categories: []
       parentId: 
       parentUniqueId: 
-    m_ResultText: 
-    m_ResultStacktrace: 
+    - id: 1049
+      uniqueId: '[PlayTest][C:/GitHub/WPG-5/Oren Adventure/Library/ScriptAssemblies/PlayTest.dll][suite]'
+      name: PlayTest.dll
+      fullName: C:/GitHub/WPG-5/Oren Adventure/Library/ScriptAssemblies/PlayTest.dll
+      resultStatus: 2
+      duration: 0.1169841
+      messages: One or more child tests had errors
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1045
+      parentUniqueId: '[Oren Adventure][suite]'
+    - id: 1046
+      uniqueId: PlayTest.dll/[PlayTest][campaignTest][suite]
+      name: campaignTest
+      fullName: campaignTest
+      resultStatus: 2
+      duration: 0.105871
+      messages: One or more child tests had errors
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1049
+      parentUniqueId: '[PlayTest][C:/GitHub/WPG-5/Oren Adventure/Library/ScriptAssemblies/PlayTest.dll][suite]'
+    - id: 1047
+      uniqueId: PlayTest.dll/campaignTest/[PlayTest][campaignTest.campaignTestSimplePasses]
+      name: campaignTestSimplePasses
+      fullName: campaignTest.campaignTestSimplePasses
+      resultStatus: 2
+      duration: 0.0269647
+      messages: 'System.NullReferenceException : Object reference not set to an instance
+        of an object'
+      output: 
+      stacktrace: "  at campaignTest.campaignTestSimplePasses () [0x0000b] in C:\\GitHub\\WPG-5\\Oren
+        Adventure\\Assets\\Test Play\\campaignTest.cs:18 \r\n  at (wrapper managed-to-native)
+        System.Reflection.MonoMethod.InternalInvoke(System.Reflection.MonoMethod,object,object[],System.Exception&)\r\n 
+        at System.Reflection.MonoMethod.Invoke (System.Object obj, System.Reflection.BindingFlags
+        invokeAttr, System.Reflection.Binder binder, System.Object[] parameters,
+        System.Globalization.CultureInfo culture) [0x00032] in <695d1cc93cca45069c528c15c9fdd749>:0 "
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1046
+      parentUniqueId: PlayTest.dll/[PlayTest][campaignTest][suite]
+    - id: 1048
+      uniqueId: PlayTest.dll/campaignTest/[PlayTest][campaignTest.campaignTestWithEnumeratorPasses]
+      name: campaignTestWithEnumeratorPasses
+      fullName: campaignTest.campaignTestWithEnumeratorPasses
+      resultStatus: 1
+      duration: 0.0398433
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1046
+      parentUniqueId: PlayTest.dll/[PlayTest][campaignTest][suite]
+    m_ResultText: "campaignTestSimplePasses (0.027s)\n---\nSystem.NullReferenceException
+      : Object reference not set to an instance of an object\n---\nat campaignTest.campaignTestSimplePasses
+      () [0x0000b] in C:\\GitHub\\WPG-5\\Oren Adventure\\Assets\\Test Play\\campaignTest.cs:18
+      \r\n  at (wrapper managed-to-native) System.Reflection.MonoMethod.InternalInvoke(System.Reflection.MonoMethod,object,object[],System.Exception&)\r\n 
+      at System.Reflection.MonoMethod.Invoke (System.Object obj, System.Reflection.BindingFlags
+      invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo
+      culture) [0x00032] in <695d1cc93cca45069c528c15c9fdd749>:0"
+    m_ResultStacktrace: "  at campaignTest.campaignTestSimplePasses () [0x0000b]
+      in C:\\GitHub\\WPG-5\\Oren Adventure\\Assets\\Test Play\\campaignTest.cs:18
+      \r\n  at (wrapper managed-to-native) System.Reflection.MonoMethod.InternalInvoke(System.Reflection.MonoMethod,object,object[],System.Exception&)\r\n 
+      at System.Reflection.MonoMethod.Invoke (System.Object obj, System.Reflection.BindingFlags
+      invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo
+      culture) [0x00032] in <695d1cc93cca45069c528c15c9fdd749>:0 "
     m_TestListState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 3e076afcffffff7f
+      m_SelectedIDs: 99177278
+      m_LastClickedID: 2020743065
+      m_ExpandedIDs: 3e076afcf05baa05d92bc5299ed728568a66335fffffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -354,8 +437,8 @@ MonoBehaviour:
       uniqueId: '[Oren Adventure][suite]'
       name: Oren Adventure
       fullName: Oren Adventure
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.2609369
       messages: 
       output: 
       stacktrace: 
@@ -366,13 +449,282 @@ MonoBehaviour:
       categories: []
       parentId: 
       parentUniqueId: 
-    m_ResultText: 
+    - id: 1018
+      uniqueId: '[Tests.dll][suite]'
+      name: Tests.dll
+      fullName: C:/GitHub/WPG-5/Oren Adventure/Library/ScriptAssemblies/Tests.dll
+      resultStatus: 1
+      duration: 0.1816143
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1006
+      parentUniqueId: '[Oren Adventure][suite]'
+    - id: 1006
+      uniqueId: Tests.dll/[Tests][suite]
+      name: Tests
+      fullName: Tests
+      resultStatus: 1
+      duration: 0.1808071
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1005
+      parentUniqueId: '[Tests.dll][suite]'
+    - id: 1001
+      uniqueId: Tests.dll/Tests/[Tests][Tests.bulletTest][suite]
+      name: bulletTest
+      fullName: Tests.bulletTest
+      resultStatus: 1
+      duration: 0.074027
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1010
+      parentUniqueId: Tests.dll/[Tests][suite]
+    - id: 1005
+      uniqueId: Tests.dll/Tests/bulletTest/[Tests][Tests.bulletTest.bulletCollisionTest]
+      name: bulletCollisionTest
+      fullName: Tests.bulletTest.bulletCollisionTest
+      resultStatus: 1
+      duration: 0.0016081
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1004
+      parentUniqueId: Tests.dll/Tests/[Tests][Tests.bulletTest][suite]
+    - id: 1016
+      uniqueId: Tests.dll/Tests/bulletTest/[Tests][Tests.bulletTest.bulletMoveDistanceTest]
+      name: bulletMoveDistanceTest
+      fullName: Tests.bulletTest.bulletMoveDistanceTest
+      resultStatus: 1
+      duration: 0.0610958
+      messages: 
+      output: 'bullet passed max distance
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1014
+      parentUniqueId: Tests.dll/Tests/[Tests][Tests.bulletTest][suite]
+    - id: 1001
+      uniqueId: Tests.dll/Tests/[Tests][Tests.healthTest][suite]
+      name: healthTest
+      fullName: Tests.healthTest
+      resultStatus: 1
+      duration: 0.0476699
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1006
+      parentUniqueId: Tests.dll/[Tests][suite]
+    - id: 1002
+      uniqueId: Tests.dll/Tests/healthTest/[Tests][Tests.healthTest.currentHealthTest]
+      name: currentHealthTest
+      fullName: Tests.healthTest.currentHealthTest
+      resultStatus: 1
+      duration: 0.0138994
+      messages: 
+      output: 'Value are equal
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: Tests.dll/Tests/[Tests][Tests.healthTest][suite]
+    - id: 1003
+      uniqueId: Tests.dll/Tests/healthTest/[Tests][Tests.healthTest.healthMinusTest]
+      name: healthMinusTest
+      fullName: Tests.healthTest.healthMinusTest
+      resultStatus: 1
+      duration: 0.0038528
+      messages: 
+      output: 'Gameobject destroyed
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: Tests.dll/Tests/[Tests][Tests.healthTest][suite]
+    - id: 1004
+      uniqueId: Tests.dll/Tests/healthTest/[Tests][Tests.healthTest.healthTestWithEnumeratorPasses]
+      name: healthTestWithEnumeratorPasses
+      fullName: Tests.healthTest.healthTestWithEnumeratorPasses
+      resultStatus: 1
+      duration: 0.0226882
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: Tests.dll/Tests/[Tests][Tests.healthTest][suite]
+    - id: 1004
+      uniqueId: Tests.dll/Tests/healthTest/[Tests][Tests.healthTest.MaxHealthTest]
+      name: MaxHealthTest
+      fullName: Tests.healthTest.MaxHealthTest
+      resultStatus: 1
+      duration: 0.0026135
+      messages: 
+      output: 'Value are equal
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: Tests.dll/Tests/[Tests][Tests.healthTest][suite]
+    - id: 1015
+      uniqueId: Tests.dll/Tests/[Tests][Tests.playerTest][suite]
+      name: playerTest
+      fullName: Tests.playerTest
+      resultStatus: 1
+      duration: 0.0577969
+      messages: 
+      output: 'You are trying to create a MonoBehaviour using the ''new'' keyword. 
+        This is not allowed.  MonoBehaviours can only be added using AddComponent().
+        Alternatively, your script can inherit from ScriptableObject or no base class
+        at all
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1019
+      parentUniqueId: Tests.dll/[Tests][suite]
+    - id: 1012
+      uniqueId: Tests.dll/Tests/playerTest/[Tests][Tests.playerTest.playerFlipTest]
+      name: playerFlipTest
+      fullName: Tests.playerTest.playerFlipTest
+      resultStatus: 1
+      duration: 0.0045787
+      messages: 
+      output: 'facing left
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1009
+      parentUniqueId: Tests.dll/Tests/[Tests][Tests.playerTest][suite]
+    - id: 1011
+      uniqueId: Tests.dll/Tests/playerTest/[Tests][Tests.playerTest.playerInitialShootPointTest]
+      name: playerInitialShootPointTest
+      fullName: Tests.playerTest.playerInitialShootPointTest
+      resultStatus: 1
+      duration: 0.0054441
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1009
+      parentUniqueId: Tests.dll/Tests/[Tests][Tests.playerTest][suite]
+    - id: 1010
+      uniqueId: Tests.dll/Tests/playerTest/[Tests][Tests.playerTest.playerJumpTest]
+      name: playerJumpTest
+      fullName: Tests.playerTest.playerJumpTest
+      resultStatus: 1
+      duration: 0.0023758
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1009
+      parentUniqueId: Tests.dll/Tests/[Tests][Tests.playerTest][suite]
+    - id: 1017
+      uniqueId: Tests.dll/Tests/playerTest/[Tests][Tests.playerTest.playerTestWithEnumeratorPasses]
+      name: playerTestWithEnumeratorPasses
+      fullName: Tests.playerTest.playerTestWithEnumeratorPasses
+      resultStatus: 1
+      duration: 0.0268534
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1015
+      parentUniqueId: Tests.dll/Tests/[Tests][Tests.playerTest][suite]
+    m_ResultText: 'currentHealthTest (0.014s)
+
+      ---
+
+      Value are equal'
     m_ResultStacktrace: 
     m_TestListState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: cccc7ef13e076afc1ba0fd3bffffff7f
+      m_SelectedIDs: 6e70161e
+      m_LastClickedID: 504787054
+      m_ExpandedIDs: cccc7ef1e557abf796226bfa3e076afc1ba0fd3b8359db416205597f9d3a5f7fffffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -395,7 +747,7 @@ MonoBehaviour:
       FailedHidden: 0
       NotRunHidden: 0
       m_SearchString: 
-      selectedCategoryMask: -1
+      selectedCategoryMask: 0
       availableCategories:
       - Uncategorized
 --- !u!114 &8
@@ -415,14 +767,14 @@ MonoBehaviour:
   - {fileID: 11}
   m_Position:
     serializedVersion: 2
-    x: 465.6
+    x: 355.2
     y: 0
-    width: 589.6
-    height: 448.8
+    width: 699.2
+    height: 468.8
   m_MinSize: {x: 202, y: 442}
   m_MaxSize: {x: 4002, y: 8042}
   vertical: 1
-  controlID: 4950
+  controlID: 4877
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -440,8 +792,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 589.6
-    height: 228
+    width: 699.2
+    height: 248
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 2}
@@ -544,8 +896,8 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 228
-    width: 589.6
+    y: 248
+    width: 699.2
     height: 220.79999
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
@@ -574,9 +926,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 465.6
-    y: 301.6
-    width: 587.6
+    x: 355.2
+    y: 321.6
+    width: 697.2
     height: 199.79999
   m_ViewDataDictionary: {fileID: 0}
   m_ShowContextualTools: 0
@@ -590,9 +942,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 4.233903, y: -4.270994, z: 90}
+    m_Target: {x: -91.73463, y: 19.981363, z: 1899.1997}
     speed: 2
-    m_Value: {x: 4.233903, y: -4.270994, z: 90}
+    m_Value: {x: -91.73463, y: 19.981363, z: 1899.1997}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -643,9 +995,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 23.907305
+    m_Target: 3.8401828
     speed: 2
-    m_Value: 23.907305
+    m_Value: 3.8401828
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -686,11 +1038,11 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 448.8
-    width: 1055.2
-    height: 291.2
-  m_MinSize: {x: 230, y: 250}
-  m_MaxSize: {x: 10000, y: 10000}
+    y: 468.8
+    width: 1054.4
+    height: 271.2
+  m_MinSize: {x: 231, y: 271}
+  m_MaxSize: {x: 10001, y: 10021}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -718,9 +1070,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 522.4
-    width: 1054.2
-    height: 270.2
+    y: 542.4
+    width: 1053.4
+    height: 250.20001
   m_ViewDataDictionary: {fileID: 0}
   m_SearchFilter:
     m_NameFilter: 
@@ -735,22 +1087,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Art/UI/Lobby
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Art/UI/Lobby
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\GitHub\WPG-5\Oren Adventure
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 165.79999}
-    m_SelectedIDs: 08510000
-    m_LastClickedID: 20744
-    m_ExpandedIDs: 000000009450000096500000985000009a5000009c5000009e500000a0500000a2500000a4500000a6500000a8500000aa500000ac500000ae500000b0500000b2500000b4500000b6500000b8500000ba500000bc500000be500000c0500000c2500000c4500000c6500000c8500000ca500000cc500000ce500000d0500000d2500000f0500000f452000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 95}
+    m_SelectedIDs: b4510000
+    m_LastClickedID: 20916
+    m_ExpandedIDs: 00000000b0500000b2500000b4500000b6500000b8500000ba500000bc500000be500000c0500000c2500000c4500000c6500000c8500000ca500000cc500000ce500000d0500000d2500000d4500000d6500000d8500000da500000dc500000de500000e0500000e2500000e4500000e6500000e8500000ea500000ec500000ee500000f0500000025100000a51000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -778,7 +1130,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000009450000096500000985000009a5000009c5000009e500000a0500000a2500000a4500000a6500000a8500000aa500000ac500000ae500000b0500000b2500000b4500000b6500000b8500000ba500000bc500000be500000c0500000c2500000c4500000c6500000c8500000ca500000cc500000ce500000d0500000d2500000f452000000ca9a3bffffff7f
+    m_ExpandedIDs: 00000000b0500000b2500000b4500000b6500000b8500000ba500000bc500000be500000c0500000c2500000c4500000c6500000c8500000ca500000cc500000ce500000d0500000d2500000d4500000d6500000d8500000da500000dc500000de500000e0500000e2500000e4500000e6500000e8500000ea500000ec500000ee500000f050000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -803,10 +1155,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: e2eaffff
-    m_LastClickedInstanceID: -5406
-    m_HadKeyboardFocusLastEvent: 0
-    m_ExpandedInstanceIDs: c623000036540000067100000a4800007e4700004a510000745000002850000038510000265000003a5100002a510000fe4e0000d24f0000de59000000000000
+    m_SelectedInstanceIDs: 9ce4ffff
+    m_LastClickedInstanceID: -7012
+    m_HadKeyboardFocusLastEvent: 1
+    m_ExpandedInstanceIDs: c623000036540000067100000a4800007e4700004a510000745000002850000038510000265000003a5100002a510000fe4e0000d24f0000de590000000000005a520000be510000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -856,8 +1208,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 522.4
-    width: 1054
-    height: 270
+    width: 980.6
+    height: 270.2
   m_ViewDataDictionary: {fileID: 0}
 --- !u!114 &16
 MonoBehaviour:
@@ -874,9 +1226,9 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1055.2
+    x: 1054.4
     y: 0
-    width: 480.80005
+    width: 481.59998
     height: 740
   m_MinSize: {x: 275, y: 50}
   m_MaxSize: {x: 4000, y: 4000}
@@ -909,9 +1261,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1055.2001
+    x: 1054.4
     y: 73.6
-    width: 479.80005
+    width: 480.59998
     height: 719
   m_ViewDataDictionary: {fileID: 0}
   m_ObjectsLockedBeforeSerialization: []
@@ -920,8 +1272,8 @@ MonoBehaviour:
     m_CachedPref: 160
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 1179.2
+  m_LastInspectedObjectInstanceID: -7012
+  m_LastVerticalScrollValue: 51.200012
   m_GlobalObjectId: 
   m_LockTracker:
     m_IsLocked: 0
@@ -1034,8 +1386,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1055.2001
+    x: 1054.4
     y: 73.6
-    width: 480
+    width: 481
     height: 719
   m_ViewDataDictionary: {fileID: 0}

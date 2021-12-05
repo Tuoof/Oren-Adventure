@@ -706,6 +706,9 @@
     <Reference Include="Unity.TextMeshPro.Editor">
         <HintPath>C:\GitHub\WPG-5\Oren Adventure\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.AdaptivePerformance.Samsung.Android.Editor">
+        <HintPath>C:\GitHub\WPG-5\Oren Adventure\Library\ScriptAssemblies\Unity.AdaptivePerformance.Samsung.Android.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.2D.IK.Editor">
         <HintPath>C:\GitHub\WPG-5\Oren Adventure\Library\ScriptAssemblies\Unity.2D.IK.Editor.dll</HintPath>
     </Reference>
@@ -853,11 +856,21 @@
     <Reference Include="Unity.2D.SpriteShape.Editor">
         <HintPath>C:\GitHub\WPG-5\Oren Adventure\Library\ScriptAssemblies\Unity.2D.SpriteShape.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.AdaptivePerformance.Simulator.VRR.Extension">
+        <HintPath>C:\GitHub\WPG-5\Oren Adventure\Library\ScriptAssemblies\Unity.AdaptivePerformance.Simulator.VRR.Extension.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.2D.SpriteShape.Runtime">
         <HintPath>C:\GitHub\WPG-5\Oren Adventure\Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.AdaptivePerformance.Samsung.Android">
+        <HintPath>C:\GitHub\WPG-5\Oren Adventure\Library\ScriptAssemblies\Unity.AdaptivePerformance.Samsung.Android.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="oren_Networking.csproj">
+      <Project>{8e223f9c-f06a-a6ab-c627-a330ad6536aa}</Project>
+      <Name>oren_Networking</Name>
+    </ProjectReference>
     <ProjectReference Include="oren_Adventure.csproj">
       <Project>{e37175d8-3afd-2ba4-2fa6-05628a5a49a5}</Project>
       <Name>oren_Adventure</Name>
@@ -873,10 +886,6 @@
     <ProjectReference Include="inputAction.csproj">
       <Project>{fb58cb93-f304-c8c4-75a3-b1ae1c366ff4}</Project>
       <Name>inputAction</Name>
-    </ProjectReference>
-    <ProjectReference Include="oren_Networking.csproj">
-      <Project>{8e223f9c-f06a-a6ab-c627-a330ad6536aa}</Project>
-      <Name>oren_Networking</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

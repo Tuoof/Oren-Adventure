@@ -8,7 +8,7 @@ namespace oren_Advent
         [SerializeField] private PlayerInput playerInput;
         public Animator animator;
         private PlayerInputAction playerInputAction;
-        private Rigidbody2D rb;
+        public Rigidbody2D rb;
 
         // Movement and Jump variable
         private float horizontal;
@@ -20,7 +20,7 @@ namespace oren_Advent
 
         // Shooting Variable
         public GameObject Bullet;
-        public Transform firePoint;
+        public GameObject firePoint;
         public int Damage = 10;
 
         // Check if player in the ground variable
@@ -69,6 +69,7 @@ namespace oren_Advent
             {
                 Flip();
             }
+
             if (isGrounded == true)
             {
                 extraJump = extraJumpValue;
@@ -108,8 +109,8 @@ namespace oren_Advent
         public void Shoot()
         {
 
-            Instantiate(Bullet, firePoint.position, firePoint.rotation);
-            RaycastHit2D hitInfo = Physics2D.Raycast(firePoint.position, firePoint.right);
+            Instantiate(Bullet, firePoint.transform.position, firePoint.transform.rotation);
+            RaycastHit2D hitInfo = Physics2D.Raycast(firePoint.transform.position, firePoint.transform.right);
             SpiderEnemySP spiderEnemySP = hitInfo.transform.GetComponent<SpiderEnemySP>();
             if (spiderEnemySP != null)
             {

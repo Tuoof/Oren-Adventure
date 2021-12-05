@@ -41,14 +41,14 @@
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\UIController.cs" />
      <Compile Include="Assets\Scripts\PlayerHealth.cs" />
+     <Compile Include="Assets\Scripts\BulletSP.cs" />
      <Compile Include="Assets\Scripts\PlayerControllerSP.cs" />
      <Compile Include="Assets\Scripts\StageManager.cs" />
      <Compile Include="Assets\Scripts\ParallaxBG.cs" />
      <Compile Include="Assets\Scripts\KillPlayer.cs" />
      <Compile Include="Assets\Scripts\CameraMovementSP.cs" />
-     <Compile Include="Assets\Scripts\PuzzleButton.cs" />
      <Compile Include="Assets\Scripts\SpiderEnemySP.cs" />
-     <Compile Include="Assets\Scripts\BulletSP.cs" />
+     <Compile Include="Assets\Scripts\PuzzleButton.cs" />
      <None Include="Assets\Scripts\oren_Adventure.asmdef" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.19f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>

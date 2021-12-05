@@ -3024,6 +3024,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthText: {fileID: 1543563070}
+--- !u!1 &978720408 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1482847890383245316, guid: cc31e1ed4adcba540bfff786b351f64a, type: 3}
+  m_PrefabInstance: {fileID: 1482847891050814918}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1031056406
 GameObject:
   m_ObjectHideFlags: 0
@@ -11192,6 +11197,10 @@ PrefabInstance:
       propertyPath: Bullet
       value: 
       objectReference: {fileID: 3263582606053999581, guid: 42944af0e19b89040b704bc38b7c8587, type: 3}
+    - target: {fileID: 7858301266192808306, guid: cc31e1ed4adcba540bfff786b351f64a, type: 3}
+      propertyPath: firePoint
+      value: 
+      objectReference: {fileID: 978720408}
     - target: {fileID: 7858301266192808306, guid: cc31e1ed4adcba540bfff786b351f64a, type: 3}
       propertyPath: jumpForce
       value: 35

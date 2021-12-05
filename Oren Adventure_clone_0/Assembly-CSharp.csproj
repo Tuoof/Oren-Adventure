@@ -36,54 +36,31 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Script Network\LobbyControl.cs" />
-     <Compile Include="Assets\Scripts\Checkpoint.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
-     <Compile Include="Assets\Scripts\Level1Puzzle.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
-     <Compile Include="Assets\Script Network\CameraMovement.cs" />
-     <Compile Include="Assets\Script Network\OldPlayerController.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
-     <Compile Include="Assets\Script Network\HealthScript.cs" />
-     <Compile Include="Assets\Scripts\GameManager.cs" />
-     <Compile Include="Assets\Input System\PlayerInputAction.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
-     <Compile Include="Assets\Scripts\UIController.cs" />
-     <Compile Include="Assets\Scripts\PlayerHealth.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
-     <Compile Include="Assets\Script Network\MenuControl.cs" />
-     <Compile Include="Assets\Scripts\SpiderEnemy.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
-     <Compile Include="Assets\Scripts\Bullet.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
-     <Compile Include="Assets\Script Network\PlayerScript.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMPro_InstructionOverlay.cs" />
-     <Compile Include="Assets\Script Network\SceneTransitionHandler.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextConsoleSimulator.cs" />
-     <Compile Include="Assets\Scripts\PlayerControllerSP.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
-     <Compile Include="Assets\Scripts\StageManager.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
-     <Compile Include="Assets\Script Network\WeaponScript.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
-     <Compile Include="Assets\Script Network\PlayerController.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
-     <Compile Include="Assets\Scripts\ParallaxBG.cs" />
-     <Compile Include="Assets\Scripts\KillPlayer.cs" />
-     <Compile Include="Assets\Scripts\CameraMovementSP.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
-     <Compile Include="Assets\Script Network\ClientPlayerController.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
@@ -92,7 +69,6 @@
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexColorCycler.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TeleType.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
-     <Compile Include="Assets\Scripts\PuzzleButton.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
@@ -882,6 +858,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="oren_Adventure.csproj">
+      <Project>{35057dde-56ab-70b1-f41a-253ee9ca0328}</Project>
+      <Name>oren_Adventure</Name>
+    </ProjectReference>
     <ProjectReference Include="ClientNetworkTransform.csproj">
       <Project>{8c0d1766-d2e1-2a36-8058-21195dcf76a2}</Project>
       <Name>ClientNetworkTransform</Name>
@@ -889,6 +869,14 @@
     <ProjectReference Include="SimpleRelay.csproj">
       <Project>{f0c3f730-9a5f-e81b-084b-748ab0fded0d}</Project>
       <Name>SimpleRelay</Name>
+    </ProjectReference>
+    <ProjectReference Include="inputAction.csproj">
+      <Project>{4a49d3a4-045f-e7de-b115-ce56d7d1fa75}</Project>
+      <Name>inputAction</Name>
+    </ProjectReference>
+    <ProjectReference Include="oren_Networking.csproj">
+      <Project>{ffb4afa9-a35e-7b85-00b2-e1ce7d68a0f3}</Project>
+      <Name>oren_Networking</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -15,6 +15,7 @@ public class LobbyControl : NetworkBehaviour
     // Minimum player count required to transition to next level
     [SerializeField]
     private int m_MinimumPlayerCount = 2;
+    private int m_MaximumPlayerCount = 4;
     
     public Text LobbyText;
     private bool m_AllPlayersInLobby;
@@ -88,7 +89,7 @@ public class LobbyControl : NetworkBehaviour
     /// </summary>
     private void UpdateAndCheckPlayersInLobby()
     {
-        m_AllPlayersInLobby = m_ClientsInLobby.Count >= m_MinimumPlayerCount;
+        m_AllPlayersInLobby = m_ClientsInLobby.Count >= m_MinimumPlayerCount && m_ClientsInLobby.Count <= m_MaximumPlayerCount;
 
         foreach (var clientLobbyStatus in m_ClientsInLobby)
         {

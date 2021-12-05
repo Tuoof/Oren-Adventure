@@ -40,11 +40,11 @@
      <Compile Include="Assets\Scripts Network\CameraMovement.cs" />
      <Compile Include="Assets\Scripts Network\HealthScript.cs" />
      <Compile Include="Assets\Scripts Network\MenuControl.cs" />
+     <Compile Include="Assets\Scripts Network\SpiderEnemy.cs" />
      <Compile Include="Assets\Scripts Network\SceneTransitionHandler.cs" />
      <Compile Include="Assets\Scripts Network\WeaponScript.cs" />
      <Compile Include="Assets\Scripts Network\PlayerController.cs" />
      <Compile Include="Assets\Scripts Network\ClientPlayerController.cs" />
-     <Compile Include="Assets\Scripts Network\SpiderEnemy.cs" />
      <None Include="Assets\Scripts Network\oren_Networking.asmdef" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.19f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
