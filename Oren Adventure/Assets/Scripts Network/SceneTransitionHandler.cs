@@ -29,7 +29,7 @@ public class SceneTransitionHandler : NetworkBehaviour
         Init,
         Start,
         Lobby,
-        Ingame
+        Level1
     }
 
     private SceneStates m_SceneState;

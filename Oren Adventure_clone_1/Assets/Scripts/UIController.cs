@@ -7,7 +7,7 @@ namespace oren_Advent
 {
     public class UIController : MonoBehaviour
     {
-        PlayerHealth playerHealth;
+        PlayerHealthSP playerHealthSP;
         public static UIController instance;
         [SerializeField] Text healthText;
         // Start is called before the first frame update
@@ -19,7 +19,7 @@ namespace oren_Advent
         // Update is called once per frame
         void Update()
         {
-            healthText.text = $"=   {PlayerHealth.instance.currentHealth}";
+            healthText.text = $"=   {PlayerHealthSP.instance.currentHealth}";
             // healthText.text = $"=   {playerHealth.currentHealth}";
         }
     }

@@ -36,15 +36,21 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts Network\Temp Script\InvadersGame.cs" />
      <Compile Include="Assets\Scripts Network\LobbyControl.cs" />
      <Compile Include="Assets\Scripts Network\CameraMovement.cs" />
      <Compile Include="Assets\Scripts Network\HealthScript.cs" />
+     <Compile Include="Assets\Scripts Network\Temp Script\PlayerControl.cs" />
      <Compile Include="Assets\Scripts Network\MenuControl.cs" />
+     <Compile Include="Assets\Scripts Network\StageManager.cs" />
      <Compile Include="Assets\Scripts Network\SpiderEnemy.cs" />
      <Compile Include="Assets\Scripts Network\SceneTransitionHandler.cs" />
      <Compile Include="Assets\Scripts Network\WeaponScript.cs" />
+     <Compile Include="Assets\Scripts Network\Bullet.cs" />
      <Compile Include="Assets\Scripts Network\PlayerController.cs" />
      <Compile Include="Assets\Scripts Network\ClientPlayerController.cs" />
+     <Compile Include="Assets\Scripts Network\KillPlayer.cs" />
+     <Compile Include="Assets\Scripts Network\PlayerHealth.cs" />
      <None Include="Assets\Scripts Network\oren_Networking.asmdef" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.19f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
@@ -675,6 +681,9 @@
     </Reference>
     <Reference Include="Unity.InputSystem">
         <HintPath>C:\GitHub\WPG-5\Oren Adventure_clone_0\Library\ScriptAssemblies\Unity.InputSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+        <HintPath>C:\GitHub\WPG-5\Oren Adventure_clone_0\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
         <HintPath>C:\GitHub\WPG-5\Oren Adventure_clone_0\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>

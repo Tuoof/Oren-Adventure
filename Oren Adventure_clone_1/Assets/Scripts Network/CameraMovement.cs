@@ -1,7 +1,10 @@
 ﻿using UnityEngine;
 using Unity.Netcode;
+using UnityEngine.SceneManagement;
 
-public class CameraMovement : NetworkBehaviour
+namespace oren_Network
+{
+    public class CameraMovement : NetworkBehaviour
 {
     [SerializeField] private float stiffness;
     public GameObject farBackground;
@@ -9,9 +12,23 @@ public class CameraMovement : NetworkBehaviour
     public GameObject Player;
     private float lastXPost;
     [SerializeField] private float minHeight, maxHeight;
-    [SerializeField ]private Camera _camera;
+    [SerializeField] private Camera _camera;
 
     // Start is called before the first frame update
+    private void OnEnable()
+    {
+        Debug.Log("OnEnable called");
+        // SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        Debug.Log("OnSceneLoaded: " + scene.name);
+        Debug.Log(mode);
+    }
+    private void Awake()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
     public override void OnNetworkSpawn()
     {
         lastXPost = transform.position.x;
@@ -45,4 +62,5 @@ public class CameraMovement : NetworkBehaviour
 
         lastXPost = transform.position.x;
     }
+}
 }

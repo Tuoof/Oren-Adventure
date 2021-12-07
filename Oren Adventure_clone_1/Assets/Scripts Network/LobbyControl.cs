@@ -18,10 +18,12 @@ public class LobbyControl : NetworkBehaviour
     private int m_MaximumPlayerCount = 4;
     
     public Text LobbyText;
+    public Text PlayerName;
     private bool m_AllPlayersInLobby;
 
     private Dictionary<ulong, bool> m_ClientsInLobby;
-    private string m_UserLobbyStatusText;
+    private Dictionary<ulong, string> m_ClientsNameInLobby;
+    private string m_UserLobbyStatusText, m_UserLobbyNameText;
 
     /// <summary>
     ///     Awake
@@ -30,6 +32,7 @@ public class LobbyControl : NetworkBehaviour
     private void Awake()
     {
         m_ClientsInLobby = new Dictionary<ulong, bool>();
+        m_ClientsNameInLobby = new Dictionary<ulong, string>();
 
         //We added this information to tell us if we are going to host a game or join an the game session
         if (isHosting)
@@ -70,12 +73,13 @@ public class LobbyControl : NetworkBehaviour
     ///     Psuedo code for setting player state
     ///     Just updating a text field, this could use a lot of "refactoring"  :)
     /// </summary>
-    private void GenerateUserStatsForLobby()
+    public void GenerateUserStatsForLobby()
     {
         m_UserLobbyStatusText = string.Empty;
+        m_UserLobbyNameText = string.Empty;
         foreach (var clientLobbyStatus in m_ClientsInLobby)
         {
-            m_UserLobbyStatusText += "Player_" + clientLobbyStatus.Key + "          ";
+            m_UserLobbyStatusText += "        " + "  ( " + PlayerName.text + clientLobbyStatus.Key + " )         ";
             if (clientLobbyStatus.Value)
                 m_UserLobbyStatusText += "(Ready)\n";
             else
@@ -223,5 +227,11 @@ public class LobbyControl : NetworkBehaviour
             UpdateAndCheckPlayersInLobby();
             GenerateUserStatsForLobby();
         }
+    }
+
+    public void ExitGame()
+    {
+        NetworkManager.Singleton.Shutdown();
+        SceneTransitionHandler.sceneTransitionHandler.ExitAndLoadStartMenu();
     }
 }

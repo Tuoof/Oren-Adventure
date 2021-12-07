@@ -51,7 +51,7 @@ GameObject:
   - component: {fileID: 4578071025526498878}
   m_Layer: 0
   m_Name: Player 1
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -235,7 +235,7 @@ MonoBehaviour:
   speed: 10
   jumpForce: 20
   extraJumpValue: 0
-  Bullet: {fileID: 3263582606053999581, guid: 42944af0e19b89040b704bc38b7c8587, type: 3}
+  Bullet: {fileID: 3263582606053999581, guid: 8fb6a2bd6278db34ebd6c3c4c74b510a, type: 3}
   firePoint: {fileID: 6341338337029632414}
   Damage: 10
   groundCheck: {fileID: 1817768598504298341}
@@ -277,8 +277,8 @@ MonoBehaviour:
   stiffness: 0
   farBackground: {fileID: 0}
   Player: {fileID: 0}
-  minHeight: 0
-  maxHeight: 0
+  minHeight: -3
+  maxHeight: 1.5
   _camera: {fileID: 0}
 --- !u!114 &7868194135117602387
 MonoBehaviour:

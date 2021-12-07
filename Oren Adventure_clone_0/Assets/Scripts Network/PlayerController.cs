@@ -32,10 +32,18 @@ namespace oren_Network
         public float checkRadius;
         public LayerMask groundLayer;
 
+        private NetworkVariable<int> m_Lives = new NetworkVariable<int>(3);
+        private SceneTransitionHandler.SceneStates m_CurrentSceneState;
+        private bool m_HasGameStarted;
+        private bool m_IsAlive = true;
+        private GameObject m_MyBullet;
+        public bool IsAlive => m_Lives.Value > 0;
+
         private void Awake()
         {
             playerInputAction = new PlayerInputAction();
             playerInput = GetComponent<PlayerInput>();
+            m_HasGameStarted = false;
         }
 
         private void OnEnable()
@@ -53,11 +61,26 @@ namespace oren_Network
             playerInputAction.Player.Movement.performed += ctx => setMovementServerRpc(ctx.ReadValue<Vector2>().x);
             playerInputAction.Player.Movement.canceled += ctx => ResetMovementServerRpc();
             playerInputAction.Player.Jump.started += ctx => JumpServerRpc();
-            playerInputAction.Player.Shoot.started += ctx => Shoot();
+            playerInputAction.Player.Shoot.started += ctx => ShootServerRPC();
         }
         private void Update()
         {
             // if (!IsOwner) { return; }
+            InGameUpdate();
+
+            switch (m_CurrentSceneState)
+            {
+                case SceneTransitionHandler.SceneStates.Level1:
+                    {
+                        InGameUpdate();
+                        break;
+                    }
+            }           
+        }
+
+        private void InGameUpdate()
+        {
+            isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, groundLayer);
 
             animator.SetFloat("Speed", Mathf.Abs(horizontal * speed));
             MoveServerRpc();
@@ -69,6 +92,11 @@ namespace oren_Network
             else if (facingRight == true && horizontal < 0)
             {
                 Flip();
+            }
+
+            if (isGrounded == true)
+            {
+                extraJump = extraJumpValue;
             }
         }
 
@@ -90,9 +118,9 @@ namespace oren_Network
             if (!IsServer) { return; }
 
             // horizontal = playerInputAction.Player.Movement.ReadValue<Vector2>().x;
-            // rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+            rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
 
-            MoveClientRpc();
+            // MoveClientRpc();
         }
 
         [ClientRpc]
@@ -101,31 +129,43 @@ namespace oren_Network
             rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
         }
 
-        private bool IsGrounded()
-        {
-            extraJump = extraJumpValue;
-            return Physics2D.OverlapCircle(groundCheck.position, checkRadius, groundLayer);
-        }
         [ServerRpc]
         public void JumpServerRpc()
         {
             if (!IsServer) { return; }
 
-            JumpClientRpc();
+            if (extraJump > 0)
+            {
+                rb.velocity = Vector2.up * jumpForce;
+                extraJump--;
+            }
+            else if (extraJump == 0 && isGrounded)
+            {
+                rb.velocity = Vector2.up * jumpForce;
+            }
+            else if (rb.velocity.y > 0f)
+            {
+                rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
+            }
+
+            // JumpClientRpc();
         }
 
         [ClientRpc]
         public void JumpClientRpc(ServerRpcParams rpcParams = default)
         {
-            if (extraJump == 0 && IsGrounded())
-            {
-                rb.velocity = Vector2.up * jumpForce;
-            }
-            else if (extraJump > 0)
+            if (!IsOwner) { return; }
+            
+            if (extraJump > 0)
             {
                 rb.velocity = Vector2.up * jumpForce;
                 extraJump--;
             }
+            else if (extraJump == 0 && isGrounded)
+            {
+                rb.velocity = Vector2.up * jumpForce;
+            }
+            
             else if (rb.velocity.y > 0f)
             {
                 rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
@@ -139,10 +179,15 @@ namespace oren_Network
             transform.Rotate(0f, 180f, 0f);
         }
 
-        public void Shoot()
+        [ServerRpc]
+        public void ShootServerRPC()
         {
-            Instantiate(Bullet, firePoint.position, firePoint.rotation);
-            RaycastHit2D hitInfo = Physics2D.Raycast(firePoint.position, firePoint.right);
+            if (!IsServer) { return; }
+
+            m_MyBullet = Instantiate(Bullet, firePoint.position, firePoint.rotation);
+            m_MyBullet.GetComponent<Bullet>().owner = this;
+            m_MyBullet.GetComponent<NetworkObject>().Spawn();
+            var hitInfo = Physics2D.Raycast(firePoint.position, firePoint.right);
             SpiderEnemy spiderEnemy = hitInfo.transform.GetComponent<SpiderEnemy>();
             if (spiderEnemy != null)
             {

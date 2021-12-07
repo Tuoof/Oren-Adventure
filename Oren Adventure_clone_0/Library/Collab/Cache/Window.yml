@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SimpleSelectedItems:
     m_Keys:
-    - Assets/Scripts Network/ClientPlayerController.cs
-    - Assets/Scripts Network/LobbyControl.cs
-    - Assets/Scripts Network/PlayerController.cs
+    - Assets/Tile/Layer belakang gua.png
+    - Assets/Tile/Layer belakang gua.png.meta
+    - Assets/Tile/tembok gdean.png
     - 
     m_Values: 00000000
   RevisionSummary: 

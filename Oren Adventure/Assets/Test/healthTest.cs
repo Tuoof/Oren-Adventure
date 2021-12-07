@@ -13,7 +13,7 @@ namespace Tests
         public void currentHealthTest()
         {
             // arrange
-            var health = new GameObject().AddComponent<PlayerHealth>();
+            var health = new GameObject().AddComponent<PlayerHealthSP>();
 
             // act
             health.maxHealth = 3;
@@ -28,7 +28,7 @@ namespace Tests
         public void healthMinusTest()
         {
             // arrange
-            var health = new GameObject().AddComponent<PlayerHealth>();
+            var health = new GameObject().AddComponent<PlayerHealthSP>();
 
             // act
             health.maxHealth = 3;
@@ -49,7 +49,7 @@ namespace Tests
         public void MaxHealthTest()
         {
             // arrange
-            var health = new GameObject().AddComponent<PlayerHealth>();
+            var health = new GameObject().AddComponent<PlayerHealthSP>();
 
             // act
             health.maxHealth = 3;

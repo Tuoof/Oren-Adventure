@@ -44,7 +44,6 @@ GameObject:
   - component: {fileID: 4443511981809817095}
   - component: {fileID: 8405487509300753296}
   - component: {fileID: 6246032890466789180}
-  - component: {fileID: 2061286627623256533}
   - component: {fileID: 1951976139622580349}
   - component: {fileID: 1496104353269772543}
   - component: {fileID: 3749624546761054572}
@@ -52,7 +51,7 @@ GameObject:
   - component: {fileID: 7380780200340403707}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -233,10 +232,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 2027839184920711740}
-  speed: 20
-  jumpForce: 40
+  speed: 10
+  jumpForce: 50
   extraJumpValue: 1
-  Bullet: {fileID: 3263582606053999581, guid: 42944af0e19b89040b704bc38b7c8587, type: 3}
+  Bullet: {fileID: 3263582606053999581, guid: 8fb6a2bd6278db34ebd6c3c4c74b510a, type: 3}
   firePoint: {fileID: 6341338337029632414}
   Damage: 10
   groundCheck: {fileID: 1817768598504298341}
@@ -244,27 +243,6 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 256
---- !u!114 &2061286627623256533
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1817768598451111015}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79ee662cf528b404397d25b5a957e6cc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 2027839184920711740}
-  speed: 30
-  jumpForce: 40
-  groundCheck: {fileID: 1817768598504298341}
-  checkRadius: 0.2
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 256
-  extraJumpValue: 0
 --- !u!114 &1951976139622580349
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -282,6 +260,7 @@ MonoBehaviour:
   Player: {fileID: 0}
   minHeight: -3
   maxHeight: 1.5
+  _camera: {fileID: 0}
 --- !u!114 &1496104353269772543
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -39,8 +39,10 @@ namespace oren_Advent
             if (spiderEnemySP != null)
             {
                 spiderEnemySP.TakeDamage(Damage);
+                Destroy(this.gameObject);
+                return;
             }
-            Destroy(this.gameObject);
+            
         }
     }
 }

@@ -11,8 +11,8 @@ namespace oren_Network
     private Text m_HostIpInput;
 
     [SerializeField]
-    private string m_SceneName = "Lobby";
-
+    private string m_SceneName = "Level1";
+        public GameObject SettingsPanel;
     public void StartHostGame()
     {
         // Update the current HostNameInput with whatever we have set in the NetworkConfig as default
@@ -43,6 +43,19 @@ namespace oren_Network
         m_SceneName = "LevelTutorial";
         SceneTransitionHandler.sceneTransitionHandler.SwitchScene(m_SceneName);
     }
-}
+        public void SettingsMenuOpen()
+        {
+            SettingsPanel.SetActive(true);
+        }
+        public void SettingsMenuClose()
+        {
+            SettingsPanel.SetActive(false);
+        }
+        public void BackToMainMenu()
+        {
+            m_SceneName = "StartMenu";
+            SceneTransitionHandler.sceneTransitionHandler.SwitchScene(m_SceneName);
+        }
+    }
 }
 
