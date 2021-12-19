@@ -27,8 +27,6 @@ namespace oren_Network
     private void Awake()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
-        // _camera = Camera.main;
-        // farBackground = GameObject.FindGameObjectWithTag("FarBackground");
         // player = GameObject.FindGameObjectWithTag("Player");
         player = this.gameObject;
     }
@@ -49,12 +47,6 @@ namespace oren_Network
         _camera = Camera.main;
         farBackground = GameObject.FindGameObjectWithTag("FarBackground");
     }
-
-    // private void FollowPlayer()
-    // {
-    //     float t = Time.deltaTime * stiffness;
-    //     transform.position = new Vector3(Mathf.Lerp(transform.position.x, _camera.transform.position.x, t), Mathf.Lerp(transform.position.y, _camera.transform.position.y, t), transform.position.z);
-    // }
 
     public void FollowTarget()
     {

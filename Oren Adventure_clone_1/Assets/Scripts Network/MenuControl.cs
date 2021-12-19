@@ -32,9 +32,9 @@ namespace oren_Network
                 var utpTransport = (UNetTransport)NetworkManager.Singleton.NetworkConfig.NetworkTransport;
                 if (utpTransport)
                 {
-                    //utpTransport.SetConnectionData(m_HostIpInput.text, 7777);
+                    //utpTransport.SetConnectionData(m_HostIpInput.text, 9998);
                     utpTransport.ConnectAddress = m_HostIpInput.text;
-                    utpTransport.ConnectPort = 7777;
+                    utpTransport.ConnectPort = 9998;
                 }
                 LobbyControl.isHosting = false; //This is a work around to handle proper instantiation of a scene for the first time.  (See LobbyControl.cs)
                 SceneTransitionHandler.sceneTransitionHandler.SwitchScene(m_SceneName);
