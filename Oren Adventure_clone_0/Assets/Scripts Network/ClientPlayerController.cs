@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using Unity.Netcode;
 using UnityEngine.SceneManagement;
+using UnityEngine.Assertions;
 
 namespace oren_Network
 {
@@ -39,6 +40,7 @@ namespace oren_Network
         private bool m_HasGameStarted;
         private bool m_IsAlive = true;
         private GameObject m_MyBullet;
+        private GameObject currentCheckpoint;
         public bool IsAlive => m_Lives.Value > 0;
         private ClientRpcParams m_OwnerRPCParams;
 
@@ -69,6 +71,7 @@ namespace oren_Network
             playerInputAction.Player.Movement.performed += ctx => setMovement(ctx.ReadValue<Vector2>().x);
             playerInputAction.Player.Movement.canceled += ctx => ResetMovement();
             playerInputAction.Player.Jump.started += ctx => JumpServerRpc();
+            playerInputAction.Player.Jump.performed += ctx => JumpServerRpc();
             playerInputAction.Player.Shoot.started += ctx => ShootServerRPC();
 
             m_Lives.OnValueChanged += OnLivesChanged;
@@ -86,6 +89,7 @@ namespace oren_Network
         }
         private void Update()
         {
+            currentCheckpoint = GameObject.FindGameObjectWithTag("Checkpoint");
             InGameUpdate();
             // if (!IsOwner) { return; }
             Debug.Log(SceneTransitionHandler.SceneStates.Level1);
@@ -178,7 +182,7 @@ namespace oren_Network
         [ServerRpc]
         public void ShootServerRPC()
         {
-            if (!IsServer) { return; }
+            // if (!IsServer && !IsOwner) { return; }
 
             m_MyBullet = Instantiate(Bullet, firePoint.position, firePoint.rotation);
             // m_MyBullet.GetComponent<Bullet>().owner = this;
@@ -190,6 +194,12 @@ namespace oren_Network
                 spiderEnemy.TakeDamage(Damage);
             }
         }
+
+        public void RespawnPlayer()
+    {
+        Assert.IsTrue(IsServer, "HitByBullet must be called server-side only!");
+        this.transform.position = currentCheckpoint.transform.position;
+    }
 
         private void SceneTransitionHandler_clientLoadedScene(ulong clientId)
         {

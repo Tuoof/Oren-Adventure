@@ -7,14 +7,14 @@ namespace oren_Network
     [RequireComponent(typeof(Rigidbody2D))]
     public class PlayerController : NetworkBehaviour
     {
-        // public NetworkVariable<float> horizontal = new NetworkVariable<float>();
+        public NetworkVariable<float> horizontal = new NetworkVariable<float>();
         private PlayerInput playerInput;
         public Animator animator;
         private PlayerInputAction playerInputAction;
         private Rigidbody2D rb;
 
         // Movement and Jump variable
-        private float horizontal;
+        // private float horizontal;
         public float speed, jumpForce;
         private float highJump, ultraJump;
         private int extraJump;
@@ -82,14 +82,14 @@ namespace oren_Network
         {
             isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, groundLayer);
 
-            animator.SetFloat("Speed", Mathf.Abs(horizontal * speed));
+            animator.SetFloat("Speed", Mathf.Abs(horizontal.Value * speed));
             MoveServerRpc();
 
-            if (facingRight == false && horizontal > 0)
+            if (facingRight == false && horizontal.Value > 0)
             {
                 Flip();
             }
-            else if (facingRight == true && horizontal < 0)
+            else if (facingRight == true && horizontal.Value < 0)
             {
                 Flip();
             }
@@ -104,13 +104,13 @@ namespace oren_Network
         private void setMovementServerRpc(float movement)
         {
             // if (!IsOwner) { return; }
-            horizontal = movement;
+            horizontal.Value = movement;
         }
         [ServerRpc]
         private void ResetMovementServerRpc()
         {
             // if (!IsOwner) { return; }
-            horizontal = Vector2.zero.x;
+            horizontal.Value = Vector2.zero.x;
         }
         [ServerRpc]
         public void MoveServerRpc()
@@ -118,7 +118,7 @@ namespace oren_Network
             if (!IsServer) { return; }
 
             // horizontal = playerInputAction.Player.Movement.ReadValue<Vector2>().x;
-            rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+            rb.velocity = new Vector2(horizontal.Value * speed, rb.velocity.y);
 
             // MoveClientRpc();
         }
@@ -126,7 +126,7 @@ namespace oren_Network
         [ClientRpc]
         public void MoveClientRpc(ServerRpcParams rpcParams = default)
         {
-            rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+            rb.velocity = new Vector2(horizontal.Value * speed, rb.velocity.y);
         }
 
         [ServerRpc]

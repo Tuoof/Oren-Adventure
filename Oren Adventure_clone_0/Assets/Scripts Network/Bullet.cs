@@ -44,8 +44,8 @@ namespace oren_Network
             var spiderEnemy = hitInfo.GetComponent<SpiderEnemy>();
             if (spiderEnemy != null)
             {
-                spiderEnemy.TakeDamage(Damage);
                 Destroy(this.gameObject);
+                spiderEnemy.TakeDamage(Damage);
                 return;
             }
         }

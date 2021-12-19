@@ -10,12 +10,13 @@ namespace oren_Network
 {
     public class StageManager : NetworkBehaviour
     {
+        public static StageManager Singleton { get; private set; }
         public GameObject currentCheckpoint;
-        private ClientPlayerController player;
+        public GameObject player;
         // Start is called before the first frame update
         void Start()
         {
-            player = FindObjectOfType<ClientPlayerController>();
+            // player = GameObject.FindGameObjectWithTag("Player");
         }
 
         // Update is called once per frame
@@ -23,10 +24,16 @@ namespace oren_Network
         {
 
         }
-        public void RespawnPlayer()
+
+        void FixedUpdate()
         {
-            Debug.Log("player respawn");
-            player.transform.position = currentCheckpoint.transform.position;
+            if (!NetworkManager.Singleton.IsConnectedClient) { return; }
+            player = GameObject.FindGameObjectWithTag("Player");
         }
+        // public void RespawnPlayer()
+        // {
+        //     Debug.Log("player respawn");
+        //     player.transform.position = currentCheckpoint.transform.position;
+        // }
     }
 }

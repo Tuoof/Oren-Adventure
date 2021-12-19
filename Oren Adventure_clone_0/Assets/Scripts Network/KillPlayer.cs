@@ -23,7 +23,8 @@ namespace oren_Network
         {
             if (collision.tag == "Player")
             {
-                stageManager.RespawnPlayer();
+                var respanwPlayer = collision.gameObject.GetComponent<ClientPlayerController>();
+                respanwPlayer.RespawnPlayer();
                 // FindObjectOfType<PlayerHealth>().DealDamage();
                 PlayerHealth.instance.DealDamage();
             }

@@ -231,6 +231,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d16077d492234c4daf769acb444062e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  horizontal:
+    m_InternalValue: 0
   animator: {fileID: 2027839184920711740}
   speed: 10
   jumpForce: 50
@@ -257,7 +259,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stiffness: 0
   farBackground: {fileID: 0}
-  Player: {fileID: 0}
+  player: {fileID: 0}
   minHeight: -3
   maxHeight: 1.5
   _camera: {fileID: 0}

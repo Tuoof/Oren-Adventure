@@ -8,8 +8,7 @@ namespace oren_Network
 {
     [SerializeField] private float stiffness;
     public GameObject farBackground;
-    // private Rigidbody2D rb;
-    public GameObject Player;
+    public GameObject player;
     private float lastXPost;
     [SerializeField] private float minHeight, maxHeight;
     [SerializeField] private Camera _camera;
@@ -28,14 +27,15 @@ namespace oren_Network
     private void Awake()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
+        // _camera = Camera.main;
+        // farBackground = GameObject.FindGameObjectWithTag("FarBackground");
+        // player = GameObject.FindGameObjectWithTag("Player");
+        player = this.gameObject;
     }
     public override void OnNetworkSpawn()
     {
         lastXPost = transform.position.x;
-        _camera = Camera.main;
-        // rb = GetComponent<Rigidbody2D>();
-        farBackground = GameObject.FindGameObjectWithTag("FarBackground");
-        Player = GameObject.FindGameObjectWithTag("Player");
+        
         //cameraTarget = Player.transform;
     }
 
@@ -43,6 +43,11 @@ namespace oren_Network
     private void Update()
     {
         FollowTarget();
+    }
+    private void FixedUpdate()
+    {
+        _camera = Camera.main;
+        farBackground = GameObject.FindGameObjectWithTag("FarBackground");
     }
 
     // private void FollowPlayer()
@@ -55,7 +60,7 @@ namespace oren_Network
     {
         if (!IsOwner) { return; }
 
-        _camera.transform.position = new Vector3(Player.transform.position.x, Mathf.Clamp(Player.transform.position.y, minHeight, maxHeight), _camera.transform.position.z);
+        _camera.transform.position = new Vector3(player.transform.position.x, Mathf.Clamp(player.transform.position.y, minHeight, maxHeight), _camera.transform.position.z);
 
         float amountToMoveX = _camera.transform.position.x - lastXPost;
         farBackground.transform.position = farBackground.transform.position + new Vector3(amountToMoveX, 0f, 0f);

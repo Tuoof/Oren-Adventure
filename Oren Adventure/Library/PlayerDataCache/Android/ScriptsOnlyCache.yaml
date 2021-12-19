@@ -1,30 +1,12 @@
 ScriptsOnlyBuild:
   usedScripts:
-    Assembly-CSharp.dll:
-    - Bullet
-    - CameraMovement
-    - CameraMovementSP
-    - ClientPlayerController
-    - KillPlayer
-    - Level1Puzzle
-    - LobbyControl
-    - MenuControl
-    - OldPlayerController
-    - ParallaxBG
-    - PlayerController
-    - PlayerControllerSP
-    - PlayerHealth
-    - PuzzleButton
-    - SceneTransitionHandler
-    - SpiderEnemy
-    - StageManager
-    - UIController
     ClientNetworkTransform.dll:
     - Unity.Netcode.Samples.ClientNetworkTransform
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.IK.Editor.dll:
     - UnityEditor.U2D.IK.IKEditorManager
+    - UnityEditor.U2D.IK.IKGizmos
     Unity.2D.Sprite.Editor.dll:
     - UnityEditor.U2D.Sprites.SpriteEditorWindow
     Unity.2D.Tilemap.Editor.dll:
@@ -41,6 +23,11 @@ ScriptsOnlyBuild:
     - UnityEditor.Tilemaps.TilemapPrefabStageHelper
     Unity.AdaptivePerformance.Editor.dll:
     - UnityEditor.AdaptivePerformance.Editor.AdaptivePerformanceGeneralSettingsPerBuildTarget
+    Unity.AdaptivePerformance.Samsung.Android.dll:
+    - UnityEngine.AdaptivePerformance.Samsung.Android.SamsungAndroidProviderSettings
+    Unity.AdaptivePerformance.dll:
+    - UnityEngine.AdaptivePerformance.AdaptivePerformanceGeneralSettings
+    - UnityEngine.AdaptivePerformance.AdaptivePerformanceManagerSettings
     Unity.CollabProxy.Editor.dll:
     - Unity.Cloud.Collaborate.UserInterface.CollaborateWindow
     - Unity.Cloud.Collaborate.UserInterface.WindowCache
@@ -73,13 +60,17 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
+    - TestRunner.Callbacks.WindowResultUpdaterDataHolder
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
+    - UnityEditor.TestTools.TestRunner.TestRunnerWindow
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.UI.Button
@@ -87,7 +78,34 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
     - UnityEngine.UI.InputField
+    - UnityEngine.UI.Slider
     - UnityEngine.UI.Text
+    - UnityEngine.UI.Toggle
+    com.unity.multiplayer-hlapi.Runtime.dll:
+    - UnityEngine.Networking.NetworkCallbacks
+    oren_Adventure.dll:
+    - CameraMovementSP
+    - Level1Puzzle
+    - ParallaxBG
+    - PuzzleButton
+    - oren_Advent.BulletSP
+    - oren_Advent.KillPlayerSP
+    - oren_Advent.PlayerControllerSP
+    - oren_Advent.PlayerHealthSP
+    - oren_Advent.SpiderEnemySP
+    - oren_Advent.StageManagerSP
+    - oren_Advent.UIController
+    oren_Networking.dll:
+    - LobbyControl
+    - SceneTransitionHandler
+    - oren_Network.Bullet
+    - oren_Network.CameraMovement
+    - oren_Network.ClientPlayerController
+    - oren_Network.KillPlayer
+    - oren_Network.MenuControl
+    - oren_Network.PlayerController
+    - oren_Network.SpiderEnemy
+    - oren_Network.StageManager
   sceneClasses:
     Assets/Scenes/InitBootStrap.unity:
     - Class: 1
@@ -119,47 +137,43 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1592}
+      Script: {instanceID: 1598}
     - Class: 114
-      Script: {instanceID: 1998}
+      Script: {instanceID: 2006}
     - Class: 114
-      Script: {instanceID: 2082}
+      Script: {instanceID: 2090}
     - Class: 114
-      Script: {instanceID: 2206}
+      Script: {instanceID: 2214}
     - Class: 114
-      Script: {instanceID: 2440}
+      Script: {instanceID: 3952}
     - Class: 114
-      Script: {instanceID: 2464}
+      Script: {instanceID: 4334}
     - Class: 114
-      Script: {instanceID: 3930}
+      Script: {instanceID: 4450}
     - Class: 114
-      Script: {instanceID: 3998}
+      Script: {instanceID: 4452}
     - Class: 114
-      Script: {instanceID: 4314}
+      Script: {instanceID: 4702}
     - Class: 114
-      Script: {instanceID: 4430}
+      Script: {instanceID: 4766}
     - Class: 114
-      Script: {instanceID: 4678}
+      Script: {instanceID: 4842}
     - Class: 114
-      Script: {instanceID: 4742}
+      Script: {instanceID: 5512}
     - Class: 114
-      Script: {instanceID: 4816}
+      Script: {instanceID: 5600}
     - Class: 114
-      Script: {instanceID: 5484}
+      Script: {instanceID: 5974}
     - Class: 114
-      Script: {instanceID: 5572}
+      Script: {instanceID: 6424}
     - Class: 114
-      Script: {instanceID: 6392}
+      Script: {instanceID: 6758}
     - Class: 114
-      Script: {instanceID: 6706}
+      Script: {instanceID: 7484}
     - Class: 114
-      Script: {instanceID: 6726}
+      Script: {instanceID: 7580}
     - Class: 114
-      Script: {instanceID: 7018}
-    - Class: 114
-      Script: {instanceID: 7450}
-    - Class: 114
-      Script: {instanceID: 7544}
+      Script: {instanceID: 56838}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -206,59 +220,53 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 718}
+      Script: {instanceID: 724}
     - Class: 114
-      Script: {instanceID: 1550}
+      Script: {instanceID: 1556}
     - Class: 114
-      Script: {instanceID: 1592}
+      Script: {instanceID: 1598}
     - Class: 114
-      Script: {instanceID: 1806}
+      Script: {instanceID: 1814}
     - Class: 114
-      Script: {instanceID: 1998}
+      Script: {instanceID: 2006}
     - Class: 114
-      Script: {instanceID: 2082}
+      Script: {instanceID: 2090}
     - Class: 114
-      Script: {instanceID: 2440}
+      Script: {instanceID: 2728}
     - Class: 114
-      Script: {instanceID: 2464}
+      Script: {instanceID: 2948}
     - Class: 114
-      Script: {instanceID: 2718}
+      Script: {instanceID: 3206}
     - Class: 114
-      Script: {instanceID: 2936}
+      Script: {instanceID: 3286}
     - Class: 114
-      Script: {instanceID: 3194}
+      Script: {instanceID: 3952}
     - Class: 114
-      Script: {instanceID: 3272}
+      Script: {instanceID: 4186}
     - Class: 114
-      Script: {instanceID: 3574}
+      Script: {instanceID: 4452}
     - Class: 114
-      Script: {instanceID: 3930}
+      Script: {instanceID: 4702}
     - Class: 114
-      Script: {instanceID: 3998}
+      Script: {instanceID: 5512}
     - Class: 114
-      Script: {instanceID: 4678}
+      Script: {instanceID: 5974}
     - Class: 114
-      Script: {instanceID: 5016}
+      Script: {instanceID: 6192}
     - Class: 114
-      Script: {instanceID: 5484}
+      Script: {instanceID: 6424}
     - Class: 114
-      Script: {instanceID: 6160}
+      Script: {instanceID: 6758}
     - Class: 114
-      Script: {instanceID: 6392}
+      Script: {instanceID: 7164}
     - Class: 114
-      Script: {instanceID: 6706}
+      Script: {instanceID: 7484}
     - Class: 114
-      Script: {instanceID: 6726}
+      Script: {instanceID: 7580}
     - Class: 114
-      Script: {instanceID: 7018}
+      Script: {instanceID: 7866}
     - Class: 114
-      Script: {instanceID: 7132}
-    - Class: 114
-      Script: {instanceID: 7450}
-    - Class: 114
-      Script: {instanceID: 7544}
-    - Class: 114
-      Script: {instanceID: 7828}
+      Script: {instanceID: 56838}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -321,55 +329,55 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 718}
+      Script: {instanceID: 724}
     - Class: 114
-      Script: {instanceID: 1550}
+      Script: {instanceID: 1556}
     - Class: 114
-      Script: {instanceID: 1592}
+      Script: {instanceID: 1598}
     - Class: 114
-      Script: {instanceID: 1806}
+      Script: {instanceID: 1814}
     - Class: 114
-      Script: {instanceID: 2718}
+      Script: {instanceID: 2728}
     - Class: 114
-      Script: {instanceID: 2856}
+      Script: {instanceID: 2866}
     - Class: 114
-      Script: {instanceID: 2936}
+      Script: {instanceID: 2948}
     - Class: 114
-      Script: {instanceID: 2952}
+      Script: {instanceID: 3206}
     - Class: 114
-      Script: {instanceID: 3194}
+      Script: {instanceID: 3286}
     - Class: 114
-      Script: {instanceID: 3272}
+      Script: {instanceID: 3692}
     - Class: 114
-      Script: {instanceID: 3574}
+      Script: {instanceID: 3762}
     - Class: 114
-      Script: {instanceID: 3744}
+      Script: {instanceID: 3952}
     - Class: 114
-      Script: {instanceID: 3930}
+      Script: {instanceID: 4808}
     - Class: 114
-      Script: {instanceID: 3998}
+      Script: {instanceID: 4956}
     - Class: 114
-      Script: {instanceID: 4928}
+      Script: {instanceID: 5600}
     - Class: 114
-      Script: {instanceID: 5016}
+      Script: {instanceID: 5870}
     - Class: 114
-      Script: {instanceID: 5572}
+      Script: {instanceID: 6192}
     - Class: 114
-      Script: {instanceID: 5842}
+      Script: {instanceID: 6462}
     - Class: 114
-      Script: {instanceID: 6160}
+      Script: {instanceID: 6738}
     - Class: 114
-      Script: {instanceID: 6704}
+      Script: {instanceID: 7002}
     - Class: 114
-      Script: {instanceID: 6706}
+      Script: {instanceID: 7164}
     - Class: 114
-      Script: {instanceID: 6970}
+      Script: {instanceID: 7866}
     - Class: 114
-      Script: {instanceID: 7132}
+      Script: {instanceID: 8158}
     - Class: 114
-      Script: {instanceID: 7828}
+      Script: {instanceID: 8610}
     - Class: 114
-      Script: {instanceID: 8568}
+      Script: {instanceID: 56846}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -409,30 +417,38 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
+    - Class: 50
+      Script: {instanceID: 0}
+    - Class: 66
+      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1550}
+      Script: {instanceID: 724}
     - Class: 114
-      Script: {instanceID: 1658}
+      Script: {instanceID: 1556}
     - Class: 114
-      Script: {instanceID: 2718}
+      Script: {instanceID: 1666}
     - Class: 114
-      Script: {instanceID: 2936}
+      Script: {instanceID: 2728}
     - Class: 114
-      Script: {instanceID: 3272}
+      Script: {instanceID: 2948}
     - Class: 114
-      Script: {instanceID: 3930}
+      Script: {instanceID: 3006}
     - Class: 114
-      Script: {instanceID: 4678}
+      Script: {instanceID: 3286}
     - Class: 114
-      Script: {instanceID: 5842}
+      Script: {instanceID: 3952}
     - Class: 114
-      Script: {instanceID: 7132}
+      Script: {instanceID: 4702}
     - Class: 114
-      Script: {instanceID: 7828}
+      Script: {instanceID: 5870}
+    - Class: 114
+      Script: {instanceID: 7164}
+    - Class: 114
+      Script: {instanceID: 7866}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 124
@@ -450,6 +466,14 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
+      Script: {instanceID: 0}
+    - Class: 19719996
+      Script: {instanceID: 0}
+    - Class: 156049354
+      Script: {instanceID: 0}
+    - Class: 483693784
+      Script: {instanceID: 0}
+    - Class: 1839735485
       Script: {instanceID: 0}
     Assets/Scenes/StartMenu.unity:
     - Class: 1
@@ -464,68 +488,36 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
-    - Class: 50
-      Script: {instanceID: 0}
-    - Class: 61
-      Script: {instanceID: 0}
-    - Class: 62
-      Script: {instanceID: 0}
-    - Class: 74
-      Script: {instanceID: 0}
     - Class: 81
-      Script: {instanceID: 0}
-    - Class: 91
-      Script: {instanceID: 0}
-    - Class: 95
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 718}
+      Script: {instanceID: 1556}
     - Class: 114
-      Script: {instanceID: 1550}
+      Script: {instanceID: 2728}
     - Class: 114
-      Script: {instanceID: 1592}
+      Script: {instanceID: 2948}
     - Class: 114
-      Script: {instanceID: 1998}
+      Script: {instanceID: 3006}
     - Class: 114
-      Script: {instanceID: 2082}
+      Script: {instanceID: 3286}
     - Class: 114
-      Script: {instanceID: 2464}
+      Script: {instanceID: 3428}
     - Class: 114
-      Script: {instanceID: 2718}
+      Script: {instanceID: 3952}
     - Class: 114
-      Script: {instanceID: 2936}
+      Script: {instanceID: 5436}
     - Class: 114
-      Script: {instanceID: 2994}
+      Script: {instanceID: 5502}
     - Class: 114
-      Script: {instanceID: 3272}
+      Script: {instanceID: 5870}
     - Class: 114
-      Script: {instanceID: 3412}
+      Script: {instanceID: 6192}
     - Class: 114
-      Script: {instanceID: 3930}
+      Script: {instanceID: 7164}
     - Class: 114
-      Script: {instanceID: 3998}
-    - Class: 114
-      Script: {instanceID: 4678}
-    - Class: 114
-      Script: {instanceID: 5484}
-    - Class: 114
-      Script: {instanceID: 5842}
-    - Class: 114
-      Script: {instanceID: 6160}
-    - Class: 114
-      Script: {instanceID: 6392}
-    - Class: 114
-      Script: {instanceID: 6726}
-    - Class: 114
-      Script: {instanceID: 7132}
-    - Class: 114
-      Script: {instanceID: 7450}
-    - Class: 114
-      Script: {instanceID: 7544}
-    - Class: 114
-      Script: {instanceID: 7828}
+      Script: {instanceID: 7866}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 124
@@ -536,8 +528,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 196
       Script: {instanceID: 0}
-    - Class: 212
-      Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
     - Class: 222
@@ -545,12 +535,6 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
-      Script: {instanceID: 0}
-    - Class: 156049354
-      Script: {instanceID: 0}
-    - Class: 483693784
-      Script: {instanceID: 0}
-    - Class: 1839735485
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -573,20 +557,26 @@ ScriptsOnlyBuild:
     className: PlayerInput
   - hash:
       serializedVersion: 2
+      Hash: d810ab139e9c898b4ab5381f262d5b80
+    assemblyName: oren_Networking.dll
+    namespaceName: 
+    className: InvadersGame
+  - hash:
+      serializedVersion: 2
       Hash: 71b711096c6c32621c1d4c02310898b7
     assemblyName: Unity.2D.Animation.Runtime.dll
     namespaceName: UnityEngine.U2D.Animation
     className: SpriteSkin
   - hash:
       serializedVersion: 2
-      Hash: a0915b5a3b139433c84a1590d5eaab31
-    assemblyName: Assembly-CSharp.dll
+      Hash: fe7430dc2981b99f673112da10d2ca4b
+    assemblyName: oren_Networking.dll
     namespaceName: 
     className: LobbyControl
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
+    assemblyName: oren_Adventure.dll
     namespaceName: 
     className: Checkpoint
   - hash:
@@ -628,7 +618,7 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: a5b433e9d06852586c76def3c31a4aad
-    assemblyName: Assembly-CSharp.dll
+    assemblyName: oren_Adventure.dll
     namespaceName: 
     className: Level1Puzzle
   - hash:
@@ -657,9 +647,9 @@ ScriptsOnlyBuild:
     className: NetworkRigidbody2D
   - hash:
       serializedVersion: 2
-      Hash: 7fa94369a630aca52a2efc33aa679b63
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
+      Hash: 81e379be09e2fdea0918cae965f8c460
+    assemblyName: oren_Networking.dll
+    namespaceName: oren_Network
     className: CameraMovement
   - hash:
       serializedVersion: 2
@@ -711,12 +701,6 @@ ScriptsOnlyBuild:
     className: IKManager2D
   - hash:
       serializedVersion: 2
-      Hash: 20f2b7311005ffc17c7910543729f309
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: OldPlayerController
-  - hash:
-      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: com.unity.multiplayer-hlapi.Runtime.dll
     namespaceName: UnityEngine.Networking
@@ -742,7 +726,7 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 4f641ba48e9eceb0731fcd71bf85340e
-    assemblyName: Assembly-CSharp.dll
+    assemblyName: oren_Networking.dll
     namespaceName: 
     className: HealthScript
   - hash:
@@ -766,7 +750,7 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
+    assemblyName: oren_Adventure.dll
     namespaceName: 
     className: GameManager
   - hash:
@@ -778,8 +762,8 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 6584326abd645f055ccbced609ebc122
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
+    assemblyName: oren_Adventure.dll
+    namespaceName: oren_Advent
     className: UIController
   - hash:
       serializedVersion: 2
@@ -787,6 +771,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.AdaptivePerformance.dll
     namespaceName: UnityEngine.AdaptivePerformance
     className: AdaptiveSorting
+  - hash:
+      serializedVersion: 2
+      Hash: 3336248218818d8871bcbb031f7ada57
+    assemblyName: oren_Networking.dll
+    namespaceName: 
+    className: PlayerControl
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -799,12 +789,6 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: GraphicRaycaster
-  - hash:
-      serializedVersion: 2
-      Hash: 8acaac6cd3d66f83e1ed0459c7de3f97
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: PlayerHealth
   - hash:
       serializedVersion: 2
       Hash: f40fedccd4adbc76605bea6d67537e4b
@@ -897,9 +881,9 @@ ScriptsOnlyBuild:
     className: Benchmark04
   - hash:
       serializedVersion: 2
-      Hash: 9fa4615d29f2dc05d5425d39998f5493
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
+      Hash: 7f964ab4db6eda513cc88f8163b07896
+    assemblyName: oren_Networking.dll
+    namespaceName: oren_Network
     className: MenuControl
   - hash:
       serializedVersion: 2
@@ -919,12 +903,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.InputSystem.dll
     namespaceName: UnityEngine.InputSystem.Editor
     className: InputActionImporterEditor
-  - hash:
-      serializedVersion: 2
-      Hash: 319890faa7cfc29adefa4867fcd4b23d
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: SpiderEnemy
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -969,6 +947,12 @@ ScriptsOnlyBuild:
     className: UdpGameManager
   - hash:
       serializedVersion: 2
+      Hash: 367f0679752086d01b3cb244970209f9
+    assemblyName: oren_Adventure.dll
+    namespaceName: oren_Advent
+    className: StageManagerSP
+  - hash:
+      serializedVersion: 2
       Hash: 7536c3aaa3b668b80f1580147a12d30d
     assemblyName: Assembly-CSharp.dll
     namespaceName: TMPro.Examples
@@ -1009,12 +993,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: ActivationTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 5a28a0456c1a766e517805c1c5bc5a96
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Bullet
   - hash:
       serializedVersion: 2
       Hash: 8b1fe5dfdcf943fb3b72506b9f19335f
@@ -1059,16 +1037,16 @@ ScriptsOnlyBuild:
     className: SpriteShapeGeometryCache
   - hash:
       serializedVersion: 2
+      Hash: 7477baaf1c893c7fcadaa810ff755931
+    assemblyName: oren_Networking.dll
+    namespaceName: oren_Network
+    className: StageManager
+  - hash:
+      serializedVersion: 2
       Hash: bfeb96683d3796cadaab890bfdfe92be
     assemblyName: Unity.InputSystem.dll
     namespaceName: UnityEngine.InputSystem.Editor
     className: InputDebuggerWindow
-  - hash:
-      serializedVersion: 2
-      Hash: d4b12e4ee9541266ac2681aeef7cb8c2
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: PlayerScript
   - hash:
       serializedVersion: 2
       Hash: ad4af01eeb7f0a9ae0be2df3e0f1953a
@@ -1119,6 +1097,12 @@ ScriptsOnlyBuild:
     className: TMP_Settings
   - hash:
       serializedVersion: 2
+      Hash: 319890faa7cfc29adefa4867fcd4b23d
+    assemblyName: oren_Networking.dll
+    namespaceName: oren_Network
+    className: SpiderEnemy
+  - hash:
+      serializedVersion: 2
       Hash: 3375c3d749f8f4cad889721b431bdc27
     assemblyName: Assembly-CSharp.dll
     namespaceName: TMPro.Examples
@@ -1129,6 +1113,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SubMeshUI
+  - hash:
+      serializedVersion: 2
+      Hash: 1e4a6700a19d8e2f394cf4be11287d7c
+    assemblyName: Unity.AdaptivePerformance.Samsung.Android.dll
+    namespaceName: UnityEngine.AdaptivePerformance.Samsung.Android
+    className: SamsungAndroidProviderSettings
   - hash:
       serializedVersion: 2
       Hash: 426e5bd616852254b77531cd1a8e29b6
@@ -1155,8 +1145,14 @@ ScriptsOnlyBuild:
     className: TMPro_InstructionOverlay
   - hash:
       serializedVersion: 2
+      Hash: 4d67a3b1a4515d7338badd0ad19c8510
+    assemblyName: oren_Adventure.dll
+    namespaceName: oren_Advent
+    className: BulletSP
+  - hash:
+      serializedVersion: 2
       Hash: d694d285556ed70f5a489762de9b6aba
-    assemblyName: Assembly-CSharp.dll
+    assemblyName: oren_Networking.dll
     namespaceName: 
     className: SceneTransitionHandler
   - hash:
@@ -1191,9 +1187,9 @@ ScriptsOnlyBuild:
     className: InputSystemObject
   - hash:
       serializedVersion: 2
-      Hash: c019a8bef2fb7763ac016b24df9cf5a5
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
+      Hash: 078ec8e224f8fab88f83c1828d462394
+    assemblyName: oren_Adventure.dll
+    namespaceName: oren_Advent
     className: PlayerControllerSP
   - hash:
       serializedVersion: 2
@@ -1207,12 +1203,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.Animation.Runtime.dll
     namespaceName: UnityEngine.U2D.Animation
     className: BufferManager
-  - hash:
-      serializedVersion: 2
-      Hash: 367f0679752086d01b3cb244970209f9
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: StageManager
   - hash:
       serializedVersion: 2
       Hash: b6514f552bd2ee9e736a5678aa7f7de3
@@ -1270,7 +1260,7 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 04f3ef235bf3e3b29cb757c061cfdc14
-    assemblyName: Assembly-CSharp.dll
+    assemblyName: oren_Networking.dll
     namespaceName: 
     className: WeaponScript
   - hash:
@@ -1359,6 +1349,18 @@ ScriptsOnlyBuild:
     className: Text
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Unity.AdaptivePerformance.Samsung.Android.dll
+    namespaceName: UnityEngine.AdaptivePerformance
+    className: AdaptiveVariableRefreshRate
+  - hash:
+      serializedVersion: 2
+      Hash: fbe2db9c53eb3138781ae921874e386a
+    assemblyName: oren_Networking.dll
+    namespaceName: oren_Network
+    className: Bullet
+  - hash:
+      serializedVersion: 2
       Hash: 9b895dcabbc1faf095c000c32d471fd0
     assemblyName: com.unity.multiplayer-hlapi.Runtime.dll
     namespaceName: UnityEngine.Networking
@@ -1419,10 +1421,16 @@ ScriptsOnlyBuild:
     className: TextMeshProUGUI
   - hash:
       serializedVersion: 2
-      Hash: da9d965d85aa2b1c92cfd5b0ae97ff2d
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
+      Hash: 043d950614e0ff674a47a83600abfc30
+    assemblyName: oren_Networking.dll
+    namespaceName: oren_Network
     className: PlayerController
+  - hash:
+      serializedVersion: 2
+      Hash: 996457ecb1110b74cd38af67616e2042
+    assemblyName: oren_Adventure.dll
+    namespaceName: oren_Advent
+    className: KillPlayerSP
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1450,15 +1458,9 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 1a80c6e737a9f19f2365f53921e7ee5a
-    assemblyName: Assembly-CSharp.dll
+    assemblyName: oren_Adventure.dll
     namespaceName: 
     className: ParallaxBG
-  - hash:
-      serializedVersion: 2
-      Hash: c04515f856b22326b0388afe45e15788
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: KillPlayer
   - hash:
       serializedVersion: 2
       Hash: 5dea360fb0b147724ac344e6f399c2f3
@@ -1522,7 +1524,7 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 1304c0ca9c931a169e17c3bb1d937531
-    assemblyName: Assembly-CSharp.dll
+    assemblyName: oren_Adventure.dll
     namespaceName: 
     className: CameraMovementSP
   - hash:
@@ -1552,8 +1554,8 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: da9d965d85aa2b1c92cfd5b0ae97ff2d
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
+    assemblyName: oren_Networking.dll
+    namespaceName: oren_Network
     className: ClientPlayerController
   - hash:
       serializedVersion: 2
@@ -1689,6 +1691,12 @@ ScriptsOnlyBuild:
     className: NetworkProximityChecker
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Unity.AdaptivePerformance.Samsung.Android.dll
+    namespaceName: UnityEngine.AdaptivePerformance.Samsung.Android
+    className: SamsungAndroidProviderLoader
+  - hash:
+      serializedVersion: 2
       Hash: b424b4eeb810aecb0ff91c62639241e9
     assemblyName: Unity.2D.Animation.Runtime.dll
     namespaceName: UnityEngine.Experimental.U2D.Animation
@@ -1753,6 +1761,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.Animation.Runtime.dll
     namespaceName: UnityEngine.U2D.Animation
     className: SpriteSkinEntity
+  - hash:
+      serializedVersion: 2
+      Hash: 319890faa7cfc29adefa4867fcd4b23d
+    assemblyName: oren_Adventure.dll
+    namespaceName: oren_Advent
+    className: SpiderEnemySP
   - hash:
       serializedVersion: 2
       Hash: c1f5356fcd27668ddc25078e27f9828d
@@ -1822,7 +1836,7 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: ce2ce5a4d59028b7a90acad0b962d87f
-    assemblyName: Assembly-CSharp.dll
+    assemblyName: oren_Adventure.dll
     namespaceName: 
     className: PuzzleButton
   - hash:
@@ -1873,6 +1887,24 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Services.Authentication.dll
     namespaceName: Unity.Services.Authentication.Utilities
     className: Scheduler
+  - hash:
+      serializedVersion: 2
+      Hash: c04515f856b22326b0388afe45e15788
+    assemblyName: oren_Networking.dll
+    namespaceName: oren_Network
+    className: KillPlayer
+  - hash:
+      serializedVersion: 2
+      Hash: 8acaac6cd3d66f83e1ed0459c7de3f97
+    assemblyName: oren_Networking.dll
+    namespaceName: oren_Network
+    className: PlayerHealth
+  - hash:
+      serializedVersion: 2
+      Hash: 8acaac6cd3d66f83e1ed0459c7de3f97
+    assemblyName: oren_Adventure.dll
+    namespaceName: oren_Advent
+    className: PlayerHealthSP
   platform: 13
   scenePathNames:
   - Assets/Scenes/InitBootStrap.unity

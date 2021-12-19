@@ -177,11 +177,23 @@ PrefabInstance:
     - target: {fileID: 4164728152975396285, guid: 3068295cf64fb4d42b600b380fcf7173, type: 3}
       propertyPath: NetworkConfig.PlayerPrefab
       value: 
-      objectReference: {fileID: 1817768598451111015, guid: 1ca32157964ac454a89bc730724aef04, type: 3}
+      objectReference: {fileID: 1817768598451111015, guid: d20a3f9627741d141b8d352183586a27, type: 3}
     - target: {fileID: 4164728152975396285, guid: 3068295cf64fb4d42b600b380fcf7173, type: 3}
       propertyPath: NetworkConfig.NetworkPrefabs.Array.size
-      value: 6
+      value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 4164728152975396285, guid: 3068295cf64fb4d42b600b380fcf7173, type: 3}
+      propertyPath: NetworkConfig.NetworkPrefabs.Array.data[0].Prefab
+      value: 
+      objectReference: {fileID: 3263582606053999581, guid: 8fb6a2bd6278db34ebd6c3c4c74b510a, type: 3}
+    - target: {fileID: 4164728152975396285, guid: 3068295cf64fb4d42b600b380fcf7173, type: 3}
+      propertyPath: NetworkConfig.NetworkPrefabs.Array.data[1].Prefab
+      value: 
+      objectReference: {fileID: 4363994786537137417, guid: 8e2c82f6c665f804f8f4fa1dcebd4eb2, type: 3}
+    - target: {fileID: 4164728152975396285, guid: 3068295cf64fb4d42b600b380fcf7173, type: 3}
+      propertyPath: NetworkConfig.NetworkPrefabs.Array.data[2].Prefab
+      value: 
+      objectReference: {fileID: 1449236091151115435, guid: f34fb8c854a533d45a1173aa4c770f84, type: 3}
     - target: {fileID: 4164728152975396285, guid: 3068295cf64fb4d42b600b380fcf7173, type: 3}
       propertyPath: NetworkConfig.NetworkPrefabs.Array.data[3].Prefab
       value: 
@@ -190,6 +202,10 @@ PrefabInstance:
       propertyPath: NetworkConfig.NetworkPrefabs.Array.data[5].Prefab
       value: 
       objectReference: {fileID: 1817768598451111015, guid: 1ca32157964ac454a89bc730724aef04, type: 3}
+    - target: {fileID: 4164728152975396285, guid: 3068295cf64fb4d42b600b380fcf7173, type: 3}
+      propertyPath: NetworkConfig.NetworkPrefabs.Array.data[0].SourcePrefabToOverride
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4164728152975396287, guid: 3068295cf64fb4d42b600b380fcf7173, type: 3}
       propertyPath: m_Name
       value: NetworkManager

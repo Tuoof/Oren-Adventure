@@ -13,8 +13,7 @@ public class LobbyControl : NetworkBehaviour
     private string m_SceneName = "Level1";
     
     // Minimum player count required to transition to next level
-    [SerializeField]
-    private int m_MinimumPlayerCount = 2;
+    private int m_MinimumPlayerCount = 1;
     private int m_MaximumPlayerCount = 4;
     
     public Text LobbyText;

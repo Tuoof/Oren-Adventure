@@ -15,7 +15,7 @@ public class campaignTest
     public void campaignTestSimplePasses()
     {   
         var localPlay = GameObject.Find("StartLocalGame");
-        _controller.StartLocalGame();
+        _controller.PlayButtonLocalGame();
     }
 
     // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use

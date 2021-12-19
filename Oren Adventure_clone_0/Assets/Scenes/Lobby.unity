@@ -203,7 +203,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_SceneName: Level1
-  m_MinimumPlayerCount: 1
   LobbyText: {fileID: 888252281}
   PlayerName: {fileID: 672662101}
 --- !u!1 &328077779
@@ -2148,7 +2147,7 @@ GameObject:
   - component: {fileID: 2053762081}
   m_Layer: 0
   m_Name: LobbyCamera
-  m_TagString: MainCamera
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
