@@ -5,7 +5,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "oren_Networking", "oren_Net
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "oren_Adventure", "oren_Adventure.csproj", "{e37175d8-3afd-2ba4-2fa6-05628a5a49a5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "Shared.csproj", "{6a67f348-3806-8013-21a7-1ae803ef58b9}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{590bca0a-6104-406d-9243-35c0fd3e48de}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tuoof.Core.Singletons", "Tuoof.Core.Singletons.csproj", "{13bd1ed4-926a-96f4-111c-f52256552173}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientNetworkTransform", "ClientNetworkTransform.csproj", "{f0e457a2-9609-0f29-96f6-12041075854d}"
 EndProject
@@ -28,8 +32,12 @@ Global
 		{8e223f9c-f06a-a6ab-c627-a330ad6536aa}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{e37175d8-3afd-2ba4-2fa6-05628a5a49a5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{e37175d8-3afd-2ba4-2fa6-05628a5a49a5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6a67f348-3806-8013-21a7-1ae803ef58b9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6a67f348-3806-8013-21a7-1ae803ef58b9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{590bca0a-6104-406d-9243-35c0fd3e48de}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{590bca0a-6104-406d-9243-35c0fd3e48de}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13bd1ed4-926a-96f4-111c-f52256552173}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13bd1ed4-926a-96f4-111c-f52256552173}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{f0e457a2-9609-0f29-96f6-12041075854d}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{f0e457a2-9609-0f29-96f6-12041075854d}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{fb58cb93-f304-c8c4-75a3-b1ae1c366ff4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU

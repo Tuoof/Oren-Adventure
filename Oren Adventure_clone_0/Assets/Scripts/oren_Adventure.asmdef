@@ -2,8 +2,8 @@
     "name": "oren_Adventure",
     "rootNamespace": "",
     "references": [
-        "GUID:75469ad4d38634e559750d17036d5f7c",
-        "GUID:208a9037d93166f4d9e9ec641729693c"
+        "GUID:208a9037d93166f4d9e9ec641729693c",
+        "GUID:75469ad4d38634e559750d17036d5f7c"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

@@ -32,14 +32,7 @@ namespace oren_Network
             //  moving platform to the point position with index"i"
             transform.position = Vector2.MoveTowards(transform.position, points[i].position, speed * Time.deltaTime);
         }
-        public void OnCollisionEnter2D(Collision2D collision)
-        {
-            collision.transform.SetParent(transform);
-        }
-        public void OnCollisionExit2D(Collision2D collision)
-        {
-            collision.transform.SetParent(null);
-        }
+
 
     }
 }

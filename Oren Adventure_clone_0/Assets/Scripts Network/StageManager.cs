@@ -10,7 +10,7 @@ namespace oren_Network
 {
     public enum GameOverReason : byte
     {
-        None = 0,
+        Win = 0,
         TimeUp = 1,
         Death = 2,
         Max,
@@ -20,7 +20,6 @@ namespace oren_Network
     {
         public static StageManager Singleton { get; private set; }
         public GameObject currentCheckpoint;
-        public GameObject player;
         public NetworkVariable<bool> hasGameStarted { get; } = new NetworkVariable<bool>(false);
         public NetworkVariable<bool> isGameOver { get; } = new NetworkVariable<bool>(false);
 
@@ -59,6 +58,8 @@ namespace oren_Network
             Assert.IsNull(Singleton, $"Multiple instances of {nameof(InvadersGame)} detected. This should not happen.");
             Singleton = this;
 
+            currentCheckpoint = GameObject.FindGameObjectWithTag("Checkpoint");
+
             OnSingletonReady?.Invoke();
 
             if (IsServer)
@@ -90,8 +91,8 @@ namespace oren_Network
 
         void FixedUpdate()
         {
-            if (!NetworkManager.Singleton.IsConnectedClient) { return; }
-            player = GameObject.FindGameObjectWithTag("Player");
+            // if (!NetworkManager.Singleton.IsConnectedClient) { return; }
+            // MovePlayerToCheckpoint();
         }
         public override void OnNetworkSpawn()
         {
@@ -147,6 +148,7 @@ namespace oren_Network
 
             return m_ClientStartCountdown;
         }
+
         [ClientRpc]
         private void SetReplicatedTimeRemainingClientRPC(float delayedStartTime)
         {
@@ -193,7 +195,7 @@ namespace oren_Network
         }
         private void OnGameStarted()
         {
-            gameTimerText.gameObject.SetActive(false);
+            // gameTimerText.gameObject.SetActive(false);
         }
         public void SetLives(int lives)
         {
@@ -225,11 +227,49 @@ namespace oren_Network
                 if (playerObject == null) continue;
 
                 // We should just early out if any of the player's are still alive
-                if (playerObject.GetComponent<PlayerControl>().IsAlive)
+                if (playerObject.GetComponent<ClientPlayerController>().IsAlive)
                     return;
             }
 
             this.isGameOver.Value = true;
+        }
+        [ClientRpc]
+        public void ExitWinTestingClientRPC(bool wincondition)
+        {
+            var wincond = false;
+
+            wincond = wincondition;
+
+            Assert.IsTrue(IsClient, "Win Condition must be called to client using rpc!");
+            if (wincondition && IsClient)
+                ExitGame();
+        }
+
+        public void MovePlayerToCheckpoint()
+        {
+            foreach (NetworkClient networkedClient in NetworkManager.Singleton.ConnectedClientsList)
+            {
+                var playerObject = networkedClient.PlayerObject;
+                if (playerObject == null) continue;
+
+                // We should just early out if any of the player's are still alive
+                if (playerObject.GetComponent<ClientPlayerController>().transform.position == currentCheckpoint.transform.position)
+                    BroadcastPlayerToCheckpointClientRpc();
+                    return;
+            }
+        }
+
+        [ClientRpc]
+        public void BroadcastPlayerToCheckpointClientRpc()
+        {
+            var localPlayerObject = NetworkManager.Singleton.ConnectedClients[NetworkManager.Singleton.LocalClientId].PlayerObject;
+            Assert.IsNotNull(localPlayerObject);
+
+            if (localPlayerObject.TryGetComponent<ClientPlayerController>(out var PlayerController))
+            {
+                PlayerController.RespawnPlayerClientRpc();
+            }
+            
         }
 
         [ClientRpc]
@@ -238,9 +278,9 @@ namespace oren_Network
             var localPlayerObject = NetworkManager.Singleton.ConnectedClients[NetworkManager.Singleton.LocalClientId].PlayerObject;
             Assert.IsNotNull(localPlayerObject);
 
-            if (localPlayerObject.TryGetComponent<PlayerControl>(out var playerControl))
+            if (localPlayerObject.TryGetComponent<ClientPlayerController>(out var PlayerController))
             {
-                // playerControl.NotifyGameOver(reason);
+                PlayerController.NotifyGameOver(reason);
             }
         }
         public void ExitGame()

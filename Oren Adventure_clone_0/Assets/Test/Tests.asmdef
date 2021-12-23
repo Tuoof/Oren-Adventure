@@ -4,8 +4,8 @@
     "references": [
         "UnityEngine.TestRunner",
         "UnityEditor.TestRunner",
-        "oren_Networking",
-        "oren_Adventure"
+        "oren_Adventure",
+        "oren_Networking"
     ],
     "includePlatforms": [
         "Editor"
