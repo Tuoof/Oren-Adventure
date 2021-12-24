@@ -15,6 +15,7 @@ namespace oren_Network
         public Animator animator;
         private PlayerInputAction playerInputAction;
         private Rigidbody2D rb;
+        private SpriteRenderer m_PlayerVisual;
 
         // Movement and Jump variable
         private float horizontal;
@@ -35,7 +36,7 @@ namespace oren_Network
         public float checkRadius;
         public LayerMask groundLayer;
 
-        private NetworkVariable<int> m_Lives = new NetworkVariable<int>(3);
+        public NetworkVariable<int> m_Lives = new NetworkVariable<int>();
         private SceneTransitionHandler.SceneStates m_CurrentSceneState;
         private bool m_HasGameStarted;
         private bool m_IsAlive = true;
@@ -49,10 +50,18 @@ namespace oren_Network
             playerInputAction = new PlayerInputAction();
             playerInput = GetComponent<PlayerInput>();
             m_HasGameStarted = false;
+
+            playerInputAction.Player.Movement.performed += ctx => setMovement(ctx.ReadValue<Vector2>().x);
+            playerInputAction.Player.Movement.canceled += ctx => ResetMovement();
+            playerInputAction.Player.Jump.started += ctx => Jump();
+            playerInputAction.Player.Jump.performed += ctx => Jump();
+            playerInputAction.Player.Shoot.started += ctx => ShootServerRPC();
         }
         private void Start()
         {
             extraJump = extraJumpValue;
+            m_PlayerVisual = GetComponent<SpriteRenderer>();
+            if (m_PlayerVisual != null) m_PlayerVisual.material.color = Color.black;
         }
 
         private void OnEnable()
@@ -63,23 +72,41 @@ namespace oren_Network
         {
             playerInputAction.Disable();
         }
+        private void SceneTransitionHandler_clientLoadedScene(ulong clientId)
+        {
+            SceneStateChangedClientRpc(m_CurrentSceneState);
+        }
+
+        [ClientRpc]
+        private void SceneStateChangedClientRpc(SceneTransitionHandler.SceneStates state)
+        {
+            if (!IsServer) SceneTransitionHandler.sceneTransitionHandler.SetSceneState(state);
+        }
+
+        private void SceneTransitionHandler_sceneStateChanged(SceneTransitionHandler.SceneStates newState)
+        {
+            m_CurrentSceneState = newState;
+            if (m_CurrentSceneState == SceneTransitionHandler.SceneStates.Level1)
+            {
+                if (m_PlayerVisual != null) m_PlayerVisual.material.color = Color.green;
+            }
+            else
+            {
+                if (m_PlayerVisual != null) m_PlayerVisual.material.color = Color.black;
+            }
+        }
 
         public override void OnNetworkSpawn()
         {
             // if (!IsOwner) { return; }
             rb = GetComponent<Rigidbody2D>();
-            playerInputAction.Player.Movement.performed += ctx => setMovement(ctx.ReadValue<Vector2>().x);
-            playerInputAction.Player.Movement.canceled += ctx => ResetMovement();
-            playerInputAction.Player.Jump.started += ctx => JumpServerRpc();
-            playerInputAction.Player.Jump.performed += ctx => JumpServerRpc();
-            playerInputAction.Player.Shoot.started += ctx => ShootServerRPC();
 
             m_Lives.OnValueChanged += OnLivesChanged;
 
             if (IsServer) m_OwnerRPCParams = new ClientRpcParams { Send = new ClientRpcSendParams { TargetClientIds = new[] { OwnerClientId } } };
 
-            if (!InvadersGame.Singleton)
-                InvadersGame.OnSingletonReady += SubscribeToDelegatesAndUpdateValues;
+            if (!StageManager.Singleton)
+                StageManager.OnSingletonReady += SubscribeToDelegatesAndUpdateValues;
             else
                 SubscribeToDelegatesAndUpdateValues();
 
@@ -87,28 +114,72 @@ namespace oren_Network
             SceneTransitionHandler.sceneTransitionHandler.OnSceneStateChanged += SceneTransitionHandler_sceneStateChanged;
 
         }
+        public override void OnNetworkDespawn()
+        {
+            base.OnNetworkDespawn();
+            if (IsClient)
+            {
+                m_Lives.OnValueChanged -= OnLivesChanged;
+            }
+
+            if (StageManager.Singleton)
+            {
+                StageManager.Singleton.isGameOver.OnValueChanged -= OnGameStartedChanged;
+                StageManager.Singleton.hasGameStarted.OnValueChanged -= OnGameStartedChanged;
+            }
+        }
+        private void SubscribeToDelegatesAndUpdateValues()
+        {
+            StageManager.Singleton.hasGameStarted.OnValueChanged += OnGameStartedChanged;
+            StageManager.Singleton.isGameOver.OnValueChanged += OnGameStartedChanged;
+
+            if (IsClient && IsOwner)
+            {
+                StageManager.Singleton.SetLives(m_Lives.Value);
+            }
+        }
+        private void OnGameStartedChanged(bool previousValue, bool newValue)
+        {
+            m_HasGameStarted = newValue;
+        }
+
+        private void OnLivesChanged(int previousAmount, int currentAmount)
+        {
+            // Hide graphics client side upon death
+            if (currentAmount <= 0 && IsClient && TryGetComponent<SpriteRenderer>(out var spriteRenderer))
+                spriteRenderer.enabled = false;
+
+            if (!IsOwner) return;
+            Debug.LogFormat("Lives {0} ", currentAmount);
+            if (StageManager.Singleton != null) StageManager.Singleton.SetLives(m_Lives.Value);
+
+            if (m_Lives.Value <= 0)
+            {
+                m_IsAlive = false;
+            }
+        }
+
         private void Update()
         {
-            currentCheckpoint = GameObject.FindGameObjectWithTag("Checkpoint");
-            InGameUpdate();
-            // if (!IsOwner) { return; }
             Debug.Log(SceneTransitionHandler.SceneStates.Level1);
             switch (m_CurrentSceneState)
             {
                 case SceneTransitionHandler.SceneStates.Level1:
                     {
-                        // InGameUpdate();
+                        InGameUpdate();
                         break;
                     }
             }
         }
         private void InGameUpdate()
         {
+            if (!IsOwner || !m_HasGameStarted) return;
+            if (!m_IsAlive) return;
+
             isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, groundLayer);
 
             animator.SetFloat("Speed", Mathf.Abs(horizontal * speed));
             Move();
-            JumpServerRpc();
 
             if (facingRight == false && horizontal > 0)
             {
@@ -123,6 +194,18 @@ namespace oren_Network
             {
                 extraJump = extraJumpValue;
             }
+        }
+
+        [ServerRpc(RequireOwnership = false)]
+        public void RespawnPlayerServerRpc(ClientRpcParams clientParams)
+        {
+            RespawnPlayerClientRpc();
+            StageManager.Singleton.MovePlayerToCheckpoint();
+        }
+        [ClientRpc]
+        public void RespawnPlayerClientRpc()
+        {
+            this.transform.position = StageManager.Singleton.currentCheckpoint.transform.position;
         }
 
         private void setMovement(float movement)
@@ -140,21 +223,13 @@ namespace oren_Network
         public void Move()
         {
             if (!IsOwner) { return; }
-
-            // horizontal = playerInputAction.Player.Movement.ReadValue<Vector2>().x;
             rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
         }
 
-        private bool IsGrounded()
+        public void Jump()
         {
-            extraJump = extraJumpValue;
-            return Physics2D.OverlapCircle(groundCheck.position, checkRadius, groundLayer);
-        }
-
-        [ServerRpc]
-        public void JumpServerRpc()
-        {
-            if (!IsServer) { return; }
+            if (!IsOwner) { return; }
+            if (!m_IsAlive) { return; }
 
             if (extraJump > 0)
             {
@@ -182,7 +257,8 @@ namespace oren_Network
         [ServerRpc]
         public void ShootServerRPC()
         {
-            // if (!IsServer && !IsOwner) { return; }
+            if (!IsOwner) { return; }
+            // if (!m_IsAlive) { return; }
 
             m_MyBullet = Instantiate(Bullet, firePoint.position, firePoint.rotation);
             // m_MyBullet.GetComponent<Bullet>().owner = this;
@@ -195,55 +271,60 @@ namespace oren_Network
             }
         }
 
-        public void RespawnPlayer()
-    {
-        Assert.IsTrue(IsServer, "HitByBullet must be called server-side only!");
-        this.transform.position = currentCheckpoint.transform.position;
-    }
+        public void HitByEnemy()
+        {
+            Assert.IsTrue(IsServer, "HitByEnemy must be called server-side only!");
+            if (!m_IsAlive) return;
 
-        private void SceneTransitionHandler_clientLoadedScene(ulong clientId)
-        {
-            SceneStateChangedClientRpc(m_CurrentSceneState);
-        }
-
-        [ClientRpc]
-        private void SceneStateChangedClientRpc(SceneTransitionHandler.SceneStates state)
-        {
-            if (!IsServer) SceneTransitionHandler.sceneTransitionHandler.SetSceneState(state);
-        }
-
-        private void SceneTransitionHandler_sceneStateChanged(SceneTransitionHandler.SceneStates newState)
-        {
-            m_CurrentSceneState = newState;
-        }
-        private void SubscribeToDelegatesAndUpdateValues()
-        {
-            InvadersGame.Singleton.hasGameStarted.OnValueChanged += OnGameStartedChanged;
-            InvadersGame.Singleton.isGameOver.OnValueChanged += OnGameStartedChanged;
-
-            if (IsClient && IsOwner)
-            {
-                InvadersGame.Singleton.SetLives(m_Lives.Value);
-            }
-        }
-        private void OnGameStartedChanged(bool previousValue, bool newValue)
-        {
-            m_HasGameStarted = newValue;
-        }
-        private void OnLivesChanged(int previousAmount, int currentAmount)
-        {
-            // Hide graphics client side upon death
-            if (currentAmount <= 0 && IsClient && TryGetComponent<SpriteRenderer>(out var spriteRenderer))
-                spriteRenderer.enabled = false;
-
-            if (!IsOwner) return;
-            Debug.LogFormat("Lives {0} ", currentAmount);
-            if (InvadersGame.Singleton != null) InvadersGame.Singleton.SetLives(m_Lives.Value);
+            m_Lives.Value -= 1;
 
             if (m_Lives.Value <= 0)
             {
+                // gameover!
                 m_IsAlive = false;
+                m_Lives.Value = 0;
+                StageManager.Singleton.SetGameEnd(GameOverReason.Death);
+                NotifyGameOverClientRpc(GameOverReason.Death, m_OwnerRPCParams);
+
+                // Hide graphics of this player object server-side. Note we don't want to destroy the object as it
+                // may stop the RPC's from reaching on the other side, as there is only one player controlled object
+                if (TryGetComponent<SpriteRenderer>(out var spriteRenderer))
+                    spriteRenderer.enabled = false;
             }
         }
+
+        [ClientRpc]
+        private void NotifyGameOverClientRpc(GameOverReason reason, ClientRpcParams clientParams)
+        {
+            NotifyGameOver(reason);
+        }
+
+        /// <summary>
+        /// This should only be called locally, either through NotifyGameOverClientRpc or through the StageManager.BroadcastGameOverReason
+        /// </summary>
+        /// <param name="reason"></param>
+        /// <exception cref="ArgumentOutOfRangeException"></exception>
+        public void NotifyGameOver(GameOverReason reason)
+        {
+            Assert.IsTrue(IsLocalPlayer);
+            m_HasGameStarted = false;
+            switch (reason)
+            {
+                case GameOverReason.Win:
+                    StageManager.Singleton.DisplayGameOverText("You have win! \n");
+                    break;
+                case GameOverReason.TimeUp:
+                    StageManager.Singleton.DisplayGameOverText("You have lost! \n The Time is up!");
+                    break;
+                case GameOverReason.Death:
+                    StageManager.Singleton.DisplayGameOverText("You have lost! \n Your health was depleted!");
+                    break;
+                case GameOverReason.Max:
+                    break;
+                    // default:
+                    //     throw new ArgumentOutOfRangeException(nameof(reason), reason, null);
+            }
+        }
+
     }
 }

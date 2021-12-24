@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4164728152975396274}
   - component: {fileID: 4164728152975396285}
   - component: {fileID: 4164728152975396284}
+  - component: {fileID: 3264080953860224345}
   m_Layer: 0
   m_Name: NetworkManager
   m_TagString: Untagged
@@ -50,34 +51,29 @@ MonoBehaviour:
   NetworkConfig:
     ProtocolVersion: 0
     NetworkTransport: {fileID: 4164728152975396284}
-    PlayerPrefab: {fileID: 1817768598451111015, guid: 1ca32157964ac454a89bc730724aef04, type: 3}
+    PlayerPrefab: {fileID: 1817768598451111015, guid: d20a3f9627741d141b8d352183586a27, type: 3}
     NetworkPrefabs:
     - Override: 0
-      Prefab: {fileID: 1817768598451111015, guid: d20a3f9627741d141b8d352183586a27, type: 3}
-      SourcePrefabToOverride: {fileID: 1817768598451111015, guid: cc31e1ed4adcba540bfff786b351f64a, type: 3}
-      SourceHashToOverride: 0
-      OverridingTargetPrefab: {fileID: 0}
-    - Override: 0
-      Prefab: {fileID: 3878116515537393567, guid: b4b14ad3855792149b31b9a215c7d7a5, type: 3}
+      Prefab: {fileID: 3263582606053999581, guid: 8fb6a2bd6278db34ebd6c3c4c74b510a, type: 3}
       SourcePrefabToOverride: {fileID: 0}
       SourceHashToOverride: 0
       OverridingTargetPrefab: {fileID: 0}
     - Override: 0
-      Prefab: {fileID: 1449236091151115435, guid: 670a923978641824981d839aafd5bd17, type: 3}
+      Prefab: {fileID: 4363994786537137417, guid: 8e2c82f6c665f804f8f4fa1dcebd4eb2, type: 3}
       SourcePrefabToOverride: {fileID: 0}
       SourceHashToOverride: 0
       OverridingTargetPrefab: {fileID: 0}
     - Override: 0
-      Prefab: {fileID: 3883375812569804984, guid: 8411967817adf65499b47e4eb9307169, type: 3}
+      Prefab: {fileID: 1449236091151115435, guid: f34fb8c854a533d45a1173aa4c770f84, type: 3}
       SourcePrefabToOverride: {fileID: 0}
       SourceHashToOverride: 0
       OverridingTargetPrefab: {fileID: 0}
     - Override: 0
-      Prefab: {fileID: 1817768598451111015, guid: 1ca32157964ac454a89bc730724aef04, type: 3}
+      Prefab: {fileID: 1258772422545934724, guid: 65d8cedc2daa7074f8c21c6b879dc3f1, type: 3}
       SourcePrefabToOverride: {fileID: 0}
       SourceHashToOverride: 0
       OverridingTargetPrefab: {fileID: 0}
-    TickRate: 30
+    TickRate: 50
     ClientConnectionBufferTimeout: 10
     ConnectionApproval: 0
     ConnectionData: 
@@ -85,7 +81,7 @@ MonoBehaviour:
     TimeResyncInterval: 30
     EnsureNetworkVariableLengthSafety: 0
     EnableSceneManagement: 1
-    ForceSamePrefabs: 0
+    ForceSamePrefabs: 1
     RecycleNetworkIds: 1
     NetworkIdRecycleDelay: 120
     RpcHashSize: 0
@@ -108,6 +104,19 @@ MonoBehaviour:
   MaxConnections: 100
   MaxSentMessageQueueSize: 128
   ConnectAddress: 127.0.0.1
-  ConnectPort: 7777
-  ServerListenPort: 7777
+  ConnectPort: 9998
+  ServerListenPort: 9998
   MessageSendMode: 0
+--- !u!114 &3264080953860224345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4164728152975396287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 923b276d5215a8e4b8d1ecc438b55241, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DefaultMainMenu: StartMenu

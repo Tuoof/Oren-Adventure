@@ -57,9 +57,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1928838599461109795}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b2218d0bc588ba4dbb6a0bd0ca25f4b, type: 3}
+  m_Script: {fileID: 11500000, guid: fa1dcb777a6d0bb45b5752e121b31df1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_InGameSceneName: InGame
-  m_MinimumPlayerCount: 2
+  m_SceneName: Level1
   LobbyText: {fileID: 0}
+  PlayerName: {fileID: 0}

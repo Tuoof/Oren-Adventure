@@ -9,6 +9,8 @@ namespace oren_Network
     {
         [SerializeField] float speed;
         public PlayerController owner;
+        public ClientPlayerController clientOwner;
+
         public int Damage = 10;
         public float maxDistanceBullet = 10;
         public float liveTime = 1;

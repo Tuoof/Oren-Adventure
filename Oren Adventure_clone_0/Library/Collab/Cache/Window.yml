@@ -14,13 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SimpleSelectedItems:
     m_Keys:
-    - Assets/Prefab/SpiderSP.prefab
-    - Assets/Prefab/spikeSP.prefab
-    - Assets/Tile/Layer belakang gua.png
-    - Assets/Tile/Layer belakang gua.png.meta
-    - Assets/Tile/tembok gdean.png
+    - Assets/Scenes/StartMenu.unity
     - 
-    m_Values: 000000000000
+    m_Values: 0101
   RevisionSummary: 
   ChangesSearchValue: 
   SelectedHistoryRevision: 

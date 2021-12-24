@@ -4,10 +4,10 @@
     "references": [
         "UnityEngine.TestRunner",
         "UnityEditor.TestRunner",
-        "oren_Adventure",
-        "oren_Networking",
         "Unity.Netcode.Runtime",
-        "Unity.Services.Core.Networking"
+        "Unity.Services.Core.Networking",
+        "oren_Adventure",
+        "oren_Networking"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

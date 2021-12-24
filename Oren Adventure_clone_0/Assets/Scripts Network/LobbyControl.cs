@@ -1,28 +1,45 @@
 ﻿using System;
+using TMPro;
 using System.Collections.Generic;
 using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class LobbyControl : NetworkBehaviour
+namespace oren_Network
+{
+    public class LobbyControl : NetworkBehaviour
 {
     [HideInInspector]
     public static bool isHosting;
+    public static bool relayServer;
 
     [SerializeField]
     private string m_SceneName = "Level1";
-    
+
     // Minimum player count required to transition to next level
     private int m_MinimumPlayerCount = 1;
     private int m_MaximumPlayerCount = 4;
-    
+
     public Text LobbyText;
     public Text PlayerName;
+    private TMP_InputField Code;
     private bool m_AllPlayersInLobby;
 
     private Dictionary<ulong, bool> m_ClientsInLobby;
     private Dictionary<ulong, string> m_ClientsNameInLobby;
     private string m_UserLobbyStatusText, m_UserLobbyNameText;
+
+    private void StartSession()
+    {
+        if (isHosting)
+        {          
+            NetworkManager.Singleton.StartHost(); //Spin up the host
+        }
+        else
+        {
+            NetworkManager.Singleton.StartClient(); //Spin up the client
+        }
+    }
 
     /// <summary>
     ///     Awake
@@ -34,10 +51,7 @@ public class LobbyControl : NetworkBehaviour
         m_ClientsNameInLobby = new Dictionary<ulong, string>();
 
         //We added this information to tell us if we are going to host a game or join an the game session
-        if (isHosting)
-            NetworkManager.Singleton.StartHost(); //Spin up the host
-        else
-            NetworkManager.Singleton.StartClient(); //Spin up the client
+        StartSession();
 
         if (NetworkManager.Singleton.IsListening)
         {
@@ -233,4 +247,5 @@ public class LobbyControl : NetworkBehaviour
         NetworkManager.Singleton.Shutdown();
         SceneTransitionHandler.sceneTransitionHandler.ExitAndLoadStartMenu();
     }
+}
 }

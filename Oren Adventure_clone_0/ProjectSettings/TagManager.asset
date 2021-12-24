@@ -7,6 +7,7 @@ TagManager:
   - FarBackground
   - Enemy
   - Checkpoint
+  - Winbox
   layers:
   - Default
   - TransparentFX
