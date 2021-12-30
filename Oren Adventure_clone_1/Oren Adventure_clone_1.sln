@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "oren_Networking", "oren_Networking.csproj", "{7c92743d-d8cc-68b9-2a7d-459a70854d7c}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "oren_Adventure", "oren_Adventure.csproj", "{f13bb09f-df4a-ee42-6d11-e44c68ce240a}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "Shared.csproj", "{e3173207-f343-458f-266c-fa244040e46b}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{d47d64e9-175b-9b21-fff0-718531bbb94e}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tuoof.Core.Singletons", "Tuoof.Core.Singletons.csproj", "{17c709ce-6633-e50e-ab7f-c44d11fb88d6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientNetworkTransform", "ClientNetworkTransform.csproj", "{a6dad095-376d-d9b8-56c1-231bf1160700}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "inputAction", "inputAction.csproj", "{7c0bffde-96a4-e669-3c22-42d8a106ce02}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayTest", "PlayTest.csproj", "{72b5d8b5-d593-eff7-20e2-b04cd7d20e82}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleRelay", "SimpleRelay.csproj", "{83c21142-f921-2ca3-5998-b6cc2bda0978}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests.csproj", "{7a511fd4-5398-4ac9-5a6a-82ec17fbf474}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EM.AutoSave.Editor", "EM.AutoSave.Editor.csproj", "{11dd00af-2168-2f52-845f-e486e6f3a2c6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7c92743d-d8cc-68b9-2a7d-459a70854d7c}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7c92743d-d8cc-68b9-2a7d-459a70854d7c}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{f13bb09f-df4a-ee42-6d11-e44c68ce240a}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{f13bb09f-df4a-ee42-6d11-e44c68ce240a}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{e3173207-f343-458f-266c-fa244040e46b}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{e3173207-f343-458f-266c-fa244040e46b}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{d47d64e9-175b-9b21-fff0-718531bbb94e}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{d47d64e9-175b-9b21-fff0-718531bbb94e}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17c709ce-6633-e50e-ab7f-c44d11fb88d6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17c709ce-6633-e50e-ab7f-c44d11fb88d6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{a6dad095-376d-d9b8-56c1-231bf1160700}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{a6dad095-376d-d9b8-56c1-231bf1160700}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7c0bffde-96a4-e669-3c22-42d8a106ce02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7c0bffde-96a4-e669-3c22-42d8a106ce02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72b5d8b5-d593-eff7-20e2-b04cd7d20e82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72b5d8b5-d593-eff7-20e2-b04cd7d20e82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83c21142-f921-2ca3-5998-b6cc2bda0978}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83c21142-f921-2ca3-5998-b6cc2bda0978}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7a511fd4-5398-4ac9-5a6a-82ec17fbf474}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7a511fd4-5398-4ac9-5a6a-82ec17fbf474}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11dd00af-2168-2f52-845f-e486e6f3a2c6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11dd00af-2168-2f52-845f-e486e6f3a2c6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
