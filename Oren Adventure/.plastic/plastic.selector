@@ -1,0 +1,3 @@
+rep "Oren Adventure@Tuoof_Studio@cloud"
+  path "/"
+    smartbranch "/main"

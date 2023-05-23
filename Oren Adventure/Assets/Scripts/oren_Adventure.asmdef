@@ -1,0 +1,19 @@
+{
+    "name": "oren_Adventure",
+    "rootNamespace": "",
+    "references": [
+        "GUID:208a9037d93166f4d9e9ec641729693c",
+        "GUID:75469ad4d38634e559750d17036d5f7c",
+        "GUID:6055be8ebefd69e48b49212b09b47b2f",
+        "GUID:cc9e5e8659a00c34eb17d360b987e204"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
